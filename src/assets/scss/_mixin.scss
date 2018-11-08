@@ -1,0 +1,82 @@
+@mixin clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+@mixin innerbox($marginLeftRight:0, $paddingLeftRight:0) {
+  max-width: container();
+  margin: 0 auto;
+  @if $marginLeftRight==1 {
+    $marginLeftRight: gutter(12);
+    margin-left: $marginLeftRight;
+    margin-right: $marginLeftRight;
+  }
+  @if $paddingLeftRight==1 {
+    $paddingLeftRight: gutter(12);
+    padding-left: $paddingLeftRight;
+    padding-right: $paddingLeftRight;
+  }
+  @include clearfix;
+}
+
+@mixin bg($size:cover) {
+  background-repeat: no-repeat !important;
+  background-size: $size !important;
+  background-position: center !important;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin ff($content, $font-size:1rem, $color:#000) {
+  font-family: FontAwesome;
+  content: $content;
+  font-size: $font-size;
+  color: $color;
+  vertical-align: middle;
+}
+
+@mixin trans($time:0.4s) {
+  -webkit-transition: ease $time all;
+  -moz-transition: ease $time all;
+  -ms-transition: ease $time all;
+  -o-transition: ease $time all;
+  transition: ease $time all;
+}
+
+@mixin b($pixel, $type:max-width) {
+  @include breakpoint($type $pixel) {
+    @content;
+  }
+}
+
+@mixin cg {
+  &.views-row-odd,
+  &.views-row-even {
+    margin: 0;
+    float: none;
+    @content;
+  }
+}
+
+@mixin os {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin osl {
+  font-family: 'Open Sans Light';
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin osb {
+  font-family: 'Open Sans Bold';
+  font-weight: bold;
+  font-style: normal;
+}
