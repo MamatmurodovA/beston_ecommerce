@@ -197,7 +197,7 @@
 
 <script>
   export default {
-    name: 'Section-top'
+    name: 'SectionTop'
   }
 </script>
 

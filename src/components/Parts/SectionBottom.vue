@@ -103,7 +103,7 @@
 
 <script>
   export default {
-    name: 'Section-bottom'
+    name: 'SectionBottom'
   }
 </script>
 

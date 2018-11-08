@@ -13,7 +13,7 @@
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                    <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                     <a href=""><i class="fa fa-eye"></i></a>
                   </div>
                   <div class="title">
@@ -173,7 +173,7 @@
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                    <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                     <a href=""><i class="fa fa-eye"></i></a>
                   </div>
                   <div class="title">
@@ -248,7 +248,7 @@
               <div class="image"><img src="images/prod1.png"></div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">Best price waste essential oil distillation equipment Beston</div>
@@ -258,7 +258,7 @@
               <div class="image"><img src="images/prod1.png"></div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">Best price waste essential oil distillation equipme...</div>
@@ -270,7 +270,7 @@
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">Best price waste essential oil distillation equipme... </div>
@@ -282,7 +282,7 @@
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">
@@ -297,7 +297,7 @@
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">
@@ -312,7 +312,7 @@
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">
@@ -327,7 +327,7 @@
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">
@@ -342,7 +342,7 @@
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">
@@ -362,7 +362,7 @@
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">
@@ -377,7 +377,7 @@
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">
@@ -392,7 +392,7 @@
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">
@@ -407,7 +407,7 @@
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">
@@ -422,7 +422,7 @@
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">
@@ -437,7 +437,7 @@
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">
@@ -452,7 +452,7 @@
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" id="add-fav"><i class="fa fa-heart-o"></i></a>
+                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
                 <a href=""><i class="fa fa-eye"></i></a>
               </div>
               <div class="title">
@@ -471,7 +471,7 @@
 
 <script>
   export default {
-    name: 'Main'
+    name: 'Home'
   }
 </script>
 
