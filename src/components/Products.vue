@@ -13,3 +13,6 @@ export default {
   name: 'Products'
 }
 </script>
+<style lang="scss">
+
+</style>
