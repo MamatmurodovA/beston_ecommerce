@@ -80,21 +80,13 @@ module.exports = {
         use: [
           'vue-style-loader',
           'css-loader',
-          'sass-loader'
+          {
+            loader: 'sass-loader',
+            options: {
+              indentedSyntax: true
+            }
+          }
         ]
-      },
-      {
-        loader: 'sass-resources-loader',
-        options: {
-          resources: [
-            path.resolve(__dirname, '../src/assets/scss/fonts.scss'),
-            path.resolve(__dirname, '../src/assets/scss/variables.scss'),
-            path.resolve(__dirname, '../src/assets/scss/mixin.scss'),
-            path.resolve(__dirname, '../src/assets/scss/grids.scss'),
-            path.resolve(__dirname, '../src/assets/scss/reset.scss'),
-            path.resolve(__dirname, '../src/assets/scss/main.scss'),
-          ]
-        }
       }
     ]
   },
