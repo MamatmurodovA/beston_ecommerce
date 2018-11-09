@@ -41,6 +41,19 @@ exports.cssLoaders = function (options) {
         })
       })
     }
+    if (loader === 'sass') {
+      loaders.push({
+        loader: 'sass-resources-loader',
+        options: {
+          resources: [
+            '/var/www/js_projects/vueapps/beston_front/src/assets/scss/_variables.scss',
+            '/var/www/js_projects/vueapps/beston_front/src/assets/scss/_mixin.scss',
+            '/var/www/js_projects/vueapps/beston_front/src/assets/scss/_grids.scss',
+            '/var/www/js_projects/vueapps/beston_front/src/assets/scss/_reset.scss',
+          ]
+        },
+      });
+    }
 
     // Extract CSS when that option is specified
     // (which is the case during production build)

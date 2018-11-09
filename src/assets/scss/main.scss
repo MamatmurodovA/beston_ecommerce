@@ -92,7 +92,7 @@ a, input, textarea, select, option, button {
         height: 110px;
         border-right: 1px solid #f0f2f7;
         #burger1{
-          background-image: url("../static/images/burger.png");
+          background-image: url("/src/assets/images/burger.png");
           width: 20px;
           height: 14px;
         }
@@ -327,7 +327,7 @@ a, input, textarea, select, option, button {
           }
         }
         &::before{
-          content: url('../static/images/arrow-search.png');
+          content: url('/src/assets/images/arrow-search.png');
           opacity: .6;
           width: 10px;
           height: 17px;
@@ -380,7 +380,7 @@ a, input, textarea, select, option, button {
         height: 110px;
         border-right: 1px solid #f0f2f7;
         #burger2{
-          background-image: url('../static/images/burger.png');
+          background-image: url('/src/assets/images/burger.png');
           width: 20px;
           height: 14px;
         }
@@ -434,7 +434,7 @@ a, input, textarea, select, option, button {
             z-index: 2;
           }
           &::before{
-            content: url('../static/images/arrow-search.png');
+            content: url('/src/assets/images/arrow-search.png');
             opacity: .6;
             width: 10px;
             height: 17px;
@@ -512,7 +512,7 @@ a, input, textarea, select, option, button {
             font-size: 14px;
             &:before{
               content: '';
-              background: url('../static/images/arrow-orange.png');
+              background: url('/src/assets/images/arrow-orange.png');
             }
             .button{
               padding: 10px;
@@ -567,7 +567,7 @@ a, input, textarea, select, option, button {
             font-size: 14px;
             &:before{
               content: '';
-              background: url('../static/images/arrow-orange.png');
+              background: url('/src/assets/images/arrow-orange.png');
             }
             .button{
               padding: 10px;
@@ -1296,7 +1296,7 @@ a, input, textarea, select, option, button {
 
       }
       .item:nth-child(1){
-        background: url('../static/images/offer1.png');
+        background: url('/src/assets/images/offer1.png');
         background-repeat: no-repeat;
         .offer{
           width: 200px;
@@ -1325,7 +1325,7 @@ a, input, textarea, select, option, button {
         }
       }
       .item:nth-child(2){
-        background: url('../static/images/offer2.png');
+        background: url('/src/assets/images/offer2.png');
         background-repeat: no-repeat;
         margin: 0 29px;
         .offer{
@@ -1356,7 +1356,7 @@ a, input, textarea, select, option, button {
         }
       }
       .item:nth-child(3){
-        background: url('../static/images/offer3.png');
+        background: url('/src/assets/images/offer3.png');
         background-repeat: no-repeat;
         .offer{
           width: 150px;
@@ -3610,7 +3610,7 @@ a, input, textarea, select, option, button {
                   width: 30px;
                   height: 20px;
                   margin-right: 4px;
-                  background-image: url("../static/images/payments.png");
+                  background-image: url("/src/assets/images/payments.png");
                   background-repeat: no-repeat;
                 }
                 .visa{
