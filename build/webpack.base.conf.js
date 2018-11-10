@@ -88,13 +88,6 @@ module.exports = {
           },
           {
             loader: 'sass-resources-loader',
-            options: {
-              // Provide path to the file with resources
-
-              // Or array of paths
-              resources: [
-              ]
-            },
           },
         ]
       }

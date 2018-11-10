@@ -41,15 +41,16 @@ exports.cssLoaders = function (options) {
         })
       })
     }
+    const  root_dir = path.dirname(path.resolve(__dirname))
     if (loader === 'sass') {
       loaders.push({
         loader: 'sass-resources-loader',
         options: {
           resources: [
-            '/var/www/js_projects/vueapps/beston_front/src/assets/scss/_variables.scss',
-            '/var/www/js_projects/vueapps/beston_front/src/assets/scss/_mixin.scss',
-            '/var/www/js_projects/vueapps/beston_front/src/assets/scss/_grids.scss',
-            '/var/www/js_projects/vueapps/beston_front/src/assets/scss/_reset.scss',
+            path.resolve(root_dir, 'src/assets/scss/_variables.scss'),
+            path.resolve(root_dir, 'src/assets/scss/_mixin.scss'),
+            path.resolve(root_dir, 'src/assets/scss/_grids.scss'),
+            path.resolve(root_dir, 'src/assets/scss/_reset.scss'),
           ]
         },
       });
