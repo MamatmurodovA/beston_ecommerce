@@ -637,7 +637,7 @@
       }
       #right {
         @include span(3 last);
-        width: 265px;
+        width: 20%;
         #new-prod,
         #recent-prod {
           .block-title {
