@@ -2,76 +2,76 @@
   <section id="section-bottom">
     <div id="partners">
       <div class="block-title">
-        <div><img src="images/partners-line.png"></div>
+        <div><img src="/static/images/partners-line.png"></div>
         <h2>Partners</h2>
-        <div><img src="images/partners-line.png"></div>
+        <div><img src="/static/images/partners-line.png"></div>
       </div>
       <div class="owl-carousel">
         <div class="item">
           <a href="">
-            <img src="images/clientlogo1.png">
+            <img src="/static/images/clientlogo1.png">
           </a>
         </div>
         <div class="item">
           <a href="">
-            <img src="images/clientlogo2.png">
+            <img src="/static/images/clientlogo2.png">
           </a>
         </div>
         <div class="item">
           <a href="">
-            <img src="images/clientlogo3.png">
+            <img src="/static/images/clientlogo3.png">
           </a>
         </div>
         <div class="item">
           <a href="">
-            <img src="images/clientlogo4.png">
+            <img src="/static/images/clientlogo4.png">
           </a>
         </div>
         <div class="item">
           <a href="">
-            <img src="images/clientlogo5.png">
+            <img src="/static/images/clientlogo5.png">
           </a>
         </div>
         <div class="item">
           <a href="">
-            <img src="images/clientlogo6.png">
+            <img src="/static/images/clientlogo6.png">
           </a>
         </div>
         <div class="item">
           <a href="">
-            <img src="images/clientlogo7.png">
+            <img src="/static/images/clientlogo7.png">
           </a>
         </div>
         <div class="item">
           <a href="">
-            <img src="images/clientlogo1.png">
+            <img src="/static/images/clientlogo1.png">
           </a>
         </div>
         <div class="item">
           <a href="">
-            <img src="images/clientlogo2.png">
+            <img src="/static/images/clientlogo2.png">
           </a>
         </div>
         <div class="item">
           <a href="">
-            <img src="images/clientlogo3.png">
+            <img src="/static/images/clientlogo3.png">
           </a>
         </div>
       </div>
     </div>
     <div id="description">
       <div>
-        <img src="images/ship.png">
+        <img src="/static/images/ship.png">
         <p>Free Shipping</p>
         <span>Free Shipping on World <br> wide Order</span>
       </div>
       <div>
-        <img src="images/trust.png">
+        <img src="/static/images/trust.png">
         <p>Trusted Pay</p>
         <span>100% Payment Protection & <br> Easy Return</span>
       </div>
       <div>
-        <img src="images/pay.png">
+        <img src="/static/images/pay.png">
         <p>Secured Payment</p>
         <span>All Major Credit & Debit Cards <br> Accepted</span>
       </div>
@@ -80,7 +80,7 @@
       <div id="newsletter">
         <div class="left">
           <div class="signup">
-            <img src="images/signup_footer.png">
+            <img src="/static/images/signup_footer.png">
             <p>SIGNUP TO <br> NEWSLETTER</p>
           </div>
           <form class="form">

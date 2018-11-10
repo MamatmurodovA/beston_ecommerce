@@ -3,7 +3,7 @@
       <Header></Header>
       <Navbar></Navbar>
       <SectionTop></SectionTop>
-      <RouterView></RouterView>
+      <router-view></router-view>
       <Underground></Underground>
       <SectionBottom></SectionBottom>
       <Footer></Footer>
@@ -22,14 +22,14 @@
 
   export default {
     name: 'HomeBase',
-    components: [
+    components: {
       Header,
       Navbar,
       SectionTop,
       SectionBottom,
       Underground,
       Footer
-    ]
+    }
   }
 </script>
 

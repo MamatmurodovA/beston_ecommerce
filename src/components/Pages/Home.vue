@@ -9,7 +9,7 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod1.png">
+                    <img src="/static/images/prod1.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod2.png">
+                    <img src="/static/images/prod2.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod2.png">
+                    <img src="/static/images/prod2.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod5.png">
+                    <img src="/static/images/prod5.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -73,7 +73,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod3.png">
+                    <img src="/static/images/prod3.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod1.png">
+                    <img src="/static/images/prod1.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod4.png">
+                    <img src="/static/images/prod4.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -121,7 +121,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod2.png">
+                    <img src="/static/images/prod2.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -137,7 +137,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod5.png">
+                    <img src="/static/images/prod5.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod3.png">
+                    <img src="/static/images/prod3.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -169,7 +169,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod1.png">
+                    <img src="/static/images/prod1.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -185,7 +185,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod2.png">
+                    <img src="/static/images/prod2.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -201,7 +201,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod2.png">
+                    <img src="/static/images/prod2.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -217,7 +217,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img src="images/prod5.png">
+                    <img src="/static/images/prod5.png">
                   </div>
                   <div class="cart">
                     <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -245,7 +245,7 @@
           <h2 class="block-title">New product</h2>
           <div class="block-content">
             <div class="item">
-              <div class="image"><img src="images/prod1.png"></div>
+              <div class="image"><img src="/static/images/prod1.png"></div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
                 <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
@@ -255,7 +255,7 @@
               <div class="price">US $30,000 - 180,000 / Set</div>
             </div>
             <div class="item">
-              <div class="image"><img src="images/prod1.png"></div>
+              <div class="image"><img src="/static/images/prod1.png"></div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
                 <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
@@ -266,7 +266,7 @@
             </div>
             <div class="item">
               <div class="image">
-                <img src="images/prod2.png">
+                <img src="/static/images/prod2.png">
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -278,7 +278,7 @@
             </div>
             <div class="item">
               <div class="image">
-                <img src="images/prod3.png">
+                <img src="/static/images/prod3.png">
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -293,7 +293,7 @@
             </div>
             <div class="item">
               <div class="image">
-                <img src="images/prod4.png">
+                <img src="/static/images/prod4.png">
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -308,7 +308,7 @@
             </div>
             <div class="item">
               <div class="image">
-                <img src="images/prod5.png">
+                <img src="/static/images/prod5.png">
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -323,7 +323,7 @@
             </div>
             <div class="item">
               <div class="image">
-                <img src="images/prod1.png">
+                <img src="/static/images/prod1.png">
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -338,7 +338,7 @@
             </div>
             <div class="item">
               <div class="image">
-                <img src="images/prod2.png">
+                <img src="/static/images/prod2.png">
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -358,7 +358,7 @@
           <div class="block-content">
             <div class="item">
               <div class="image">
-                <img src="images/prod1.png">
+                <img src="/static/images/prod1.png">
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -373,7 +373,7 @@
             </div>
             <div class="item">
               <div class="image">
-                <img src="images/prod2.png">
+                <img src="/static/images/prod2.png">
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -388,7 +388,7 @@
             </div>
             <div class="item">
               <div class="image">
-                <img src="images/prod3.png">
+                <img src="/static/images/prod3.png">
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -403,7 +403,7 @@
             </div>
             <div class="item">
               <div class="image">
-                <img src="images/prod4.png">
+                <img src="/static/images/prod4.png">
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -418,7 +418,7 @@
             </div>
             <div class="item">
               <div class="image">
-                <img src="images/prod5.png">
+                <img src="/static/images/prod5.png">
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -433,7 +433,7 @@
             </div>
             <div class="item">
               <div class="image">
-                <img src="images/prod1.png">
+                <img src="/static/images/prod1.png">
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -448,7 +448,7 @@
             </div>
             <div class="item">
               <div class="image">
-                <img src="images/prod2.png">
+                <img src="/static/images/prod2.png">
               </div>
               <div class="cart">
                 <a href=""><i class="fa fa-shopping-cart"></i></a>
@@ -465,7 +465,7 @@
         </section>
       </div>
     </div>
-    <div id="major"><a href="#"><img src="images/major.png"></a></div>
+    <div id="major"><a href="#"><img src="/static/images/major.png"></a></div>
   </section>
 </template>
 

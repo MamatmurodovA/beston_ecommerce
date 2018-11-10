@@ -3,15 +3,15 @@
     <div id="top">
       <div id="navbar">
         <div class="burger1"><a href="#" id="burger1"></a></div>
-        <div class="logo"><a href=""><img src="images/logo-top.png"></a></div>
-        <div class="reclame"><img src="images/reclame.png"></div>
+        <div class="logo"><a href=""><img src="/static/images/logo-top.png"></a></div>
+        <div class="reclame"><img src="/static/images/reclame.png"></div>
         <ul class="menu">
           <li id="cart1">
-            <a href="#"><img src="images/shopping-cart-icon.png" alt="shopping cart">CART</a>
+            <a href="#"><img src="/static/images/shopping-cart-icon.png" alt="shopping cart">CART</a>
             <h2 id="value">0</h2>
           </li>
           <li id="cart1_hide">
-            <a href="#"><img src="images/shopping-cart-icon.png" alt="shopping cart">CART</a>
+            <a href="#"><img src="/static/images/shopping-cart-icon.png" alt="shopping cart">CART</a>
             <h2 id="value_hide">0</h2>
           </li>
           <li id="reg">
@@ -21,7 +21,7 @@
           <!-- <li id="sign2"><a href="pages/profile_page_merchant.html">Merchant profile</a></li> -->
           <div id="cartview">
             <div class="item">
-              <img src="images/cartview.png">
+              <img src="/static/images/cartview.png">
               <div class="description">
                 <h2>Halogen Room Handwear</h2>
                 <p>$125.00 x2</p>
@@ -29,7 +29,7 @@
               <a href="" id="delete"><p>X</p></a>
             </div>
             <div class="item">
-              <img src="images/cartview.png">
+              <img src="/static/images/cartview.png">
               <div class="description">
                 <h2>Shaving Cream, 100 gm</h2>
                 <p>$75.00 x1</p>
@@ -37,7 +37,7 @@
               <a href="" id="delete"><p>X</p></a>
             </div>
             <div class="item">
-              <img src="images/cartview.png">
+              <img src="/static/images/cartview.png">
               <div class="description">
                 <h2>Shaving Cream, 100 gm</h2>
                 <p>$75.00 x1</p>
@@ -45,7 +45,7 @@
               <a href="" id="delete"><p>X</p></a>
             </div>
             <div class="item">
-              <img src="images/cartview.png">
+              <img src="/static/images/cartview.png">
               <div class="description">
                 <h2>Shaving Cream, 100 gm</h2>
                 <p>$75.00 x1</p>
@@ -53,7 +53,7 @@
               <a href="" id="delete"><p>X</p></a>
             </div>
             <div class="item">
-              <img src="images/cartview.png">
+              <img src="/static/images/cartview.png">
               <div class="description">
                 <h2>Shaving Cream, 100 gm</h2>
                 <p>$75.00 x1</p>
@@ -68,9 +68,9 @@
           </div>
         </ul>
         <div class="languages">
-          <a href=""><p>Uz</p><img src="images/uz.png" alt=""></a>
-          <a href=""><p>Ru</p><img src="images/ru.png" alt=""></a>
-          <a href="" class="active"><p>En</p><img src="images/en.png" alt=""></a>
+          <a href=""><p>Uz</p><img src="/static/images/uz.png" alt=""></a>
+          <a href=""><p>Ru</p><img src="/static/images/ru.png" alt=""></a>
+          <a href="" class="active"><p>En</p><img src="/static/images/en.png" alt=""></a>
         </div>
       </div>
     </div>
@@ -92,14 +92,14 @@
             <option>Concrete Mixer</option>
             <option>Concrete Mixing Plant</option>
           </select>
-          <button type="submit" class="search_button"><img src="images/search-icon.png"></button>
+          <button type="submit" class="search_button"><img src="/static/images/search-icon.png"></button>
         </form>
       </div>
     </div>
     <div id="top_fixed">
       <div id="navbar_fixed">
         <div class="burger2"><a href="#" id="burger2"></a></div>
-        <div class="logo"><a href=""><img src="images/logo-top.png"></a></div>
+        <div class="logo"><a href=""><img src="/static/images/logo-top.png"></a></div>
         <div id="search">
           <form class="form">
             <input type="text" class="search_panel" placeholder="Search...">
@@ -117,16 +117,16 @@
               <option>Concrete Mixer</option>
               <option>Concrete Mixing Plant</option>
             </select>
-            <button type="submit" class="search_button"><img src="images/search-icon.png"></button>
+            <button type="submit" class="search_button"><img src="/static/images/search-icon.png"></button>
           </form>
         </div>
         <ul class="menu">
           <li id="cart2">
-            <a href="#"><img src="images/shopping-cart-icon.png" alr="shopping cart">CART</a>
+            <a href="#"><img src="/static/images/shopping-cart-icon.png" alr="shopping cart">CART</a>
             <h2 id="value">0</h2>
           </li>
           <li id="cart2_hide">
-            <a href="#"><img src="images/shopping-cart-icon.png" alr="shopping cart">CART</a>
+            <a href="#"><img src="/static/images/shopping-cart-icon.png" alr="shopping cart">CART</a>
             <h2 id="value_hide">0</h2>
           </li>
           <li id="reg">
@@ -399,7 +399,7 @@
             }
           }
           &::before{
-            content: url('../../assets/images/arrow-search.png');
+            content: url('/static/images/arrow-search.png');
             opacity: .6;
             width: 10px;
             height: 17px;
@@ -452,7 +452,7 @@
           height: 110px;
           border-right: 1px solid #f0f2f7;
           #burger2{
-            background-image: url('../../assets/images/burger.png');
+            background-image: url('/static/images/burger.png');
             width: 20px;
             height: 14px;
           }
@@ -506,7 +506,7 @@
               z-index: 2;
             }
             &::before{
-              content: url('../../assets/images/arrow-search.png');
+              content: url('/static/images/arrow-search.png');
               opacity: .6;
               width: 10px;
               height: 17px;
@@ -584,7 +584,7 @@
               font-size: 14px;
               &:before{
                 content: '';
-                background: url('../../assets/images/arrow-orange.png');
+                background: url('/static/images/arrow-orange.png');
               }
               .button{
                 padding: 10px;

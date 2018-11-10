@@ -2,7 +2,7 @@
   <footer id="footer">
     <div class="footer-top">
       <div class="info">
-        <img src="images/logo-foot.png">
+        <img src="/static/images/logo-foot.png">
         <p>
           <strong>Address:</strong> 9 Floor, Building A, Central China Electronic Commerce Port, South <br> Daxue Rd., Erqi District, Zhengzhou, Henan, China (Mainland)
         </p><br>
@@ -68,7 +68,7 @@
                         Site developed by <br>
                         Design Studio
                     </span>
-          <img src="images/dst.png">
+          <img src="/static/images/dst.png">
         </div>
       </div>
       <div class="chat">

@@ -10,7 +10,7 @@
             <div class="date">
               <span>24</span><span>dec</span>
             </div>
-            <div class="image"><a href=""><img src="images/news1.png"></a></div>
+            <div class="image"><a href=""><img src="/static/images/news1.png"></a></div>
             <div class="title"><a href="">Sed ut perspiciatis unde omnis iste natus</a></div>
             <div class="body"><p>Sed ut perspicihhhhhatis unde omnis iste natus error sit voluptatem accusantium doloremque lau</p></div>
             <div class="link"><a href="">Read more</a></div>
@@ -19,7 +19,7 @@
             <div class="date">
               <span>24</span><span>dec</span>
             </div>
-            <div class="image"><a href=""><img src="images/news2.png"></a></div>
+            <div class="image"><a href=""><img src="/static/images/news2.png"></a></div>
             <div class="title"><a href="">Sed ut perspiciatis unde omnis iste natus</a></div>
             <div class="body"><p>Sed ut perspicihhhhhatis unde omnis iste natus error sit voluptatem accusantium doloremque lau</p></div>
             <div class="link"><a href="">Read more</a></div>
@@ -28,7 +28,7 @@
             <div class="date">
               <span>24</span><span>dec</span>
             </div>
-            <div class="image"><a href=""><img src="images/news3.png"></a></div>
+            <div class="image"><a href=""><img src="/static/images/news3.png"></a></div>
             <div class="title"><a href="">Sed ut perspiciatis unde omnis iste natus</a></div>
             <div class="body"><p>Sed ut perspicihhhhhatis unde omnis iste natus error sit voluptatem accusantium doloremque lau</p></div>
             <div class="link"><a href="">Read more</a></div>
@@ -37,7 +37,7 @@
       </section>
       <section id="news-baner">
         <a href="">
-          <img src="images/news-baner.png">
+          <img src="/static/images/news-baner.png">
         </a>
       </section>
     </div>

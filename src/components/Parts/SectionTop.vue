@@ -10,7 +10,7 @@
           </a>
           <ul id="category_menu">
             <li class="category_list">
-              <a href="pages/product_list_page.html">Rubber Product Making Machinery</a><img src="images/arrow.png">
+              <a href="pages/product_list_page.html">Rubber Product Making Machinery</a><img src="/static/images/arrow.png">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="pages/subcategory_page.html">Rubber Product Making Machinery</a></li>
                 <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
@@ -21,7 +21,7 @@
               </ul>
             </li>
             <li class="category_list">
-              <a href="">Plastic Pellet Machine</a><img src="images/arrow.png">
+              <a href="">Plastic Pellet Machine</a><img src="/static/images/arrow.png">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="">Rubber Product Making Machinery</a></li>
                 <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
@@ -36,7 +36,7 @@
               </ul>
             </li>
             <li class="category_list">
-              <a href="">Urban Garbage Sorting Plant</a><img src="images/arrow.png">
+              <a href="">Urban Garbage Sorting Plant</a><img src="/static/images/arrow.png">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="">Rubber Product Making Machinery</a></li>
                 <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
@@ -44,7 +44,7 @@
               </ul>
             </li>
             <li class="category_list">
-              <a href="">Solid Waste Pyrolysis Machine</a><img src="images/arrow.png">
+              <a href="">Solid Waste Pyrolysis Machine</a><img src="/static/images/arrow.png">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="">Rubber Product Making Machinery</a></li>
                 <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
@@ -55,7 +55,7 @@
               </ul>
             </li>
             <li class="category_list">
-              <a href="">Oil Distillation Machine</a><img src="images/arrow.png">
+              <a href="">Oil Distillation Machine</a><img src="/static/images/arrow.png">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="">Rubber Product Making Machinery</a></li>
                 <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
@@ -70,14 +70,14 @@
               </ul>
             </li>
             <li class="category_list">
-              <a href="">Biomass Carbonization Furnace</a><img src="images/arrow.png">
+              <a href="">Biomass Carbonization Furnace</a><img src="/static/images/arrow.png">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="">Rubber Product Making Machinery</a></li>
                 <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
               </ul>
             </li>
             <li class="category_list">
-              <a href="">Carbon Black Processing Machine</a><img src="images/arrow.png">
+              <a href="">Carbon Black Processing Machine</a><img src="/static/images/arrow.png">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="">Rubber Product Making Machinery</a></li>
                 <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
@@ -89,7 +89,7 @@
               </ul>
             </li>
             <li class="category_list">
-              <a href="">Biomass Pellet Machine</a><img src="images/arrow.png">
+              <a href="">Biomass Pellet Machine</a><img src="/static/images/arrow.png">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="">Subcategory 1</a></li>
                 <li class="sub_list"><a href="">Subcategory 2</a></li>
@@ -104,7 +104,7 @@
               </ul>
             </li>
             <li class="category_list">
-              <a href="">Tyre Pretreating Machine</a><img src="images/arrow.png">
+              <a href="">Tyre Pretreating Machine</a><img src="/static/images/arrow.png">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="">Subcategory 1</a></li>
                 <li class="sub_list"><a href="">Subcategory 2</a></li>
@@ -119,7 +119,7 @@
               </ul>
             </li>
             <li class="category_list">
-              <a href="">Concrete Mixer</a><img src="images/arrow.png">
+              <a href="">Concrete Mixer</a><img src="/static/images/arrow.png">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="">Subcategory 1</a></li>
                 <li class="sub_list"><a href="">Subcategory 2</a></li>
@@ -134,7 +134,7 @@
               </ul>
             </li>
             <li class="category_list">
-              <a href="">Concrete Mixing Plant</a><img src="images/arrow.png">
+              <a href="">Concrete Mixing Plant</a><img src="/static/images/arrow.png">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="">Subcategory 1</a></li>
                 <li class="sub_list"><a href="">Subcategory 2</a></li>
@@ -153,20 +153,16 @@
       </section>
     </div>
     <div class="main">
-      <div class="owl-carousel">
-        <div class="item">
-          <img src="images/slider-image.png">
-        </div>
-        <div class="item">
-          <img src="images/slider-image.png">
-        </div>
-        <div class="item">
-          <img src="images/slider-image.png">
-        </div>
-        <div class="item">
-          <img src="images/slider-image.png">
-        </div>
-      </div>
+      <swiper >
+        <swiper-slide v-for="(image, key) in banner_images" :key="key">
+            <div class="item">
+              <img :src="image">
+            </div>
+        </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </swiper>
       <div class="aside">
         <div class="item">
           <div class="offer">
@@ -196,8 +192,25 @@
 </template>
 
 <script>
+
+  import { swiper, swiperSlide } from 'vue-awesome-swiper'
   export default {
-    name: 'SectionTop'
+    name: 'SectionTop',
+    components: {
+      swiper,
+      swiperSlide
+    },
+    data(){
+      return {
+          banner_images: [
+            "/static/images/slider-image.png",
+            "/static/images/slider-image.png",
+            "/static/images/slider-image.png",
+            "/static/images/slider-image.png"
+          ],
+
+      }
+    }
   }
 </script>
 
@@ -361,7 +374,7 @@
 
         }
         .item:nth-child(1){
-          background: url('../../assets/images/offer1.png');
+          background: url('/static/images/offer1.png');
           background-repeat: no-repeat;
           .offer{
             width: 200px;
@@ -390,7 +403,7 @@
           }
         }
         .item:nth-child(2){
-          background: url('../../assets/images/offer2.png');
+          background: url('/static/images/offer2.png');
           background-repeat: no-repeat;
           margin: 0 29px;
           .offer{
@@ -421,7 +434,7 @@
           }
         }
         .item:nth-child(3){
-          background: url('../../assets/images/offer3.png');
+          background: url('/static/images/offer3.png');
           background-repeat: no-repeat;
           .offer{
             width: 150px;
