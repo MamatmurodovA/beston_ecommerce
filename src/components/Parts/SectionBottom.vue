@@ -6,56 +6,23 @@
         <h2>Partners</h2>
         <div><img src="/static/images/partners-line.png"></div>
       </div>
-      <div class="owl-carousel">
-        <div class="item">
-          <a href="">
-            <img src="/static/images/clientlogo1.png">
-          </a>
-        </div>
-        <div class="item">
-          <a href="">
-            <img src="/static/images/clientlogo2.png">
-          </a>
-        </div>
-        <div class="item">
-          <a href="">
-            <img src="/static/images/clientlogo3.png">
-          </a>
-        </div>
-        <div class="item">
-          <a href="">
-            <img src="/static/images/clientlogo4.png">
-          </a>
-        </div>
-        <div class="item">
-          <a href="">
-            <img src="/static/images/clientlogo5.png">
-          </a>
-        </div>
-        <div class="item">
-          <a href="">
-            <img src="/static/images/clientlogo6.png">
-          </a>
-        </div>
-        <div class="item">
-          <a href="">
-            <img src="/static/images/clientlogo7.png">
-          </a>
-        </div>
-        <div class="item">
-          <a href="">
-            <img src="/static/images/clientlogo1.png">
-          </a>
-        </div>
-        <div class="item">
-          <a href="">
-            <img src="/static/images/clientlogo2.png">
-          </a>
-        </div>
-        <div class="item">
-          <a href="">
-            <img src="/static/images/clientlogo3.png">
-          </a>
+      <div class="partners-carousel">
+        <swiper :options="partners_carousel_options" class="partners-wrapper">
+            <swiper-slide  v-for="(partner, index) in partners" :key="index">
+              <div class="item">
+                <a :href="partner">
+                  <img :src="partner">
+                </a>
+              </div>
+            </swiper-slide>
+        </swiper>
+        <div class="partners-control">
+          <button type="button"  class="partners-control-prev">
+            <span aria-label="Previous">‹</span>
+          </button>
+          <button type="button" class="partners-control-next">
+            <span aria-label="Next">›</span>
+          </button>
         </div>
       </div>
     </div>
@@ -102,8 +69,42 @@
 </template>
 
 <script>
+
   export default {
-    name: 'SectionBottom'
+    name: 'SectionBottom',
+    data(){
+      return {
+        partners: [
+          "/static/images/clientlogo1.png",
+          "/static/images/clientlogo2.png",
+          "/static/images/clientlogo3.png",
+          "/static/images/clientlogo4.png",
+          "/static/images/clientlogo5.png",
+          "/static/images/clientlogo6.png",
+          "/static/images/clientlogo7.png",
+          "/static/images/clientlogo2.png",
+          "/static/images/clientlogo3.png",
+          "/static/images/clientlogo4.png",
+          "/static/images/clientlogo5.png",
+          "/static/images/clientlogo6.png",
+          "/static/images/clientlogo7.png",
+          "/static/images/clientlogo3.png",
+          "/static/images/clientlogo4.png",
+          "/static/images/clientlogo5.png",
+          "/static/images/clientlogo6.png",
+          "/static/images/clientlogo7.png",
+        ],
+        partners_carousel_options: {
+          slidesPerView: 6,
+          keyboardControl: true,
+          loop: true,
+          navigation: {
+            nextEl:  '.partners-control-next',
+            prevEl: '.partners-control-prev'
+          }
+        }
+      }
+    }
   }
 </script>
 
@@ -136,12 +137,12 @@
           align-items: center;
         }
       }
-      .owl-carousel{
+      .partners-carousel{
         @include innerbox(0, 0);
-        .owl-stage-outer {
+        .partners-wrapper {
           overflow: hidden;
           padding: 10px 0;
-          .owl-item {
+          .item {
             display: inline-block;
             box-shadow: 0 5px 10px 0 #ccc;
             height: 95px;
@@ -160,15 +161,14 @@
             }
           }
         }
-        .owl-nav {
+        .partners-control {
           display: flex;
           justify-content: center;
           position: absolute;
           left: 0;
           right: 0;
           color: #777777;
-          bottom: 45px;
-          .owl-prev, .owl-next{
+          .partners-control-prev, .partners-control-next{
             margin: 2.5px;
             border: 1px solid #e5e5e5;
             border-radius: 2px;

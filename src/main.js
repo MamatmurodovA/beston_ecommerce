@@ -5,15 +5,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 Vue.config.productionTip = false
 
-Vue.use(VueAwesomeSwiper, {
-  pagination: {
-    el: '.swiper-pagination',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-})
+Vue.use(VueAwesomeSwiper)
 
 import 'swiper/dist/css/swiper.css'
 

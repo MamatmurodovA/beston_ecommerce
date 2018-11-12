@@ -5,236 +5,30 @@
         <section id="toprod">
           <h2 class="block-title">Top products</h2>
           <div class="block-content">
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod1.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    Best price waste essential oil distillation equipment Beston
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod2.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href=""><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    High performance continuous rubber cable pyrolysis plant to fuel oil Beston
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod2.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href=""><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    High performance continuous rubber cable pyrolysis plant to fuel oil Beston
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod5.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href=""><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    Advanced waste engine oil pyrolysis used motor oil filtering recycling...
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod3.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href=""><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    Large yield tyre rubber handling equipment price used tyre cutting mac... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio voluptate quo quis quisquam. Illo iure unde, aspernatur illum corrupti quam!
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod1.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href=""><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    High quality low price waste essential oil distillation equipment
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod4.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href=""><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    Best price waste essential oil distillation equipment Beston
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod2.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href=""><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    High performance continuous rubber cable pyrolysis plant to fuel oil Beston
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod5.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href=""><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    High performance continuous rubber cable pyrolysis plant to fuel oil Beston
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod3.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href=""><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    Best price waste essential oil distillation equipment Beston
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod1.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    Best price waste essential oil distillation equipment Beston
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod2.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href=""><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    High performance continuous rubber cable pyrolysis plant to fuel oil Beston
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod2.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href=""><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    High performance continuous rubber cable pyrolysis plant to fuel oil Beston
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod5.png">
-                  </div>
-                  <div class="cart">
-                    <a href=""><i class="fa fa-shopping-cart"></i></a>
-                    <a href=""><i class="fa fa-heart-o"></i></a>
-                    <a href=""><i class="fa fa-eye"></i></a>
-                  </div>
-                  <div class="title">
-                    Advanced waste engine oil pyrolysis used motor oil filtering recycling...
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
+            <div class="swiper-container top-products-container">
+              <div class="swiper-wrapper top-products-wrapper">
+                <swiper :options="top_products_slider_config">
+                  <swiper-slide v-for="(top_product, index) in top_products" :key="index" class="top-product-item">
+                      <div class="image">
+                        <img :src="top_product">
+                      </div>
+                      <div class="cart">
+                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                        <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                        <a href=""><i class="fa fa-eye"></i></a>
+                      </div>
+                      <div class="title">
+                        Best price waste essential oil distillation equipment Beston
+                      </div>
+                      <div class="price">
+                        US $30,000 - 180,000 / Set
+                      </div>
+                  </swiper-slide>
+                </swiper>
               </div>
-              <div class="swiper-button">
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+              <div class="swiper-button top-products-controls">
+                <div class="swiper-button-next top-products-controls-next"></div>
+                <div class="swiper-button-prev top-products-controls-prev"></div>
               </div>
             </div>
           </div>
@@ -471,7 +265,32 @@
 
 <script>
   export default {
-    name: 'Home'
+    name: 'Home',
+    data(){
+      return {
+        top_products: [
+          "/static/images/prod1.png",
+          "/static/images/prod2.png",
+          "/static/images/prod5.png",
+          "/static/images/prod3.png",
+          "/static/images/prod4.png",
+          "/static/images/prod1.png",
+          "/static/images/prod2.png",
+          "/static/images/prod5.png",
+          "/static/images/prod3.png",
+          "/static/images/prod4.png",
+
+        ],
+        top_products_slider_config: {
+          slidesPerView: 3,
+          slidesPerColumn: 2,
+          navigation: {
+            nextEl:  '.top-products-controls-next',
+            prevEl: '.top-products-controls-prev'
+          }
+        }
+      }
+    }
   }
 </script>
 
@@ -499,10 +318,10 @@
           }
           .block-content {
             font-size: 0;
-            .swiper-container{
+            .top-products-container{
               overflow: visible;
-              .swiper-wrapper {
-                .swiper-slide {
+              .top-products-wrapper {
+                .top-product-item {
                   height: 378px;
                   max-width: 268px;
                   display: flex;
@@ -586,11 +405,11 @@
                   }
                 }
               }
-              .swiper-button{
+              .top-products-controls{
                 position: absolute;
                 top: -47px;
                 right: 40px;
-                .swiper-button-next, .swiper-button-prev{
+                .top-products-controls-next, .top-products-controls-prev{
                   margin: 0 3px;
                   border: 1px solid #ddd;
                   border-radius: 2px;
@@ -618,13 +437,13 @@
                     }
                   }
                 }
-                .swiper-button-prev{
+                .top-products-controls-prev{
                   left: -25px;
                   &::before{
                     content: '\f053';
                   }
                 }
-                .swiper-button-next{
+                .top-products-controls-next{
                   right: -40px;
                   &::before{
                     content: '\f054';
