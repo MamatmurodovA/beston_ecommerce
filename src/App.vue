@@ -19,13 +19,13 @@ export default {
  h1{
    font-size: 24px;
  }
-  #app {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  #main #content #right {
-    width: 20%;
-  }
+  /*#app {*/
+    /*max-width: 1200px;*/
+    /*margin: 0 auto;*/
+  /*}*/
+  /*#main #content #right {*/
+    /*width: 20%;*/
+  /*}*/
   .swiper-container{
     width: 100%;
   }

@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HomeBase from '../components/Base/HomeBase'
 import Home from '../components/Pages/Home'
+import ProductListPage from '../components/Pages/ProductListPage'
+import ProductPageNew from '../components/Pages/ProductPageNew'
 
 Vue.use(Router)
 
@@ -15,6 +17,16 @@ export default new Router({
             path: '/',
             component: Home,
             name: 'HomeBase',
+        },
+        {
+          path: '/products',
+          component: ProductListPage,
+          name: 'ProductLIstPage',
+        },
+        {
+          path: '/ProductPageNew',
+          component: ProductPageNew,
+          name: 'ProductPageNew',
         }
       ]
     }
