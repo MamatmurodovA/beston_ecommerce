@@ -3,7 +3,11 @@
     <div id="top">
       <div id="navbar">
         <div class="burger1"><a href="#" id="burger1"></a></div>
-        <div class="logo"><a href=""><img src="/static/images/logo-top.png"></a></div>
+        <div class="logo">
+          <router-link :to="{name: 'HomeBase'}">
+            <img src="/static/images/logo-top.png">
+          </router-link>
+        </div>
         <div class="reclame"><img src="/static/images/reclame.png"></div>
         <ul class="menu">
           <li id="cart1">

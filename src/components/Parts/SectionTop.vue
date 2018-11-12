@@ -10,7 +10,7 @@
           </a>
           <ul id="category_menu">
             <li class="category_list">
-              <a href="pages/product_list_page.html">Rubber Product Making Machinery</a><img src="/static/images/arrow.png">
+              <a href="/products/">Rubber Product Making Machinery</a><img src="/static/images/arrow.png">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="pages/subcategory_page.html">Rubber Product Making Machinery</a></li>
                 <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
@@ -153,7 +153,7 @@
       </section>
     </div>
     <div class="main">
-      <swiper >
+      <swiper :options="banner_slider_config">
         <swiper-slide v-for="(image, key) in banner_images" :key="key">
             <div class="item">
               <img :src="image">
@@ -208,6 +208,9 @@
             "/static/images/slider-image.png",
             "/static/images/slider-image.png"
           ],
+          banner_slider_config: {
+
+          }
 
       }
     }

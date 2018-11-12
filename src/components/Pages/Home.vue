@@ -284,6 +284,7 @@
         top_products_slider_config: {
           slidesPerView: 3,
           slidesPerColumn: 2,
+          spaceBetween: 30,
           navigation: {
             nextEl:  '.top-products-controls-next',
             prevEl: '.top-products-controls-prev'
