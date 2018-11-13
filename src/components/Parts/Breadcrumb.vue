@@ -15,6 +15,11 @@
         Categories name
       </router-link>
     </li>
+    <li v-if="page.name==='product_detail'">
+        <router-link :to="{name: 'product_detail_page', params: {category_id: 1, id: 1}}">
+            Product detail
+        </router-link>
+    </li>
   </ul>
 </template>
 
@@ -30,6 +35,15 @@
           }
         ]
       }
+    },
+    props: {
+      page: {
+        default: {name: '', params: {}},
+        type: Object
+      }
+    },
+    mounted() {
+      console.log(this.page)
     }
   }
 </script>

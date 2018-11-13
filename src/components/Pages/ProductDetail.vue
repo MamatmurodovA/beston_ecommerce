@@ -1,274 +1,283 @@
 <template>
-  <section class="product-section">
-    <div class="wrapper">
-      <main class="main">
-        <div class="main-product-section">
-          <div class="product-image">
-            <div id="main-product-image">
-              <img id="zoom_01" src="/static/plugins/zoom/images/small/image1.png" data-zoom-image="/static/plugins/zoom/images/large/image1.jpg"/>
-            </div>
-            <div id="other-images">
-              <div class="swiper-container">
-                <div class="swiper-wrapper" id="gal1">
-                  <div class="swiper-slide">
-                    <a href="#" data-image="/static/plugins/zoom/images/small/image1.png" data-zoom-image="/static/plugins/zoom/images/large/image1.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image1.jpg" class="active"/></a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#" data-image="/static/plugins/zoom/images/small/image2.png" data-zoom-image="/static/plugins/zoom/images/large/image2.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image2.jpg" /></a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#" data-image="/static/plugins/zoom/images/small/image3.png" data-zoom-image="/static/plugins/zoom/images/large/image3.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image3.jpg" /></a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#" data-image="/static/plugins/zoom/images/small/image4.png" data-zoom-image="/static/plugins/zoom/images/large/image4.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image4.jpg" /></a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#" data-image="/static/plugins/zoom/images/small/image1.png" data-zoom-image="/static/plugins/zoom/images/large/image1.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image1.jpg" class="active"/></a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#" data-image="/static/plugins/zoom/images/small/image2.png" data-zoom-image="/static/plugins/zoom/images/large/image2.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image2.jpg" /></a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#" data-image="/static/plugins/zoom/images/small/image3.png" data-zoom-image="/static/plugins/zoom/images/large/image3.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image3.jpg" /></a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#" data-image="/static/plugins/zoom/images/small/image4.png" data-zoom-image="/static/plugins/zoom/images/large/image4.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image4.jpg" /></a>
+  <div>
+    <Breadcrumb :page="{name: 'product_detail', params: {}}"></Breadcrumb>
+    <section class="product-section">
+      <div class="wrapper">
+        <main class="main">
+          <div class="main-product-section">
+            <div class="product-image">
+              <div id="main-product-image">
+                <img id="zoom_01" src="/static/plugins/zoom/images/small/image1.png" data-zoom-image="/static/plugins/zoom/images/large/image1.jpg"/>
+              </div>
+              <div id="other-images">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper" id="gal1">
+                    <div class="swiper-slide">
+                      <a href="#" data-image="/static/plugins/zoom/images/small/image1.png" data-zoom-image="/static/plugins/zoom/images/large/image1.jpg">
+                        <img id="img_01" src="/static/plugins/zoom/images/thumb/image1.jpg" class="active"/>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" data-image="/static/plugins/zoom/images/small/image2.png" data-zoom-image="/static/plugins/zoom/images/large/image2.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image2.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" data-image="/static/plugins/zoom/images/small/image3.png" data-zoom-image="/static/plugins/zoom/images/large/image3.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image3.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" data-image="/static/plugins/zoom/images/small/image4.png" data-zoom-image="/static/plugins/zoom/images/large/image4.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image4.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" data-image="/static/plugins/zoom/images/small/image1.png" data-zoom-image="/static/plugins/zoom/images/large/image1.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image1.jpg" class="active"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" data-image="/static/plugins/zoom/images/small/image2.png" data-zoom-image="/static/plugins/zoom/images/large/image2.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image2.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" data-image="/static/plugins/zoom/images/small/image3.png" data-zoom-image="/static/plugins/zoom/images/large/image3.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image3.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" data-image="/static/plugins/zoom/images/small/image4.png" data-zoom-image="/static/plugins/zoom/images/large/image4.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image4.jpg" /></a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="product-description">
-            <div class="description_top">
-              <p id="product_title">Best price waste essential oil distillation equipment Beston</p>
-              <p id="transportation_price">FOB <span>Reference</span> Price:<a href="">Get Latest Price</a></p>
-              <p id="product_price">
-                <span class="set"><b>US $12000 - 250000</b> / Set</span>
-                <span class="piece">1 Piece/Pieces (Min. Order)</span>
-              </p>
-              <p id="supplier_ability"><span>Supply Ability:</span><span>200000 Piece/Pieces per Month</span></p>
-              <form class="buttons">
-                <button id="add-compare"><input type="checkbox"></input><p>Add to compare</p></button>
-                <button id="supplier_mail">Contact supplier</button>
-              </form>
-            </div>
-            <div class="description_bottom">
-              <div class="payments">
-                <p>Payment:</p>
-                <div>
-                  <span class="payment-item visa"></span>
-                  <span class="payment-item mastercard"></span>
-                  <span class="payment-item tt"></span>
-                  <span class="payment-item e-cheking"></span>
-                  <div class="more">
-                    <p class="hover">More <i class="fa fa-angle-down" aria-hidden="true"></i></p>
-                    <div class="also"><p>This supplier also supports L/C,T/T,Western Union payments for offline orders.</p></div>
+            <div class="product-description">
+              <div class="description_top">
+                <p id="product_title">Best price waste essential oil distillation equipment Beston</p>
+                <p id="transportation_price">FOB <span>Reference</span> Price:<a href="">Get Latest Price</a></p>
+                <p id="product_price">
+                  <span class="set"><b>US $12000 - 250000</b> / Set</span>
+                  <span class="piece">1 Piece/Pieces (Min. Order)</span>
+                </p>
+                <p id="supplier_ability"><span>Supply Ability:</span><span>200000 Piece/Pieces per Month</span></p>
+                <form class="buttons">
+                  <button id="add-compare"><input type="checkbox"></input><p>Add to compare</p></button>
+                  <button id="supplier_mail">Contact supplier</button>
+                </form>
+              </div>
+              <div class="description_bottom">
+                <div class="payments">
+                  <p>Payment:</p>
+                  <div>
+                    <span class="payment-item visa"></span>
+                    <span class="payment-item mastercard"></span>
+                    <span class="payment-item tt"></span>
+                    <span class="payment-item e-cheking"></span>
+                    <div class="more">
+                      <p class="hover">More <i class="fa fa-angle-down" aria-hidden="true"></i></p>
+                      <div class="also"><p>This supplier also supports L/C,T/T,Western Union payments for offline orders.</p></div>
+                    </div>
                   </div>
                 </div>
+                <div class="shipping">
+                  <p>Shipping:</p>
+                  <p>Less than Container Load (LCL) Service to US <a href="">Get shipping quote</a></p>
+                </div>
               </div>
-              <div class="shipping">
-                <p>Shipping:</p>
-                <p>Less than Container Load (LCL) Service to US <a href="">Get shipping quote</a></p>
+              <div class="adds">
+                <a href="" class="shop">Add to favorite<i class="fa fa-heart-o"></i></a>
+                <a href="" class="cart">Add to cart<i class="fa fa-shopping-cart"></i></a>
               </div>
-            </div>
-            <div class="adds">
-              <a href="" class="shop">Add to favorite<i class="fa fa-heart-o"></i></a>
-              <a href="" class="cart">Add to cart<i class="fa fa-shopping-cart"></i></a>
             </div>
           </div>
-        </div>
-        <div class="details-block">
-          <h2 class="product-details">Product details</h2>
-          <div class="details-description">
-            <h2 class="overview">Overview</h2>
-            <ul class="details">
-              <li class="quick-details">Quick details</li>
-              <li class="place-of-origin">Place of Origin:<span>Jiangsu, China (Mainland)</span></li>
-              <li class="shape">Shape:<span>Cup-Shaped</span></li>
-              <li class="hardness">Hardness:<span>T</span></li>
-              <li class="application">Application:<span>Stainless Steel, Metal, Aluminiu</span></li>
-              <li class="certificate">Certificate:<span>ISO9001 MPA EN12413</span></li>
-              <li class="type">Type:<span>china grinding wheel</span></li>
-              <li class="speed">Speed:<span>80M/S. 1.88TIMES</span></li>
-              <li class="brand-name">Brand Name:<span>CNDOME or OEM</span></li>
-              <li class="abrasive">Abrasive:<span>Silicon Carbide</span></li>
-              <li class="viscosity">Viscosity:<span>Standrad</span></li>
-              <li class="color">Color:<span>Black Green Red</span></li>
-              <li class="delivery">Delivery Time:<span>Within 30 Days from Receiving Deposit</span></li>
-              <li class="bond">Bond:<span>china grinding wheel</span></li>
-              <li class="model-number">Model Number:<span>T27</span></li>
-              <li class="bonding-agent">Bonding Agent:<span>Resin</span></li>
-              <li class="size">Size:<span></span>4"</li>
-              <li class="material">Material:<span>Aluminum Oxide</span></li>
-              <li class="advantage">Advantage:<span>Higher Efficiency, Durable Use</span></li>
-              <li class="package">Package:<span>200pcs/ctn</span></li>
-            </ul>
-            <ul class="packing-delivery">
-              <li class="packing-and-delivery">Packing and delivery</li>
-              <ul class="packing-details">
-                <li class="details">Packaging Details:</li>
-                <ul>
-                  <li>1) standard exporting kraft carton, 36x23.5x23.5cm, 200pcs, or colourful carton</li>
-                  <li>2) round plastic case is acceptable</li>
-                  <li>3) 100x6x16 China flexible grinding wheel and grinding disc for stainless steel are sealed by plastic</li>
-                  <li>4) all cartons would be wrapped by plastic film and fixed on the pallet.</li>
+          <div class="details-block">
+            <h2 class="product-details">Product details</h2>
+            <div class="details-description">
+              <h2 class="overview">Overview</h2>
+              <ul class="details">
+                <li class="quick-details">Quick details</li>
+                <li class="place-of-origin">Place of Origin:<span>Jiangsu, China (Mainland)</span></li>
+                <li class="shape">Shape:<span>Cup-Shaped</span></li>
+                <li class="hardness">Hardness:<span>T</span></li>
+                <li class="application">Application:<span>Stainless Steel, Metal, Aluminiu</span></li>
+                <li class="certificate">Certificate:<span>ISO9001 MPA EN12413</span></li>
+                <li class="type">Type:<span>china grinding wheel</span></li>
+                <li class="speed">Speed:<span>80M/S. 1.88TIMES</span></li>
+                <li class="brand-name">Brand Name:<span>CNDOME or OEM</span></li>
+                <li class="abrasive">Abrasive:<span>Silicon Carbide</span></li>
+                <li class="viscosity">Viscosity:<span>Standrad</span></li>
+                <li class="color">Color:<span>Black Green Red</span></li>
+                <li class="delivery">Delivery Time:<span>Within 30 Days from Receiving Deposit</span></li>
+                <li class="bond">Bond:<span>china grinding wheel</span></li>
+                <li class="model-number">Model Number:<span>T27</span></li>
+                <li class="bonding-agent">Bonding Agent:<span>Resin</span></li>
+                <li class="size">Size:<span></span>4"</li>
+                <li class="material">Material:<span>Aluminum Oxide</span></li>
+                <li class="advantage">Advantage:<span>Higher Efficiency, Durable Use</span></li>
+                <li class="package">Package:<span>200pcs/ctn</span></li>
+              </ul>
+              <ul class="packing-delivery">
+                <li class="packing-and-delivery">Packing and delivery</li>
+                <ul class="packing-details">
+                  <li class="details">Packaging Details:</li>
+                  <ul>
+                    <li>1) standard exporting kraft carton, 36x23.5x23.5cm, 200pcs, or colourful carton</li>
+                    <li>2) round plastic case is acceptable</li>
+                    <li>3) 100x6x16 China flexible grinding wheel and grinding disc for stainless steel are sealed by plastic</li>
+                    <li>4) all cartons would be wrapped by plastic film and fixed on the pallet.</li>
+                  </ul>
+                </ul>
+                <ul class="delivery-time">
+                  <li>Delivery Time:</li><span>Shipped in 30 days after payment</span>
                 </ul>
               </ul>
-              <ul class="delivery-time">
-                <li>Delivery Time:</li><span>Shipped in 30 days after payment</span>
-              </ul>
-            </ul>
+            </div>
           </div>
-        </div>
-      </main>
-      <aside class="aside">
-        <h2 class="title">You May Like</h2>
-        <div class="related_items">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="image">
-                  <img src="/static/images/prod2.png">
+        </main>
+        <aside class="aside">
+          <h2 class="title">You May Like</h2>
+          <div class="related_items">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="image">
+                    <img src="/static/images/prod2.png">
+                  </div>
+                  <div class="title">
+                    <a href="product_page_new.html">High performance continuous rubber cable pyrolysis plant to fuel oil Beston</a>
+                  </div>
+                  <div class="price">
+                    US $30,000 - 180,000 / Set
+                  </div>
                 </div>
-                <div class="title">
-                  <a href="product_page_new.html">High performance continuous rubber cable pyrolysis plant to fuel oil Beston</a>
+                <div class="swiper-slide">
+                  <div class="image">
+                    <img src="/static/images/prod5.png">
+                  </div>
+                  <div class="title">
+                    Advanced waste engine oil pyrolysis used motor oil filtering recycling...
+                  </div>
+                  <div class="price">
+                    US $30,000 - 180,000 / Set
+                  </div>
                 </div>
-                <div class="price">
-                  US $30,000 - 180,000 / Set
+                <div class="swiper-slide">
+                  <div class="image">
+                    <img src="/static/images/prod3.png">
+                  </div>
+                  <div class="title">
+                    Large yield tyre rubber handling equipment price used tyre cutting mac... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, sunt?
+                  </div>
+                  <div class="price">
+                    US $30,000 - 180,000 / Set
+                  </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image">
-                  <img src="/static/images/prod5.png">
+                <div class="swiper-slide">
+                  <div class="image">
+                    <img src="/static/images/prod2.png">
+                  </div>
+                  <div class="title">
+                    <a href="product_page_new.html">High performance continuous rubber cable pyrolysis plant to fuel oil Beston</a>
+                  </div>
+                  <div class="price">
+                    US $30,000 - 180,000 / Set
+                  </div>
                 </div>
-                <div class="title">
-                  Advanced waste engine oil pyrolysis used motor oil filtering recycling...
+                <div class="swiper-slide">
+                  <div class="image">
+                    <img src="/static/images/prod5.png">
+                  </div>
+                  <div class="title">
+                    Advanced waste engine oil pyrolysis used motor oil filtering recycling...
+                  </div>
+                  <div class="price">
+                    US $30,000 - 180,000 / Set
+                  </div>
                 </div>
-                <div class="price">
-                  US $30,000 - 180,000 / Set
+                <div class="swiper-slide">
+                  <div class="image">
+                    <img src="/static/images/prod3.png">
+                  </div>
+                  <div class="title">
+                    Large yield tyre rubber handling equipment price used tyre cutting mac... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, sunt?
+                  </div>
+                  <div class="price">
+                    US $30,000 - 180,000 / Set
+                  </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image">
-                  <img src="/static/images/prod3.png">
+                <div class="swiper-slide">
+                  <div class="image">
+                    <img src="/static/images/prod2.png">
+                  </div>
+                  <div class="title">
+                    <a href="product_page_new.html">High performance continuous rubber cable pyrolysis plant to fuel oil Beston</a>
+                  </div>
+                  <div class="price">
+                    US $30,000 - 180,000 / Set
+                  </div>
                 </div>
-                <div class="title">
-                  Large yield tyre rubber handling equipment price used tyre cutting mac... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, sunt?
+                <div class="swiper-slide">
+                  <div class="image">
+                    <img src="/static/images/prod5.png">
+                  </div>
+                  <div class="title">
+                    Advanced waste engine oil pyrolysis used motor oil filtering recycling...
+                  </div>
+                  <div class="price">
+                    US $30,000 - 180,000 / Set
+                  </div>
                 </div>
-                <div class="price">
-                  US $30,000 - 180,000 / Set
+                <div class="swiper-slide">
+                  <div class="image">
+                    <img src="/static/images/prod3.png">
+                  </div>
+                  <div class="title">
+                    Large yield tyre rubber handling equipment price used tyre cutting mac... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, sunt?
+                  </div>
+                  <div class="price">
+                    US $30,000 - 180,000 / Set
+                  </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image">
-                  <img src="/static/images/prod2.png">
+                <div class="swiper-slide">
+                  <div class="image">
+                    <img src="/static/images/prod2.png">
+                  </div>
+                  <div class="title">
+                    <a href="product_page_new.html">High performance continuous rubber cable pyrolysis plant to fuel oil Beston</a>
+                  </div>
+                  <div class="price">
+                    US $30,000 - 180,000 / Set
+                  </div>
                 </div>
-                <div class="title">
-                  <a href="product_page_new.html">High performance continuous rubber cable pyrolysis plant to fuel oil Beston</a>
+                <div class="swiper-slide">
+                  <div class="image">
+                    <img src="/static/images/prod5.png">
+                  </div>
+                  <div class="title">
+                    Advanced waste engine oil pyrolysis used motor oil filtering recycling...
+                  </div>
+                  <div class="price">
+                    US $30,000 - 180,000 / Set
+                  </div>
                 </div>
-                <div class="price">
-                  US $30,000 - 180,000 / Set
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image">
-                  <img src="/static/images/prod5.png">
-                </div>
-                <div class="title">
-                  Advanced waste engine oil pyrolysis used motor oil filtering recycling...
-                </div>
-                <div class="price">
-                  US $30,000 - 180,000 / Set
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image">
-                  <img src="/static/images/prod3.png">
-                </div>
-                <div class="title">
-                  Large yield tyre rubber handling equipment price used tyre cutting mac... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, sunt?
-                </div>
-                <div class="price">
-                  US $30,000 - 180,000 / Set
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image">
-                  <img src="/static/images/prod2.png">
-                </div>
-                <div class="title">
-                  <a href="product_page_new.html">High performance continuous rubber cable pyrolysis plant to fuel oil Beston</a>
-                </div>
-                <div class="price">
-                  US $30,000 - 180,000 / Set
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image">
-                  <img src="/static/images/prod5.png">
-                </div>
-                <div class="title">
-                  Advanced waste engine oil pyrolysis used motor oil filtering recycling...
-                </div>
-                <div class="price">
-                  US $30,000 - 180,000 / Set
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image">
-                  <img src="/static/images/prod3.png">
-                </div>
-                <div class="title">
-                  Large yield tyre rubber handling equipment price used tyre cutting mac... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, sunt?
-                </div>
-                <div class="price">
-                  US $30,000 - 180,000 / Set
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image">
-                  <img src="/static/images/prod2.png">
-                </div>
-                <div class="title">
-                  <a href="product_page_new.html">High performance continuous rubber cable pyrolysis plant to fuel oil Beston</a>
-                </div>
-                <div class="price">
-                  US $30,000 - 180,000 / Set
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image">
-                  <img src="/static/images/prod5.png">
-                </div>
-                <div class="title">
-                  Advanced waste engine oil pyrolysis used motor oil filtering recycling...
-                </div>
-                <div class="price">
-                  US $30,000 - 180,000 / Set
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image">
-                  <img src="/static/images/prod3.png">
-                </div>
-                <div class="title">
-                  Large yield tyre rubber handling equipment price used tyre cutting mac... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, sunt?
-                </div>
-                <div class="price">
-                  US $30,000 - 180,000 / Set
+                <div class="swiper-slide">
+                  <div class="image">
+                    <img src="/static/images/prod3.png">
+                  </div>
+                  <div class="title">
+                    Large yield tyre rubber handling equipment price used tyre cutting mac... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, sunt?
+                  </div>
+                  <div class="price">
+                    US $30,000 - 180,000 / Set
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </aside>
-    </div>
-  </section>
+        </aside>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
+  import Breadcrumb from '../Parts/Breadcrumb'
   export default {
-    name: 'ProductPageNew'
+    name: 'ProductDetail',
+    components: {
+        Breadcrumb
+    }
   }
 </script>
 
