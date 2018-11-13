@@ -168,7 +168,7 @@
           height: 110px;
           border-right: 1px solid #f0f2f7;
           #burger1{
-            background-image: url('/src/assets/images/burger.png');
+            background-image: url('/static/images/burger.png');
             width: 20px;
             height: 14px;
           }
