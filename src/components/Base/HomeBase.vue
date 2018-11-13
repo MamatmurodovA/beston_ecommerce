@@ -3,7 +3,6 @@
       <Header></Header>
       <Navbar></Navbar>
       <router-view></router-view>
-      <SectionBottom></SectionBottom>
       <Footer></Footer>
   </div>
 </template>
@@ -12,7 +11,6 @@
 
   import Header from '../Parts/Header'
   import Navbar from '../Parts/Navbar'
-  import SectionBottom from '../Parts/SectionBottom'
   import Footer from '../Parts/Footer'
 
 
@@ -21,7 +19,6 @@
     components: {
       Header,
       Navbar,
-      SectionBottom,
       Footer
     }
   }

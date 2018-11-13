@@ -3,8 +3,9 @@ import Router from 'vue-router'
 import HomeBase from '../components/Base/HomeBase'
 import ProductsBase from '../components/Base/ProductsBase'
 import Home from '../components/Pages/Home'
-import ProductListPage from '../components/Pages/ProductListPage'
-import ProductPageNew from '../components/Pages/ProductPageNew'
+import ProductListPage from '../components/Pages/ProductList'
+import ProductDetail from '../components/Pages/ProductDetail'
+import ProductSubcategory from '../components/Pages/ProductSubcategory'
 
 Vue.use(Router)
 
@@ -17,18 +18,23 @@ export default new Router({
         {
             path: '/',
             component: Home,
-            name: 'HomeBase',
+            name: 'home_page',
         },
         {
-          path: '/products',
+          path: '/category/:category_id',
+          component: ProductSubcategory,
+          name: 'product_category_page',
+        },
+        {
+          path: '/category/:category_id/products/',
           component: ProductListPage,
-          name: 'product_list',
+          name: 'product_list_page',
         },
         {
-          path: '/ProductPageNew',
-          component: ProductPageNew,
-          name: 'ProductPageNew',
-        }
+          path: '/category/:category_id/products/:id',
+          component: ProductDetail,
+          name: 'product_detail_page',
+        },
       ],
     },
   ],

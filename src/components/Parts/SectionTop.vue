@@ -10,7 +10,7 @@
           </a>
           <ul id="category_menu">
             <li class="category_list">
-              <router-link :to="{name: 'product_list'}">
+              <router-link :to="{name: 'product_list_page', params: {'category_id': 1}}">
                 Rubber Product Making Machinery
               </router-link>
               <img src="/static/images/arrow.png">

@@ -4,7 +4,7 @@
       <div id="navbar">
         <div class="burger1"><a href="#" id="burger1"></a></div>
         <div class="logo">
-          <router-link :to="{name: 'HomeBase'}">
+          <router-link :to="{name: 'home_page'}">
             <img src="/static/images/logo-top.png">
           </router-link>
         </div>

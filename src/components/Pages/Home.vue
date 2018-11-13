@@ -264,12 +264,15 @@
       <div id="major"><a href="#"><img src="/static/images/major.png"></a></div>
     </section>
     <Underground></Underground>
+    <SectionBottom></SectionBottom>
   </div>
 </template>
 
 <script>
   import SectionTop from '../Parts/SectionTop'
   import Underground from '../Parts/Underground'
+  import SectionBottom from '../Parts/SectionBottom'
+
   export default {
     name: 'Home',
     data(){
@@ -300,6 +303,7 @@
     },
     components: {
       SectionTop,
+      SectionBottom,
       Underground
     }
   }
