@@ -16,6 +16,7 @@ export default {
   @import "~susy";
   @import "~breakpoint-sass/stylesheets/breakpoint";
   @import "assets/scss/main";
+  @import "../static/plugins/fontawesome/font-awesome.min.css";
  h1{
    font-size: 24px;
  }
