@@ -19,24 +19,18 @@ export default new Router({
             component: Home,
             name: 'HomeBase',
         },
-      ],
-    },
-    {
-      path: '',
-      component: ProductsBase,
-      children: [
         {
           path: '/products',
           component: ProductListPage,
-          name: 'ProductLIstPage',
+          name: 'product_list',
         },
         {
           path: '/ProductPageNew',
           component: ProductPageNew,
           name: 'ProductPageNew',
         }
-      ]
-    }
+      ],
+    },
   ],
   mode: 'history'
 })

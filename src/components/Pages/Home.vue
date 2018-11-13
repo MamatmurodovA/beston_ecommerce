@@ -1,14 +1,16 @@
 <template>
-  <section id="main">
-    <div id="content">
-      <div id="center">
-        <section id="toprod">
-          <h2 class="block-title">Top products</h2>
-          <div class="block-content">
-            <div class="swiper-container top-products-container">
-              <div class="swiper-wrapper top-products-wrapper">
-                <swiper :options="top_products_slider_config">
-                  <swiper-slide v-for="(top_product, index) in top_products" :key="index" class="top-product-item">
+  <div>
+    <SectionTop></SectionTop>
+    <section id="main">
+      <div id="content">
+        <div id="center">
+          <section id="toprod">
+            <h2 class="block-title">Top products</h2>
+            <div class="block-content">
+              <div class="swiper-container top-products-container">
+                <div class="swiper-wrapper top-products-wrapper">
+                  <swiper :options="top_products_slider_config">
+                    <swiper-slide v-for="(top_product, index) in top_products" :key="index" class="top-product-item">
                       <div class="image">
                         <img :src="top_product">
                       </div>
@@ -23,247 +25,251 @@
                       <div class="price">
                         US $30,000 - 180,000 / Set
                       </div>
-                  </swiper-slide>
-                </swiper>
-              </div>
-              <div class="swiper-button top-products-controls">
-                <div class="swiper-button-next top-products-controls-next"></div>
-                <div class="swiper-button-prev top-products-controls-prev"></div>
+                    </swiper-slide>
+                  </swiper>
+                </div>
+                <div class="swiper-button top-products-controls">
+                  <div class="swiper-button-next top-products-controls-next"></div>
+                  <div class="swiper-button-prev top-products-controls-prev"></div>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
+        <div id="right">
+          <section id="new-prod">
+            <h2 class="block-title">New product</h2>
+            <div class="block-content">
+              <div class="item">
+                <div class="image"><img src="/static/images/prod1.png"></div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">Best price waste essential oil distillation equipment Beston</div>
+                <div class="price">US $30,000 - 180,000 / Set</div>
+              </div>
+              <div class="item">
+                <div class="image"><img src="/static/images/prod1.png"></div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">Best price waste essential oil distillation equipme...</div>
+                <div class="price">US $30,000 - 180,000 / Set</div>
+              </div>
+              <div class="item">
+                <div class="image">
+                  <img src="/static/images/prod2.png">
+                </div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">Best price waste essential oil distillation equipme... </div>
+                <div class="price">US $30,000 - 180,000 / Set</div>
+              </div>
+              <div class="item">
+                <div class="image">
+                  <img src="/static/images/prod3.png">
+                </div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">
+                  Best price waste essential oil distillation equipme... </div>
+                <div class="price">
+                  US $30,000 - 180,000 / Set
+                </div>
+              </div>
+              <div class="item">
+                <div class="image">
+                  <img src="/static/images/prod4.png">
+                </div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">
+                  Best price waste essential oil distillation equipme... </div>
+                <div class="price">
+                  US $30,000 - 180,000 / Set
+                </div>
+              </div>
+              <div class="item">
+                <div class="image">
+                  <img src="/static/images/prod5.png">
+                </div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">
+                  Best price waste essential oil distillation equipme... </div>
+                <div class="price">
+                  US $30,000 - 180,000 / Set
+                </div>
+              </div>
+              <div class="item">
+                <div class="image">
+                  <img src="/static/images/prod1.png">
+                </div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">
+                  Best price waste essential oil distillation equipme... </div>
+                <div class="price">
+                  US $30,000 - 180,000 / Set
+                </div>
+              </div>
+              <div class="item">
+                <div class="image">
+                  <img src="/static/images/prod2.png">
+                </div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">
+                  Best price waste essential oil distillation equipme... </div>
+                <div class="price">
+                  US $30,000 - 180,000 / Set
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="recent-prod">
+            <h2 class="block-title">Recently viewed items</h2>
+            <div class="block-content">
+              <div class="item">
+                <div class="image">
+                  <img src="/static/images/prod1.png">
+                </div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">
+                  Best price waste essential oil distillation equipme... </div>
+                <div class="price">
+                  US $30,000 - 180,000 / Set
+                </div>
+              </div>
+              <div class="item">
+                <div class="image">
+                  <img src="/static/images/prod2.png">
+                </div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">
+                  Best price waste essential oil distillation equipme... </div>
+                <div class="price">
+                  US $30,000 - 180,000 / Set
+                </div>
+              </div>
+              <div class="item">
+                <div class="image">
+                  <img src="/static/images/prod3.png">
+                </div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">
+                  Best price waste essential oil distillation equipme... </div>
+                <div class="price">
+                  US $30,000 - 180,000 / Set
+                </div>
+              </div>
+              <div class="item">
+                <div class="image">
+                  <img src="/static/images/prod4.png">
+                </div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">
+                  Best price waste essential oil distillation equipme... </div>
+                <div class="price">
+                  US $30,000 - 180,000 / Set
+                </div>
+              </div>
+              <div class="item">
+                <div class="image">
+                  <img src="/static/images/prod5.png">
+                </div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">
+                  Best price waste essential oil distillation equipme... </div>
+                <div class="price">
+                  US $30,000 - 180,000 / Set
+                </div>
+              </div>
+              <div class="item">
+                <div class="image">
+                  <img src="/static/images/prod1.png">
+                </div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">
+                  Best price waste essential oil distillation equipme... </div>
+                <div class="price">
+                  US $30,000 - 180,000 / Set
+                </div>
+              </div>
+              <div class="item">
+                <div class="image">
+                  <img src="/static/images/prod2.png">
+                </div>
+                <div class="cart">
+                  <a href=""><i class="fa fa-shopping-cart"></i></a>
+                  <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
+                  <a href=""><i class="fa fa-eye"></i></a>
+                </div>
+                <div class="title">
+                  Best price waste essential oil distillation equipme... </div>
+                <div class="price">
+                  US $30,000 - 180,000 / Set
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-      <div id="right">
-        <section id="new-prod">
-          <h2 class="block-title">New product</h2>
-          <div class="block-content">
-            <div class="item">
-              <div class="image"><img src="/static/images/prod1.png"></div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">Best price waste essential oil distillation equipment Beston</div>
-              <div class="price">US $30,000 - 180,000 / Set</div>
-            </div>
-            <div class="item">
-              <div class="image"><img src="/static/images/prod1.png"></div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">Best price waste essential oil distillation equipme...</div>
-              <div class="price">US $30,000 - 180,000 / Set</div>
-            </div>
-            <div class="item">
-              <div class="image">
-                <img src="/static/images/prod2.png">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">Best price waste essential oil distillation equipme... </div>
-              <div class="price">US $30,000 - 180,000 / Set</div>
-            </div>
-            <div class="item">
-              <div class="image">
-                <img src="/static/images/prod3.png">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                Best price waste essential oil distillation equipme... </div>
-              <div class="price">
-                US $30,000 - 180,000 / Set
-              </div>
-            </div>
-            <div class="item">
-              <div class="image">
-                <img src="/static/images/prod4.png">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                Best price waste essential oil distillation equipme... </div>
-              <div class="price">
-                US $30,000 - 180,000 / Set
-              </div>
-            </div>
-            <div class="item">
-              <div class="image">
-                <img src="/static/images/prod5.png">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                Best price waste essential oil distillation equipme... </div>
-              <div class="price">
-                US $30,000 - 180,000 / Set
-              </div>
-            </div>
-            <div class="item">
-              <div class="image">
-                <img src="/static/images/prod1.png">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                Best price waste essential oil distillation equipme... </div>
-              <div class="price">
-                US $30,000 - 180,000 / Set
-              </div>
-            </div>
-            <div class="item">
-              <div class="image">
-                <img src="/static/images/prod2.png">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                Best price waste essential oil distillation equipme... </div>
-              <div class="price">
-                US $30,000 - 180,000 / Set
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="recent-prod">
-          <h2 class="block-title">Recently viewed items</h2>
-          <div class="block-content">
-            <div class="item">
-              <div class="image">
-                <img src="/static/images/prod1.png">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                Best price waste essential oil distillation equipme... </div>
-              <div class="price">
-                US $30,000 - 180,000 / Set
-              </div>
-            </div>
-            <div class="item">
-              <div class="image">
-                <img src="/static/images/prod2.png">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                Best price waste essential oil distillation equipme... </div>
-              <div class="price">
-                US $30,000 - 180,000 / Set
-              </div>
-            </div>
-            <div class="item">
-              <div class="image">
-                <img src="/static/images/prod3.png">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                Best price waste essential oil distillation equipme... </div>
-              <div class="price">
-                US $30,000 - 180,000 / Set
-              </div>
-            </div>
-            <div class="item">
-              <div class="image">
-                <img src="/static/images/prod4.png">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                Best price waste essential oil distillation equipme... </div>
-              <div class="price">
-                US $30,000 - 180,000 / Set
-              </div>
-            </div>
-            <div class="item">
-              <div class="image">
-                <img src="/static/images/prod5.png">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                Best price waste essential oil distillation equipme... </div>
-              <div class="price">
-                US $30,000 - 180,000 / Set
-              </div>
-            </div>
-            <div class="item">
-              <div class="image">
-                <img src="/static/images/prod1.png">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                Best price waste essential oil distillation equipme... </div>
-              <div class="price">
-                US $30,000 - 180,000 / Set
-              </div>
-            </div>
-            <div class="item">
-              <div class="image">
-                <img src="/static/images/prod2.png">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href="" class="add-fav"><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                Best price waste essential oil distillation equipme... </div>
-              <div class="price">
-                US $30,000 - 180,000 / Set
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-    <div id="major"><a href="#"><img src="/static/images/major.png"></a></div>
-  </section>
+      <div id="major"><a href="#"><img src="/static/images/major.png"></a></div>
+    </section>
+    <Underground></Underground>
+  </div>
 </template>
 
 <script>
+  import SectionTop from '../Parts/SectionTop'
+  import Underground from '../Parts/Underground'
   export default {
     name: 'Home',
     data(){
@@ -291,6 +297,10 @@
           }
         }
       }
+    },
+    components: {
+      SectionTop,
+      Underground
     }
   }
 </script>

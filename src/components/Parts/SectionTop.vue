@@ -10,7 +10,10 @@
           </a>
           <ul id="category_menu">
             <li class="category_list">
-              <a href="/products/">Rubber Product Making Machinery</a><img src="/static/images/arrow.png">
+              <router-link :to="{name: 'product_list'}">
+                Rubber Product Making Machinery
+              </router-link>
+              <img src="/static/images/arrow.png">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="pages/subcategory_page.html">Rubber Product Making Machinery</a></li>
                 <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>

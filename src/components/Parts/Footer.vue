@@ -1,84 +1,108 @@
 <template>
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="info">
-        <img src="/static/images/logo-foot.png">
-        <p>
-          <strong>Address:</strong> 9 Floor, Building A, Central China Electronic Commerce Port, South <br> Daxue Rd., Erqi District, Zhengzhou, Henan, China (Mainland)
-        </p><br>
-        <p>
-          <strong>Phone:</strong> +86 17839909611
-        </p><br>
-        <p>
-          <strong>Email:</strong> info@beston.uz
-        </p>
-      </div>
-      <div class="right">
-        <div class="policy">
-          <h2 class="block-title">Policy info</h2>
-          <div class="block-content">
-            <ul>
-              <li>
-                <a href="">Orders & Returns</a>
-              </li>
-              <li>
-                <a href="">Advanced Search</a>
-              </li>
-              <li>
-                <a href="">Help & FAQs</a>
-              </li>
-              <li>
-                <a href="">Consultant</a>
-              </li>
-              <li>
-                <a href="">Store Locations</a>
-              </li>
-            </ul>
+  <div>
+    <div class="region-footer">
+      <div id="newsletter">
+        <div class="left">
+          <div class="signup">
+            <img src="/static/images/signup_footer.png">
+            <p>SIGNUP TO <br> NEWSLETTER</p>
           </div>
+          <form class="form">
+            <input type="text" name="" placeholder="Enter Your Email Address" class="submit_panel">
+            <button type="button" class="submit_button">Submit</button>
+          </form>
         </div>
-        <div class="account">
-          <h2 class="block-title">My account</h2>
-          <div class="block-content">
-            <ul>
-              <li>
-                <a href="">About Us</a>
-              </li>
-              <li>
-                <a href="">Delivery Information</a>
-              </li>
-              <li>
-                <a href="">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="">Terms & Conditions</a>
-              </li>
-              <li>
-                <a href="">Custom Link</a>
-              </li>
-            </ul>
-          </div>
+        <div class="socials" id="socials">
+          <span>KEEP IN TOUCH</span>
+          <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="desc">
-        <div class="copyright"><p>Copyright © Beston Group - Beston (Henan) Machinery Co., Ltd.</p></div>
-        <div class="developed">
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="info">
+          <img src="/static/images/logo-foot.png">
+          <p>
+            <strong>Address:</strong> 9 Floor, Building A, Central China Electronic Commerce Port, South <br> Daxue Rd., Erqi District, Zhengzhou, Henan, China (Mainland)
+          </p><br>
+          <p>
+            <strong>Phone:</strong> +86 17839909611
+          </p><br>
+          <p>
+            <strong>Email:</strong> info@beston.uz
+          </p>
+        </div>
+        <div class="right">
+          <div class="policy">
+            <h2 class="block-title">Policy info</h2>
+            <div class="block-content">
+              <ul>
+                <li>
+                  <a href="">Orders & Returns</a>
+                </li>
+                <li>
+                  <a href="">Advanced Search</a>
+                </li>
+                <li>
+                  <a href="">Help & FAQs</a>
+                </li>
+                <li>
+                  <a href="">Consultant</a>
+                </li>
+                <li>
+                  <a href="">Store Locations</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="account">
+            <h2 class="block-title">My account</h2>
+            <div class="block-content">
+              <ul>
+                <li>
+                  <a href="">About Us</a>
+                </li>
+                <li>
+                  <a href="">Delivery Information</a>
+                </li>
+                <li>
+                  <a href="">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="">Terms & Conditions</a>
+                </li>
+                <li>
+                  <a href="">Custom Link</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="desc">
+          <div class="copyright"><p>Copyright © Beston Group - Beston (Henan) Machinery Co., Ltd.</p></div>
+          <div class="developed">
                     <span>
                         Site developed by <br>
                         Design Studio
                     </span>
-          <img src="/static/images/dst.png">
+            <img src="/static/images/dst.png">
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chaticon" id="chaticon">
+            <p>Let's chat? - <span>Online</span></p><i class="fa fa-chevron-up"></i><i class="fa fa-chevron-down"></i>
+          </div>
+          <div class="chatwindow" id="chatwindow"></div>
         </div>
       </div>
-      <div class="chat">
-        <div class="chaticon" id="chaticon">
-          <p>Let's chat? - <span>Online</span></p><i class="fa fa-chevron-up"></i><i class="fa fa-chevron-down"></i>
-        </div>
-        <div class="chatwindow" id="chatwindow"></div>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </template>
 
 <script>

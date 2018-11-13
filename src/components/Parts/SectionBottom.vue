@@ -43,28 +43,6 @@
         <span>All Major Credit & Debit Cards <br> Accepted</span>
       </div>
     </div>
-    <div class="region-footer">
-      <div id="newsletter">
-        <div class="left">
-          <div class="signup">
-            <img src="/static/images/signup_footer.png">
-            <p>SIGNUP TO <br> NEWSLETTER</p>
-          </div>
-          <form class="form">
-            <input type="text" name="" placeholder="Enter Your Email Address" class="submit_panel">
-            <button type="button" class="submit_button">Submit</button>
-          </form>
-        </div>
-        <div class="socials" id="socials">
-          <span>KEEP IN TOUCH</span>
-          <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-          <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-          <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
-        </div>
-      </div>
-    </div>
   </section>
 </template>
 
