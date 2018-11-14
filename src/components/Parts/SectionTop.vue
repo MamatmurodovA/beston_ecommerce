@@ -9,147 +9,25 @@
             <i class="fa fa-minus-circle" aria-hidden="true"></i>
           </a>
           <ul id="category_menu">
-            <li class="category_list">
-              <router-link :to="{name: 'product_category_page', params: {category_id: 1}}">
-                Rubber Product Making Machinery
-              </router-link>
-              <img src="/static/images/arrow.png">
-              <ul class="sub_menu">
-                <li class="sub_list"><a href="pages/subcategory_page.html">Rubber Product Making Machinery</a></li>
-                <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
-                <li class="sub_list"><a href="">Urban Garbage Sorting Plant</a></li>
-                <li class="sub_list"><a href="">Solid Waste Pyrolysis Machine</a></li>
-                <li class="sub_list"><a href="">Oil Distillation Machine</a></li>
-                <li class="sub_list"><a href="">Biomass Carbonization Furnace</a></li>
-              </ul>
-            </li>
-            <li class="category_list">
-              <a href="">Plastic Pellet Machine</a><img src="/static/images/arrow.png">
-              <ul class="sub_menu">
-                <li class="sub_list"><a href="">Rubber Product Making Machinery</a></li>
-                <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
-                <li class="sub_list"><a href="">Urban Garbage Sorting Plant</a></li>
-                <li class="sub_list"><a href="">Solid Waste Pyrolysis Machine</a></li>
-                <li class="sub_list"><a href="">Oil Distillation Machine</a></li>
-                <li class="sub_list"><a href="">Biomass Carbonization Furnace</a></li>
-                <li class="sub_list"><a href="">Subcategory 7</a></li>
-                <li class="sub_list"><a href="">Subcategory 8</a></li>
-                <li class="sub_list"><a href="">Subcategory 9</a></li>
-                <li class="sub_list"><a href="">Subcategory 10</a></li>
-              </ul>
-            </li>
-            <li class="category_list">
-              <a href="">Urban Garbage Sorting Plant</a><img src="/static/images/arrow.png">
-              <ul class="sub_menu">
-                <li class="sub_list"><a href="">Rubber Product Making Machinery</a></li>
-                <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
-                <li class="sub_list"><a href="">Urban Garbage Sorting Plant</a></li>
-              </ul>
-            </li>
-            <li class="category_list">
-              <a href="">Solid Waste Pyrolysis Machine</a><img src="/static/images/arrow.png">
-              <ul class="sub_menu">
-                <li class="sub_list"><a href="">Rubber Product Making Machinery</a></li>
-                <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
-                <li class="sub_list"><a href="">Urban Garbage Sorting Plant</a></li>
-                <li class="sub_list"><a href="">Solid Waste Pyrolysis Machine</a></li>
-                <li class="sub_list"><a href="">Oil Distillation Machine</a></li>
-                <li class="sub_list"><a href="">Biomass Carbonization Furnace</a></li>
-              </ul>
-            </li>
-            <li class="category_list">
-              <a href="">Oil Distillation Machine</a><img src="/static/images/arrow.png">
-              <ul class="sub_menu">
-                <li class="sub_list"><a href="">Rubber Product Making Machinery</a></li>
-                <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
-                <li class="sub_list"><a href="">Urban Garbage Sorting Plant</a></li>
-                <li class="sub_list"><a href="">Solid Waste Pyrolysis Machine</a></li>
-                <li class="sub_list"><a href="">Oil Distillation Machine</a></li>
-                <li class="sub_list"><a href="">Biomass Carbonization Furnace</a></li>
-                <li class="sub_list"><a href="">Subcategory 7</a></li>
-                <li class="sub_list"><a href="">Subcategory 8</a></li>
-                <li class="sub_list"><a href="">Subcategory 9</a></li>
-                <li class="sub_list"><a href="">Subcategory 10</a></li>
-              </ul>
-            </li>
-            <li class="category_list">
-              <a href="">Biomass Carbonization Furnace</a><img src="/static/images/arrow.png">
-              <ul class="sub_menu">
-                <li class="sub_list"><a href="">Rubber Product Making Machinery</a></li>
-                <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
-              </ul>
-            </li>
-            <li class="category_list">
-              <a href="">Carbon Black Processing Machine</a><img src="/static/images/arrow.png">
-              <ul class="sub_menu">
-                <li class="sub_list"><a href="">Rubber Product Making Machinery</a></li>
-                <li class="sub_list"><a href="">Plastic Pellet Machine</a></li>
-                <li class="sub_list"><a href="">Urban Garbage Sorting Plant</a></li>
-                <li class="sub_list"><a href="">Solid Waste Pyrolysis Machine</a></li>
-                <li class="sub_list"><a href="">Oil Distillation Machine</a></li>
-                <li class="sub_list"><a href="">Biomass Carbonization Furnace</a></li>
-                <li class="sub_list"><a href="">Subcategory 7</a></li>
-              </ul>
-            </li>
-            <li class="category_list">
-              <a href="">Biomass Pellet Machine</a><img src="/static/images/arrow.png">
-              <ul class="sub_menu">
-                <li class="sub_list"><a href="">Subcategory 1</a></li>
-                <li class="sub_list"><a href="">Subcategory 2</a></li>
-                <li class="sub_list"><a href="">Subcategory 3</a></li>
-                <li class="sub_list"><a href="">Subcategory 4</a></li>
-                <li class="sub_list"><a href="">Subcategory 5</a></li>
-                <li class="sub_list"><a href="">Subcategory 6</a></li>
-                <li class="sub_list"><a href="">Subcategory 7</a></li>
-                <li class="sub_list"><a href="">Subcategory 8</a></li>
-                <li class="sub_list"><a href="">Subcategory 9</a></li>
-                <li class="sub_list"><a href="">Subcategory 10</a></li>
-              </ul>
-            </li>
-            <li class="category_list">
-              <a href="">Tyre Pretreating Machine</a><img src="/static/images/arrow.png">
-              <ul class="sub_menu">
-                <li class="sub_list"><a href="">Subcategory 1</a></li>
-                <li class="sub_list"><a href="">Subcategory 2</a></li>
-                <li class="sub_list"><a href="">Subcategory 3</a></li>
-                <li class="sub_list"><a href="">Subcategory 4</a></li>
-                <li class="sub_list"><a href="">Subcategory 5</a></li>
-                <li class="sub_list"><a href="">Subcategory 6</a></li>
-                <li class="sub_list"><a href="">Subcategory 7</a></li>
-                <li class="sub_list"><a href="">Subcategory 8</a></li>
-                <li class="sub_list"><a href="">Subcategory 9</a></li>
-                <li class="sub_list"><a href="">Subcategory 10</a></li>
-              </ul>
-            </li>
-            <li class="category_list">
-              <a href="">Concrete Mixer</a><img src="/static/images/arrow.png">
-              <ul class="sub_menu">
-                <li class="sub_list"><a href="">Subcategory 1</a></li>
-                <li class="sub_list"><a href="">Subcategory 2</a></li>
-                <li class="sub_list"><a href="">Subcategory 3</a></li>
-                <li class="sub_list"><a href="">Subcategory 4</a></li>
-                <li class="sub_list"><a href="">Subcategory 5</a></li>
-                <li class="sub_list"><a href="">Subcategory 6</a></li>
-                <li class="sub_list"><a href="">Subcategory 7</a></li>
-                <li class="sub_list"><a href="">Subcategory 8</a></li>
-                <li class="sub_list"><a href="">Subcategory 9</a></li>
-                <li class="sub_list"><a href="">Subcategory 10</a></li>
-              </ul>
-            </li>
-            <li class="category_list">
-              <a href="">Concrete Mixing Plant</a><img src="/static/images/arrow.png">
-              <ul class="sub_menu">
-                <li class="sub_list"><a href="">Subcategory 1</a></li>
-                <li class="sub_list"><a href="">Subcategory 2</a></li>
-                <li class="sub_list"><a href="">Subcategory 3</a></li>
-                <li class="sub_list"><a href="">Subcategory 4</a></li>
-                <li class="sub_list"><a href="">Subcategory 5</a></li>
-                <li class="sub_list"><a href="">Subcategory 6</a></li>
-                <li class="sub_list"><a href="">Subcategory 7</a></li>
-                <li class="sub_list"><a href="">Subcategory 8</a></li>
-                <li class="sub_list"><a href="">Subcategory 9</a></li>
-                <li class="sub_list"><a href="">Subcategory 10</a></li>
-              </ul>
+            <li class="category_list" v-for="category in categories">
+                <template v-if="category.children">
+                    <router-link :to="{name: 'product_category_page', params: {category_id: category.id}}">
+                      {{ category.title }}
+                    </router-link>
+                    <img src="/static/images/arrow.png">
+                    <ul class="sub_menu">
+                      <li class="sub_list" v-for="child_cat in category.children">
+                          <router-link :to="{name: 'product_category_page', params: {category_id: child_cat.id}}">
+                            {{ category.title }}
+                          </router-link>
+                      </li>
+                    </ul>
+                </template>
+                <template v-else>
+                  <router-link :to="{name: 'product_category_page', params: {category_id: 1}}">
+                    {{ category.title }}
+                  </router-link>
+                </template>
             </li>
           </ul>
         </div>
@@ -195,7 +73,7 @@
 </template>
 
 <script>
-
+  import categories from '../../data/category.json'
   export default {
     name: 'SectionTop',
     data(){
@@ -216,8 +94,8 @@
               nextEl: '.banner-slider-next',
               prevEl: '.banner-slider-prev'
             }
-          }
-
+          },
+          categories: categories
       }
     }
   }
