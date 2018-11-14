@@ -1,7 +1,6 @@
 <template>
   <div>
       <Header></Header>
-      <Navbar></Navbar>
       <router-view></router-view>
       <Footer></Footer>
   </div>
@@ -10,7 +9,6 @@
 <script>
 
   import Header from '../Parts/Header'
-  import Navbar from '../Parts/Navbar'
   import Footer from '../Parts/Footer'
 
 
@@ -18,7 +16,6 @@
     name: 'HomeBase',
     components: {
       Header,
-      Navbar,
       Footer
     }
   }

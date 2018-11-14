@@ -292,7 +292,7 @@
         ],
         top_products_slider_config: {
           slidesPerView: 3,
-          slidesPerColumn: 2,
+          slidesPerColumn: 3,
           spaceBetween: 30,
           navigation: {
             nextEl:  '.top-products-controls-next',

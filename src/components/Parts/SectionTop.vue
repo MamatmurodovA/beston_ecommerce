@@ -162,9 +162,9 @@
               <img :src="image">
             </div>
         </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
+        <div class="swiper-pagination banner-slider-pagination" slot="pagination"></div>
+        <div class="swiper-button-prev banner-slider-prev" slot="button-prev"></div>
+        <div class="swiper-button-next banner-slider-next" slot="button-next"></div>
       </swiper>
       <div class="aside">
         <div class="item">
@@ -196,13 +196,8 @@
 
 <script>
 
-  import { swiper, swiperSlide } from 'vue-awesome-swiper'
   export default {
     name: 'SectionTop',
-    components: {
-      swiper,
-      swiperSlide
-    },
     data(){
       return {
           banner_images: [
@@ -212,7 +207,15 @@
             "/static/images/slider-image.png"
           ],
           banner_slider_config: {
-
+            spaceBetween: 0,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
+            navigation: {
+              nextEl: '.banner-slider-next',
+              prevEl: '.banner-slider-prev'
+            }
           }
 
       }

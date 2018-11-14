@@ -33,12 +33,17 @@
             name: 'Home',
             path: 'home'
           }
-        ]
+        ],
       }
     },
     props: {
       page: {
-        default: {name: '', params: {}},
+        default: function () {
+          return {
+            name: 'test',
+            params: {}
+          }
+        },
         type: Object
       }
     },

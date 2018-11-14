@@ -1,112 +1,90 @@
 <template>
-  <div id="header">
-    <div id="top">
-      <div id="navbar">
-        <div class="burger1"><a href="#" id="burger1"></a></div>
-        <div class="logo">
-          <router-link :to="{name: 'home_page'}">
-            <img src="/static/images/logo-top.png">
-          </router-link>
-        </div>
-        <div class="reclame"><img src="/static/images/reclame.png"></div>
-        <ul class="menu">
-          <li id="cart1">
-            <a href="#"><img src="/static/images/shopping-cart-icon.png" alt="shopping cart">CART</a>
-            <h2 id="value">0</h2>
-          </li>
-          <li id="cart1_hide">
-            <a href="#"><img src="/static/images/shopping-cart-icon.png" alt="shopping cart">CART</a>
-            <h2 id="value_hide">0</h2>
-          </li>
-          <li id="reg">
-            <a href="pages/signin_page.html">SIGN IN</a>
-          </li>
-          <!-- <li id="sign"><a href="pages/profile_page.html">User profile</a></li> -->
-          <!-- <li id="sign2"><a href="pages/profile_page_merchant.html">Merchant profile</a></li> -->
-          <div id="cartview">
-            <div class="item">
-              <img src="/static/images/cartview.png">
-              <div class="description">
-                <h2>Halogen Room Handwear</h2>
-                <p>$125.00 x2</p>
-              </div>
-              <a href="" id="delete"><p>X</p></a>
-            </div>
-            <div class="item">
-              <img src="/static/images/cartview.png">
-              <div class="description">
-                <h2>Shaving Cream, 100 gm</h2>
-                <p>$75.00 x1</p>
-              </div>
-              <a href="" id="delete"><p>X</p></a>
-            </div>
-            <div class="item">
-              <img src="/static/images/cartview.png">
-              <div class="description">
-                <h2>Shaving Cream, 100 gm</h2>
-                <p>$75.00 x1</p>
-              </div>
-              <a href="" id="delete"><p>X</p></a>
-            </div>
-            <div class="item">
-              <img src="/static/images/cartview.png">
-              <div class="description">
-                <h2>Shaving Cream, 100 gm</h2>
-                <p>$75.00 x1</p>
-              </div>
-              <a href="" id="delete"><p>X</p></a>
-            </div>
-            <div class="item">
-              <img src="/static/images/cartview.png">
-              <div class="description">
-                <h2>Shaving Cream, 100 gm</h2>
-                <p>$75.00 x1</p>
-              </div>
-              <a href="" id="delete"><p>X</p></a>
-            </div>
-            <p>ORDER TOTAL<span>325$</span></p>
-            <div class="buttons">
-              <a href="" class="button" id="viewcart">view cart</a>
-              <a href="" class="button" id="cancel">cancel</a>
-            </div>
+  <div>
+    <div id="header">
+      <div id="top">
+        <div id="navbar">
+          <div class="burger1">
+            <a href="#" id="burger1" class="left_menu_open" @click="left_menu_is_open=true"></a>
           </div>
-        </ul>
-        <div class="languages">
-          <a href=""><p>Uz</p><img src="/static/images/uz.png" alt=""></a>
-          <a href=""><p>Ru</p><img src="/static/images/ru.png" alt=""></a>
-          <a href="" class="active"><p>En</p><img src="/static/images/en.png" alt=""></a>
+          <div class="logo">
+            <router-link :to="{name: 'home_page'}">
+              <img src="/static/images/logo-top.png">
+            </router-link>
+          </div>
+          <div class="reclame"><img src="/static/images/reclame.png"></div>
+          <ul class="menu">
+            <li id="cart1">
+              <a href="#"><img src="/static/images/shopping-cart-icon.png" alt="shopping cart">CART</a>
+              <h2 id="value">0</h2>
+            </li>
+            <li id="cart1_hide">
+              <a href="#"><img src="/static/images/shopping-cart-icon.png" alt="shopping cart">CART</a>
+              <h2 id="value_hide">0</h2>
+            </li>
+            <li id="reg">
+              <a href="pages/signin_page.html">SIGN IN</a>
+            </li>
+            <!-- <li id="sign"><a href="pages/profile_page.html">User profile</a></li> -->
+            <!-- <li id="sign2"><a href="pages/profile_page_merchant.html">Merchant profile</a></li> -->
+            <div id="cartview">
+              <div class="item">
+                <img src="/static/images/cartview.png">
+                <div class="description">
+                  <h2>Halogen Room Handwear</h2>
+                  <p>$125.00 x2</p>
+                </div>
+                <a href="" id="delete"><p>X</p></a>
+              </div>
+              <div class="item">
+                <img src="/static/images/cartview.png">
+                <div class="description">
+                  <h2>Shaving Cream, 100 gm</h2>
+                  <p>$75.00 x1</p>
+                </div>
+                <a href="" id="delete"><p>X</p></a>
+              </div>
+              <div class="item">
+                <img src="/static/images/cartview.png">
+                <div class="description">
+                  <h2>Shaving Cream, 100 gm</h2>
+                  <p>$75.00 x1</p>
+                </div>
+                <a href="" id="delete"><p>X</p></a>
+              </div>
+              <div class="item">
+                <img src="/static/images/cartview.png">
+                <div class="description">
+                  <h2>Shaving Cream, 100 gm</h2>
+                  <p>$75.00 x1</p>
+                </div>
+                <a href="" id="delete"><p>X</p></a>
+              </div>
+              <div class="item">
+                <img src="/static/images/cartview.png">
+                <div class="description">
+                  <h2>Shaving Cream, 100 gm</h2>
+                  <p>$75.00 x1</p>
+                </div>
+                <a href="" id="delete"><p>X</p></a>
+              </div>
+              <p>ORDER TOTAL<span>325$</span></p>
+              <div class="buttons">
+                <a href="" class="button" id="viewcart">view cart</a>
+                <a href="" class="button" id="cancel">cancel</a>
+              </div>
+            </div>
+          </ul>
+          <div class="languages">
+            <a href=""><p>Uz</p><img src="/static/images/uz.png" alt=""></a>
+            <a href=""><p>Ru</p><img src="/static/images/ru.png" alt=""></a>
+            <a href="" class="active"><p>En</p><img src="/static/images/en.png" alt=""></a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="search-block">
-      <div id="search">
-        <form class="form">
-          <input type="search" class="search_panel" placeholder="Search...">
-          <select>
-            <option class="main">All categories</option><i class="fa fa-sort-desc" aria-hidden="true"></i>
-            <option>Rubber Product Making Machinery</option>
-            <option>Plastic Pellet Machine</option>
-            <option>Urban Garbage Sorting Plant</option>
-            <option>Solid Waste Pyrolysis Machine</option>
-            <option>Oil Distillation Machine</option>
-            <option>Biomass Carbonization Furnace</option>
-            <option>Carbon Black Processing Machine</option>
-            <option>Biomass Pellet Machine</option>
-            <option>Tyre Pretreating Machine</option>
-            <option>Concrete Mixer</option>
-            <option>Concrete Mixing Plant</option>
-          </select>
-          <button type="submit" class="search_button"><img src="/static/images/search-icon.png"></button>
-        </form>
-      </div>
-    </div>
-    <div id="top_fixed">
-      <div id="navbar_fixed">
-        <div class="burger2"><a href="#" id="burger2"></a></div>
-        <div class="logo"><a href=""><img src="/static/images/logo-top.png"></a></div>
+      <div class="search-block">
         <div id="search">
           <form class="form">
-            <input type="text" class="search_panel" placeholder="Search...">
+            <input type="search" class="search_panel" placeholder="Search...">
             <select>
               <option class="main">All categories</option><i class="fa fa-sort-desc" aria-hidden="true"></i>
               <option>Rubber Product Making Machinery</option>
@@ -124,27 +102,151 @@
             <button type="submit" class="search_button"><img src="/static/images/search-icon.png"></button>
           </form>
         </div>
-        <ul class="menu">
-          <li id="cart2">
-            <a href="#"><img src="/static/images/shopping-cart-icon.png" alr="shopping cart">CART</a>
-            <h2 id="value">0</h2>
-          </li>
-          <li id="cart2_hide">
-            <a href="#"><img src="/static/images/shopping-cart-icon.png" alr="shopping cart">CART</a>
-            <h2 id="value_hide">0</h2>
-          </li>
-          <li id="reg">
-            <a href="">SIGN IN</a>
-          </li>
-        </ul>
+      </div>
+      <div id="top_fixed">
+        <div id="navbar_fixed">
+          <div class="burger2">
+            <a href="#" id="burger2" @click="left_menu_is_open=true"></a>
+          </div>
+          <div class="logo"><a href=""><img src="/static/images/logo-top.png"></a></div>
+          <div id="search">
+            <form class="form">
+              <input type="text" class="search_panel" placeholder="Search...">
+              <select>
+                <option class="main">All categories</option><i class="fa fa-sort-desc" aria-hidden="true"></i>
+                <option>Rubber Product Making Machinery</option>
+                <option>Plastic Pellet Machine</option>
+                <option>Urban Garbage Sorting Plant</option>
+                <option>Solid Waste Pyrolysis Machine</option>
+                <option>Oil Distillation Machine</option>
+                <option>Biomass Carbonization Furnace</option>
+                <option>Carbon Black Processing Machine</option>
+                <option>Biomass Pellet Machine</option>
+                <option>Tyre Pretreating Machine</option>
+                <option>Concrete Mixer</option>
+                <option>Concrete Mixing Plant</option>
+              </select>
+              <button type="submit" class="search_button"><img src="/static/images/search-icon.png"></button>
+            </form>
+          </div>
+          <ul class="menu">
+            <li id="cart2">
+              <a href="#"><img src="/static/images/shopping-cart-icon.png" alr="shopping cart">CART</a>
+              <h2 id="value">0</h2>
+            </li>
+            <li id="cart2_hide">
+              <a href="#"><img src="/static/images/shopping-cart-icon.png" alr="shopping cart">CART</a>
+              <h2 id="value_hide">0</h2>
+            </li>
+            <li id="reg">
+              <a href="">SIGN IN</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+    <nav id="nav">
+      <div id="menu1">
+        <ul class="menu_horizontal">
+          <li><a href="" class="active">home</a></li>
+          <li><a href="">about us</a></li>
+          <li><a href="">news</a></li>
+          <li><a href="">sertificates</a></li>
+          <li><a href="">contact us</a></li>
+        </ul>
+      </div>
+      <div id="menu2" class="hide" :class="{'open':left_menu_is_open}">
+        <nav>
+          <ul class="nav">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">news</a></li>
+            <li><a href="#">sertificates</a></li>
+            <li><a href="#">contact us</a></li>
+            <li class="category">categories</li>
+            <li>
+              <a href="#" class="collapse" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Rubber Product Making Machinery<p></p></a>
+              <ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
+                <li><a href="#">Plastic Pellet Machine</a></li>
+                <li><a href="#">Urban Garbage Sorting Plant</a></li>
+                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
+                <li><a href="#">Oil Distillation Machine</a></li>
+                <li><a href="#">Biomass Carbonization Furnace</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="collapse" id="btn-2" data-toggle="collapse" data-target="#submenu2" aria-expanded="false">Plastic Pellet Machine</a>
+              <ul class="nav collapse" id="submenu2" role="menu" aria-labelledby="btn-2">
+                <li><a href="#">Plastic Pellet Machine</a></li>
+                <li><a href="#">Urban Garbage Sorting Plant</a></li>
+                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
+                <li><a href="#">Oil Distillation Machine</a></li>
+                <li><a href="#">Biomass Carbonization Furnace</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="collapse" id="btn-3" data-toggle="collapse" data-target="#submenu3" aria-expanded="false">Urban Garbage Sorting Plant</a>
+              <ul class="nav collapse" id="submenu3" role="menu" aria-labelledby="btn-3">
+                <li><a href="#">Plastic Pellet Machine</a></li>
+                <li><a href="#">Urban Garbage Sorting Plant</a></li>
+                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
+                <li><a href="#">Oil Distillation Machine</a></li>
+                <li><a href="#">Biomass Carbonization Furnace</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="collapse" id="btn-4" data-toggle="collapse" data-target="#submenu4" aria-expanded="false">Solid Waste Pyrolysis Machine</a>
+              <ul class="nav collapse" id="submenu4" role="menu" aria-labelledby="btn-4">
+                <li><a href="#">Plastic Pellet Machine</a></li>
+                <li><a href="#">Urban Garbage Sorting Plant</a></li>
+                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
+                <li><a href="#">Oil Distillation Machine</a></li>
+                <li><a href="#">Biomass Carbonization Furnace</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="collapse" id="btn-5" data-toggle="collapse" data-target="#submenu5" aria-expanded="false">Oil Distillation Machine</a>
+              <ul class="nav collapse" id="submenu5" role="menu" aria-labelledby="btn-5">
+                <li><a href="#">Plastic Pellet Machine</a></li>
+                <li><a href="#">Urban Garbage Sorting Plant</a></li>
+                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
+                <li><a href="#">Oil Distillation Machine</a></li>
+                <li><a href="#">Biomass Carbonization Furnace</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="collapse" id="btn-6" data-toggle="collapse" data-target="#submenu6" aria-expanded="false">Biomass Carbonization Furnace</a>
+              <ul class="nav collapse" id="submenu6" role="menu" aria-labelledby="btn-6">
+                <li><a href="#">Plastic Pellet Machine</a></li>
+                <li><a href="#">Urban Garbage Sorting Plant</a></li>
+                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
+                <li><a href="#">Oil Distillation Machine</a></li>
+                <li><a href="#">Biomass Carbonization Furnace</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="collapse" id="btn-7" data-toggle="collapse" data-target="#submenu7" aria-expanded="false">Product categories</a>
+              <ul class="nav collapse" id="submenu7" role="menu" aria-labelledby="btn-7">
+                <li><a href="#">Plastic Pellet Machine</a></li>
+                <li><a href="#">Urban Garbage Sorting Plant</a></li>
+                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
+                <li><a href="#">Oil Distillation Machine</a></li>
+                <li><a href="#">Biomass Carbonization Furnace</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <a href="#" id="menuclosed" @click="left_menu_is_open=false">
+          <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div id="overlay" :class="{'open': left_menu_is_open}" @click="left_menu_is_open=false"></div>
+    </nav>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'Header'
+    name: 'Header',
+    data(){
+      return {
+        left_menu_is_open: false
+      }
+    }
   }
 </script>
 
@@ -1040,6 +1142,174 @@
         }
         &::after{
           display: none;
+        }
+      }
+    }
+  }
+  #nav{
+    font-family: 'Circe Bold';
+    font-size: 14px;
+    padding: 25px 0;
+    display: block;
+    #menu1{
+      @include innerbox(0, 0);
+      text-transform: uppercase;
+      .menu_horizontal{
+        display: flex;
+      }
+      li{
+        margin-right: 35px;
+        a{
+          color: $gray;
+          &.active{
+            color: $orange;
+          }
+          &:hover{
+            color: $orange;
+            transition: .4s;
+          }
+        }
+      }
+    }
+    #menu2{
+      text-transform: uppercase;
+      display: block !important;
+      position: fixed;
+      left: -1500px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 30%;
+      background: #fff;
+      color: $orange;
+      border: 1px solid $lightgray;
+      z-index: 20;
+      transition: .5s;
+      -webkit-box-shadow: 2px 0px 20px 1px rgba(0,0,0,.5);
+      -moz-box-shadow: 2px 0px 20px 1px rgba(0,0,0,.5);
+      box-shadow: 2px 0px 20px 1px rgba(0,0,0,.5);
+      overflow-y: scroll;
+      nav{
+        .nav{
+          li{
+            font-size: 16px;
+            border-bottom: 1px solid $lightgray;
+            a{
+              color: $gray;
+              padding: 25px;
+              &.active{
+                color: $orange;
+              }
+              &:hover{
+                color: $orange;
+                transition: .4s;
+              }
+              &.collapse{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &::after{
+                  font-family: 'FontAwesome';
+                  content: '\f077';
+                }
+              }
+              &.collapsed{
+                &::after{
+                  font-family: 'FontAwesome';
+                  content: '\f078';
+                }
+              }
+            }
+            .in{
+              li{
+                a{
+                  margin-left: 30px;
+                  background: none;
+                  transition: .3s;
+                }
+              }
+            }
+          }
+          .category{
+            color: #fff;
+            background: $orange;
+            padding: 25px;
+            text-align: center;
+          }
+        }
+      }
+      &.open{
+        position: fixed;
+        left: 0;
+        transition: .5s;
+        z-index: 25;
+        #menuclosed{
+          display: block;
+          position: absolute;
+          top: 5px;
+          right: 10px;
+          i{
+            &:hover{
+              cursor: pointer;
+            }
+          }
+          &:hover{
+            color: $orange;
+          }
+        }
+      }
+    }
+    #overlay{
+      z-index: 19;
+      background: rgba(0,0,0,.5);
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: none;
+      &.open{
+        display: block;
+      }
+    }
+    @include b(992px, max-width){
+      #menu1{
+        display: flex;
+        justify-content: center;
+      }
+      #menu2{
+        &.hide{
+          width: 50%;
+          font-size: 10px;
+          &.open{
+            li{
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+    @include b(768px, max-width){
+      padding: 0;
+      #menu1{
+        display: none;
+      }
+      #menu2{
+        &.hide{
+          width: 100%;
+        }
+        #menuclosed{
+          font-size: 13px;
+          width: 30px;
+          height: 50px;
+          text-align: center;
+        }
+      }
+    }
+    @include b(540px, max-width){
+      #menu2{
+        #menuclosed{
+          font-size: 16px;
         }
       }
     }
