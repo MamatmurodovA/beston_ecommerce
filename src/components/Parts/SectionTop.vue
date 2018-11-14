@@ -230,7 +230,7 @@
       max-width: 268px;
       font-family: 'Circe Regular';
       font-size: 12px;
-      margin-right: 0;
+      margin-right: 29px;
       #category{
         .block-title {
           height: 53px;
@@ -369,7 +369,6 @@
         display: flex;
         justify-content: space-around;
         text-transform: uppercase;
-        margin-left: 29px;
         &::-webkit-scrollbar {
           display: none;
         }

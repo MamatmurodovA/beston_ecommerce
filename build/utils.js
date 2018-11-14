@@ -47,6 +47,7 @@ exports.cssLoaders = function (options) {
         loader: 'sass-resources-loader',
         options: {
           resources: [
+            path.resolve(root_dir, 'static/scss/_fonts.scss'),
             path.resolve(root_dir, 'static/scss/_variables.scss'),
             path.resolve(root_dir, 'static/scss/_mixin.scss'),
             path.resolve(root_dir, 'static/scss/_grids.scss'),

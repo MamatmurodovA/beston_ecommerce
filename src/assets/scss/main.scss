@@ -1,4 +1,4 @@
-//@import 'fonts';
+@import 'fonts';
 @import 'variables';
 @import 'mixin';
 @import "grids";
@@ -1285,7 +1285,6 @@ a, input, textarea, select, option, button {
       display: flex;
       justify-content: space-around;
       text-transform: uppercase;
-      margin-left: 29px;
       &::-webkit-scrollbar {
         display: none;
       }
