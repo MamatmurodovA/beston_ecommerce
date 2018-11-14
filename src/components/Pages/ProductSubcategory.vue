@@ -2,10 +2,14 @@
   <div>
     <Breadcrumb></Breadcrumb>
     <section class="section-product-list">
-      <div class="subcategory-products">
+      <div class="subcategory-products" v-for="category in categories">
         <div class="wrapper">
           <div class="list">
-            <h2 class="block-title"><a href="subcategory_page.html">Plastic Pellet Machine</a></h2>
+            <h2 class="block-title">
+              <router-link :to="{name: 'product_category_page', params: {id: category.id}}">
+                {{ category.title }}
+              </router-link>
+            </h2>
             <div class="menu">
               <ul class="sub_menu">
                 <li class="sub_list"><a href="product_page.html">shenzhen</a></li>
@@ -20,66 +24,11 @@
             </div>
           </div>
           <div class="items">
-            <div class="item" v-for="product in products">
-              <div class="image">
-                <img :src="product.picture">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href=""><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                <router-link :to="{name: 'product_detail_page', params:{id: product.id, category_id:1} }">
-                  {{ product.title }}
-                </router-link>
-              </div>
-              <div class="price">
-                {{ product.price }} / Set
-              </div>
-            </div>
+            <SmallProductItem :product="product"  v-for="(product, index) in products" :key="index"></SmallProductItem>
           </div>
         </div>
       </div>
-      <div class="subcategory-products">
-        <div class="wrapper">
-          <div class="list">
-            <h2 class="block-title"><a href="subcategory_page.html">Plastic Pellet Machine</a></h2>
-            <div class="menu">
-              <ul class="sub_menu">
-                <li class="sub_list active"><a href="product_page.html">shenzhen</a></li>
-                <li class="sub_list"><a href="">wireless charger</a></li>
-                <li class="sub_list"><a href="">headset</a></li>
-                <li class="sub_list"><a href="">power bank</a></li>
-                <li class="sub_list"><a href="">shenzhen</a></li>
-                <li class="sub_list"><a href="">wireless charger</a></li>
-                <li class="sub_list"><a href="">headset</a></li>
-                <li class="sub_list"><a href="">power bank</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="items">
-            <div class="item" v-for="product in products">
-              <div class="image">
-                <img :src="product.picture">
-              </div>
-              <div class="cart">
-                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                <a href=""><i class="fa fa-heart-o"></i></a>
-                <a href=""><i class="fa fa-eye"></i></a>
-              </div>
-              <div class="title">
-                <router-link :to="{name: 'product_detail_page', params:{id: product.id, category_id:1} }">
-                  {{ product.title }}
-                </router-link>
-              </div>
-              <div class="price">
-                {{ product.price }} / Set
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </section>
   </div>
 </template>
@@ -87,15 +36,21 @@
 <script>
   import Breadcrumb from '../Parts/Breadcrumb'
   import products from '../../data/products.json'
+  import categories from '../../data/category.json'
+  import SmallProductItem from '../Items/SmallProductItem'
+  import ProductItem from '../Items/ProductItem'
   export default {
     name: 'ProductListPage',
     data(){
       return {
-        products: products
+        products: products,
+        categories: categories
       }
     },
     components: {
-      Breadcrumb
+      ProductItem,
+      Breadcrumb,
+      SmallProductItem
     }
   }
 </script>
