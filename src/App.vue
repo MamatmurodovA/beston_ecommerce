@@ -17,9 +17,9 @@ export default {
   @import "~breakpoint-sass/stylesheets/breakpoint";
   @import "../static/scss/main";
   @import "../static/plugins/fontawesome/font-awesome.min.css";
- h1{
+  h1{
    font-size: 24px;
- }
+  }
   .swiper-container{
     width: 100%;
     margin-bottom: 30px;

@@ -42,19 +42,7 @@
         <section id="recent-prod" class="recent-prod-list-page">
           <h2 class="block-title">Recently viewed items</h2>
           <div class="block-content">
-            <div class="item" v-for="product in products">
-              <div class="image">
-                <img :src="product.picture">
-              </div>
-              <div class="title">
-                  <router-link :to="{name: 'product_detail_page', params: {category_id: 1, id: product.id}}">
-                    {{ product.title }}
-                  </router-link>
-              </div>
-              <div class="price">
-                {{ product.price }} / Set
-              </div>
-            </div>
+            <ProductItem v-for="(product, index) in products" :key="index" :product="product"></ProductItem>
           </div>
         </section>
       </aside>
@@ -156,8 +144,9 @@
 
 <script>
   import Breadcrumb from '../Parts/Breadcrumb'
-  import * as products from '../../data/products'
-  
+  import ProductItem from '../Items/ProductItem'
+  import products from '../../data/products.json'
+
   export default {
     name: 'Subcategory',
     data() {
@@ -166,7 +155,8 @@
       }
     },
     components: {
-      Breadcrumb
+      Breadcrumb,
+      ProductItem
     }
   }
 </script>

@@ -86,7 +86,7 @@
 
 <script>
   import Breadcrumb from '../Parts/Breadcrumb'
-  import * as products from '../../data/products'
+  import products from '../../data/products.json'
   export default {
     name: 'ProductListPage',
     data(){

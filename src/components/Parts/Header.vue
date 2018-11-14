@@ -163,71 +163,29 @@
             <li><a href="#">news</a></li>
             <li><a href="#">sertificates</a></li>
             <li><a href="#">contact us</a></li>
-            <li class="category">categories</li>
-            <li>
-              <a href="#" class="collapse" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Rubber Product Making Machinery<p></p></a>
-              <ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
-                <li><a href="#">Plastic Pellet Machine</a></li>
-                <li><a href="#">Urban Garbage Sorting Plant</a></li>
-                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
-                <li><a href="#">Oil Distillation Machine</a></li>
-                <li><a href="#">Biomass Carbonization Furnace</a></li>
-              </ul>
+            <li class="category">Categories</li>
+            <li v-for="category in categories">
+              <template v-if="category.children">
+                <a href="#" class="collapse" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">
+                  {{ category.title }}
+                  <p></p>
+                </a>
+                <ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
+                  <li v-for="child_cat in category.children">
+                    <a href="#">
+                      {{ child_cat.title }}
+                    </a>
+                  </li>
+                </ul>
+              </template>
+              <template v-else>
+                <a href="">
+                  {{ category.title }}
+                </a>
+              </template>
             </li>
-            <li><a href="#" class="collapse" id="btn-2" data-toggle="collapse" data-target="#submenu2" aria-expanded="false">Plastic Pellet Machine</a>
-              <ul class="nav collapse" id="submenu2" role="menu" aria-labelledby="btn-2">
-                <li><a href="#">Plastic Pellet Machine</a></li>
-                <li><a href="#">Urban Garbage Sorting Plant</a></li>
-                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
-                <li><a href="#">Oil Distillation Machine</a></li>
-                <li><a href="#">Biomass Carbonization Furnace</a></li>
-              </ul>
-            </li>
-            <li><a href="#" class="collapse" id="btn-3" data-toggle="collapse" data-target="#submenu3" aria-expanded="false">Urban Garbage Sorting Plant</a>
-              <ul class="nav collapse" id="submenu3" role="menu" aria-labelledby="btn-3">
-                <li><a href="#">Plastic Pellet Machine</a></li>
-                <li><a href="#">Urban Garbage Sorting Plant</a></li>
-                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
-                <li><a href="#">Oil Distillation Machine</a></li>
-                <li><a href="#">Biomass Carbonization Furnace</a></li>
-              </ul>
-            </li>
-            <li><a href="#" class="collapse" id="btn-4" data-toggle="collapse" data-target="#submenu4" aria-expanded="false">Solid Waste Pyrolysis Machine</a>
-              <ul class="nav collapse" id="submenu4" role="menu" aria-labelledby="btn-4">
-                <li><a href="#">Plastic Pellet Machine</a></li>
-                <li><a href="#">Urban Garbage Sorting Plant</a></li>
-                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
-                <li><a href="#">Oil Distillation Machine</a></li>
-                <li><a href="#">Biomass Carbonization Furnace</a></li>
-              </ul>
-            </li>
-            <li><a href="#" class="collapse" id="btn-5" data-toggle="collapse" data-target="#submenu5" aria-expanded="false">Oil Distillation Machine</a>
-              <ul class="nav collapse" id="submenu5" role="menu" aria-labelledby="btn-5">
-                <li><a href="#">Plastic Pellet Machine</a></li>
-                <li><a href="#">Urban Garbage Sorting Plant</a></li>
-                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
-                <li><a href="#">Oil Distillation Machine</a></li>
-                <li><a href="#">Biomass Carbonization Furnace</a></li>
-              </ul>
-            </li>
-            <li><a href="#" class="collapse" id="btn-6" data-toggle="collapse" data-target="#submenu6" aria-expanded="false">Biomass Carbonization Furnace</a>
-              <ul class="nav collapse" id="submenu6" role="menu" aria-labelledby="btn-6">
-                <li><a href="#">Plastic Pellet Machine</a></li>
-                <li><a href="#">Urban Garbage Sorting Plant</a></li>
-                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
-                <li><a href="#">Oil Distillation Machine</a></li>
-                <li><a href="#">Biomass Carbonization Furnace</a></li>
-              </ul>
-            </li>
-            <li><a href="#" class="collapse" id="btn-7" data-toggle="collapse" data-target="#submenu7" aria-expanded="false">Product categories</a>
-              <ul class="nav collapse" id="submenu7" role="menu" aria-labelledby="btn-7">
-                <li><a href="#">Plastic Pellet Machine</a></li>
-                <li><a href="#">Urban Garbage Sorting Plant</a></li>
-                <li><a href="#">Solid Waste Pyrolysis Machine</a></li>
-                <li><a href="#">Oil Distillation Machine</a></li>
-                <li><a href="#">Biomass Carbonization Furnace</a></li>
-              </ul>
-            </li>
+
+
           </ul>
         </nav>
         <a href="#" id="menuclosed" @click="left_menu_is_open=false">
@@ -240,13 +198,15 @@
 </template>
 
 <script>
+  import categories from '../../data/category.json'
   export default {
     name: 'Header',
     data(){
       return {
-        left_menu_is_open: false
+        left_menu_is_open: false,
+        categories: categories
       }
-    }
+    },
   }
 </script>
 
