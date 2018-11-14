@@ -1155,6 +1155,8 @@
             font-size: 16px;
             border-bottom: 1px solid $lightgray;
             a{
+              position: relative;
+              display: block;
               color: $gray;
               padding: 25px;
               &.active{
@@ -1188,6 +1190,12 @@
                   transition: .3s;
                 }
               }
+            }
+            .collapse{
+              display: none;
+            }
+            &.in{
+              display: block;
             }
           }
           .category{
