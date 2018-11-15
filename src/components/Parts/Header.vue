@@ -12,68 +12,7 @@
             </router-link>
           </div>
           <div class="reclame"><img src="/static/images/reclame.png"></div>
-          <ul class="menu">
-            <li id="cart1">
-              <a href="#"><img src="/static/images/shopping-cart-icon.png" alt="shopping cart">CART</a>
-              <h2 id="value">0</h2>
-            </li>
-            <li id="cart1_hide">
-              <a href="#"><img src="/static/images/shopping-cart-icon.png" alt="shopping cart">CART</a>
-              <h2 id="value_hide">0</h2>
-            </li>
-            <li id="reg">
-              <a href="pages/signin_page.html">SIGN IN</a>
-            </li>
-            <!-- <li id="sign"><a href="pages/profile_page.html">User profile</a></li> -->
-            <!-- <li id="sign2"><a href="pages/profile_page_merchant.html">Merchant profile</a></li> -->
-            <div id="cartview">
-              <div class="item">
-                <img src="/static/images/cartview.png">
-                <div class="description">
-                  <h2>Halogen Room Handwear</h2>
-                  <p>$125.00 x2</p>
-                </div>
-                <a href="" id="delete"><p>X</p></a>
-              </div>
-              <div class="item">
-                <img src="/static/images/cartview.png">
-                <div class="description">
-                  <h2>Shaving Cream, 100 gm</h2>
-                  <p>$75.00 x1</p>
-                </div>
-                <a href="" id="delete"><p>X</p></a>
-              </div>
-              <div class="item">
-                <img src="/static/images/cartview.png">
-                <div class="description">
-                  <h2>Shaving Cream, 100 gm</h2>
-                  <p>$75.00 x1</p>
-                </div>
-                <a href="" id="delete"><p>X</p></a>
-              </div>
-              <div class="item">
-                <img src="/static/images/cartview.png">
-                <div class="description">
-                  <h2>Shaving Cream, 100 gm</h2>
-                  <p>$75.00 x1</p>
-                </div>
-                <a href="" id="delete"><p>X</p></a>
-              </div>
-              <div class="item">
-                <img src="/static/images/cartview.png">
-                <div class="description">
-                  <h2>Shaving Cream, 100 gm</h2>
-                  <p>$75.00 x1</p>
-                </div>
-                <a href="" id="delete"><p>X</p></a>
-              </div>
-              <p>ORDER TOTAL<span>325$</span></p>
-              <div class="buttons">
-                <a href="" class="button" id="viewcart">view cart</a>
-                <a href="" class="button" id="cancel">cancel</a>
-              </div>
-            </div>
-          </ul>
+          <Cart></Cart>
           <div class="languages">
             <a href=""><p>Uz</p><img src="/static/images/uz.png" alt=""></a>
             <a href=""><p>Ru</p><img src="/static/images/ru.png" alt=""></a>
@@ -84,30 +23,18 @@
       <div class="search-block">
         <Search :categories="categories"></Search>
       </div>
-      <div id="top_fixed">
+      <div id="top_fixed" :class="{'flex': scrolled}">
         <div id="navbar_fixed">
           <div class="burger2">
             <span id="burger2" @click="left_menu_is_open=true"></span>
           </div>
           <div class="logo"><a href=""><img src="/static/images/logo-top.png"></a></div>
           <Search :categories="categories"></Search>
-          <ul class="menu">
-            <li id="cart2">
-              <a href="#"><img src="/static/images/shopping-cart-icon.png" alr="shopping cart">CART</a>
-              <h2 id="value">0</h2>
-            </li>
-            <li id="cart2_hide">
-              <a href="#"><img src="/static/images/shopping-cart-icon.png" alr="shopping cart">CART</a>
-              <h2 id="value_hide">0</h2>
-            </li>
-            <li id="reg">
-              <a href="">SIGN IN</a>
-            </li>
-          </ul>
+          <Cart></Cart>
         </div>
       </div>
     </div>
-    <nav id="nav">
+    <nav id="nav" :class="{'fixed': scrolled}">
       <div id="menu1">
         <ul class="menu_horizontal">
           <li><a href="" class="active">home</a></li>
@@ -160,13 +87,15 @@
 <script>
   import categories from '../../data/category.json'
   import Search from './Search'
+  import Cart from './Cart'
   export default {
     name: 'Header',
-    components: {Search},
+    components: {Search, Cart},
     data(){
       return {
         left_menu_is_open: false,
-        categories: categories
+        categories: categories,
+        scrolled: false
       }
     },
     methods: {
@@ -175,8 +104,20 @@
         let el = e.target;
         el.classList.toggle('active')
         el.nextElementSibling.classList.toggle('in')
+      },
+
+      handleScroll(event)
+      {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        this.scrolled = scrollTop > 105;
       }
-    }
+    },
+    created () {
+      window.addEventListener('scroll', this.handleScroll);
+    },
+    destroyed () {
+      window.removeEventListener('scroll', this.handleScroll);
+    },
   }
 </script>
 
