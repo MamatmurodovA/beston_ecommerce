@@ -1178,8 +1178,14 @@
                 align-items: center;
                 &::after{
                   font-family: 'FontAwesome';
-                  content: '\f077';
+                  content: '\f054';
                 }
+               &.active{
+                 &::after{
+                   font-family: 'FontAwesome';
+                   content: '\f078';
+                 }
+               }
               }
               &.collapsed{
                 &::after{

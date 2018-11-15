@@ -493,6 +493,8 @@
       .aside{
         display: flex;
         flex-direction: column;
+        height: 600px;
+        overflow-y: scroll;
         .title{
           font-size: 17px;
           margin-bottom: 20px;
