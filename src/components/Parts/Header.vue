@@ -4,7 +4,7 @@
       <div id="top">
         <div id="navbar">
           <div class="burger1">
-            <a href="#" id="burger1" class="left_menu_open" @click="left_menu_is_open=true"></a>
+            <span id="burger1" class="left_menu_open" @click="left_menu_is_open=true"></span>
           </div>
           <div class="logo">
             <router-link :to="{name: 'home_page'}">
@@ -82,53 +82,15 @@
         </div>
       </div>
       <div class="search-block">
-        <div id="search">
-          <form class="form">
-            <input type="search" class="search_panel" placeholder="Search...">
-            <select>
-              <option class="main">All categories</option><i class="fa fa-sort-desc" aria-hidden="true"></i>
-              <option>Rubber Product Making Machinery</option>
-              <option>Plastic Pellet Machine</option>
-              <option>Urban Garbage Sorting Plant</option>
-              <option>Solid Waste Pyrolysis Machine</option>
-              <option>Oil Distillation Machine</option>
-              <option>Biomass Carbonization Furnace</option>
-              <option>Carbon Black Processing Machine</option>
-              <option>Biomass Pellet Machine</option>
-              <option>Tyre Pretreating Machine</option>
-              <option>Concrete Mixer</option>
-              <option>Concrete Mixing Plant</option>
-            </select>
-            <button type="submit" class="search_button"><img src="/static/images/search-icon.png"></button>
-          </form>
-        </div>
+        <Search :categories="categories"></Search>
       </div>
       <div id="top_fixed">
         <div id="navbar_fixed">
           <div class="burger2">
-            <a href="#" id="burger2" @click="left_menu_is_open=true"></a>
+            <span id="burger2" @click="left_menu_is_open=true"></span>
           </div>
           <div class="logo"><a href=""><img src="/static/images/logo-top.png"></a></div>
-          <div id="search">
-            <form class="form">
-              <input type="text" class="search_panel" placeholder="Search...">
-              <select>
-                <option class="main">All categories</option><i class="fa fa-sort-desc" aria-hidden="true"></i>
-                <option>Rubber Product Making Machinery</option>
-                <option>Plastic Pellet Machine</option>
-                <option>Urban Garbage Sorting Plant</option>
-                <option>Solid Waste Pyrolysis Machine</option>
-                <option>Oil Distillation Machine</option>
-                <option>Biomass Carbonization Furnace</option>
-                <option>Carbon Black Processing Machine</option>
-                <option>Biomass Pellet Machine</option>
-                <option>Tyre Pretreating Machine</option>
-                <option>Concrete Mixer</option>
-                <option>Concrete Mixing Plant</option>
-              </select>
-              <button type="submit" class="search_button"><img src="/static/images/search-icon.png"></button>
-            </form>
-          </div>
+          <Search :categories="categories"></Search>
           <ul class="menu">
             <li id="cart2">
               <a href="#"><img src="/static/images/shopping-cart-icon.png" alr="shopping cart">CART</a>
@@ -197,8 +159,10 @@
 
 <script>
   import categories from '../../data/category.json'
+  import Search from './Search'
   export default {
     name: 'Header',
+    components: {Search},
     data(){
       return {
         left_menu_is_open: false,
