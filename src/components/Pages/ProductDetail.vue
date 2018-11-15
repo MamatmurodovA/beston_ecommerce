@@ -129,139 +129,8 @@
           <h2 class="title">You May Like</h2>
           <div class="related_items">
             <div class="swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod2.png">
-                  </div>
-                  <div class="title">
-                    <a href="product_page_new.html">High performance continuous rubber cable pyrolysis plant to fuel oil Beston</a>
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod5.png">
-                  </div>
-                  <div class="title">
-                    Advanced waste engine oil pyrolysis used motor oil filtering recycling...
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod3.png">
-                  </div>
-                  <div class="title">
-                    Large yield tyre rubber handling equipment price used tyre cutting mac... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, sunt?
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod2.png">
-                  </div>
-                  <div class="title">
-                    <a href="product_page_new.html">High performance continuous rubber cable pyrolysis plant to fuel oil Beston</a>
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod5.png">
-                  </div>
-                  <div class="title">
-                    Advanced waste engine oil pyrolysis used motor oil filtering recycling...
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod3.png">
-                  </div>
-                  <div class="title">
-                    Large yield tyre rubber handling equipment price used tyre cutting mac... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, sunt?
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod2.png">
-                  </div>
-                  <div class="title">
-                    <a href="product_page_new.html">High performance continuous rubber cable pyrolysis plant to fuel oil Beston</a>
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod5.png">
-                  </div>
-                  <div class="title">
-                    Advanced waste engine oil pyrolysis used motor oil filtering recycling...
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod3.png">
-                  </div>
-                  <div class="title">
-                    Large yield tyre rubber handling equipment price used tyre cutting mac... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, sunt?
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod2.png">
-                  </div>
-                  <div class="title">
-                    <a href="product_page_new.html">High performance continuous rubber cable pyrolysis plant to fuel oil Beston</a>
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod5.png">
-                  </div>
-                  <div class="title">
-                    Advanced waste engine oil pyrolysis used motor oil filtering recycling...
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="image">
-                    <img src="/static/images/prod3.png">
-                  </div>
-                  <div class="title">
-                    Large yield tyre rubber handling equipment price used tyre cutting mac... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, sunt?
-                  </div>
-                  <div class="price">
-                    US $30,000 - 180,000 / Set
-                  </div>
-                </div>
+              <div class="swiper-wrapper related_products">
+                  <TopProductItem :product="product" v-for="(product, index) in products" :key="index" class="swiper-slide"></TopProductItem>
               </div>
             </div>
           </div>
@@ -273,15 +142,33 @@
 
 <script>
   import Breadcrumb from '../Parts/Breadcrumb'
+  import TopProductItem from '../Items/TopProductItem'
+  import products from '../../data/products.json'
+
   export default {
     name: 'ProductDetail',
     components: {
+      TopProductItem,
         Breadcrumb
+    },
+    data(){
+      return {
+        products: products
+      }
     }
   }
 </script>
 
 <style lang="scss">
+
+  .swiper-slide {
+    font-size: 18px!important;
+    text-align: left!important;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 30px;
+  }
   @import "~susy";
   @import "~breakpoint-sass/stylesheets/breakpoint";
   .product-section{

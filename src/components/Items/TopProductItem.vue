@@ -1,7 +1,9 @@
 <template>
     <div >
       <div class="image">
-        <img :src="product.picture">
+        <router-link :to="{name: 'product_detail_page', params: {category_id: 1, id: product.id}}">
+          <img :src="product.picture">
+        </router-link>
       </div>
       <div class="cart">
         <a href=""><i class="fa fa-shopping-cart"></i></a>

@@ -62,9 +62,9 @@
                     <option value="audi">Sort 3</option>
                   </select>
                 </form>
-                <div class="buttons">
-                  <a href="" class="button list"><i class="fa fa-th-list" aria-hidden="true"></i></a>
-                  <a href="" class="button grid active"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+                <div class="buttons view-changer">
+                  <a href="#" class="button list" @click="set_view_type($event, 'list')" ><i class="fa fa-th-list" aria-hidden="true"></i></a>
+                  <a href="#" class="button grid active" @click="set_view_type($event, 'grid')"><i class="fa fa-th-large" aria-hidden="true"></i></a>
                 </div>
               </div>
               <div class="mobile_filter_btn" id="mobile-filter-btn">
@@ -81,9 +81,12 @@
               </div>
             </div>
           </div>
-          <div class="block-content">
-            <div class="row grid">
-              <ProductItem :product="product" v-for="(product, index) in products" :key="index"></ProductItem>
+          <div class="block-content" >
+            <div class="row" :class="[view_type]">
+              <div v-for="(product, index) in products" :key="index" >
+                <ProductItem :product="product"></ProductItem>
+                <hr>
+              </div>
             </div>
           </div>
           <div class="pagination">
@@ -116,13 +119,29 @@
     name: 'Subcategory',
     data() {
       return {
-        products: products
+        products: products,
+        view_type: 'grid'
       }
     },
     components: {
       Breadcrumb,
       ProductItem,
       SmallProductItem
+    },
+    methods: {
+      set_view_type(event, view_type)
+      {
+        event.preventDefault();
+        this.view_type = view_type;
+        let el = event.target.parentNode;
+
+        let children = el.parentNode.children
+        for(let x = 0; x < children.length; x++)
+        {
+            children[x].classList.remove('active')
+        }
+        el.classList.add('active')
+      }
     }
   }
 </script>

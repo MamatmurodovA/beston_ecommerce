@@ -166,11 +166,11 @@
             <li class="category">Categories</li>
             <li v-for="category in categories">
               <template v-if="category.children">
-                <a href="#" class="collapse" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">
+                <a class="collapse" @click="open_children($event)">
                   {{ category.title }}
                   <p></p>
                 </a>
-                <ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
+                <ul class="nav collapse" >
                   <li v-for="child_cat in category.children">
                     <a href="#">
                       {{ child_cat.title }}
@@ -184,8 +184,6 @@
                 </a>
               </template>
             </li>
-
-
           </ul>
         </nav>
         <a href="#" id="menuclosed" @click="left_menu_is_open=false">
@@ -207,6 +205,14 @@
         categories: categories
       }
     },
+    methods: {
+      open_children(e)
+      {
+        let el = e.target;
+        el.classList.toggle('active')
+        el.nextElementSibling.classList.toggle('in')
+      }
+    }
   }
 </script>
 
@@ -1182,7 +1188,8 @@
                 }
               }
             }
-            .in{
+            .collapse.in{
+              display: block ;
               li{
                 a{
                   margin-left: 30px;
@@ -1193,9 +1200,6 @@
             }
             .collapse{
               display: none;
-            }
-            &.in{
-              display: block;
             }
           }
           .category{
