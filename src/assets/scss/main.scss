@@ -3109,7 +3109,7 @@ a, input, textarea, select, option, button {
           display: flex;
           flex-direction: column;
           width: 100%;
-          .item{
+          li, .item{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -3118,6 +3118,7 @@ a, input, textarea, select, option, button {
             background: #fff;
             border-radius: 5px;
             text-align: center;
+            margin-bottom: 25px;
             .top{
               display: flex;
               flex-direction: column;
