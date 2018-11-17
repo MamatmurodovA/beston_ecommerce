@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeBase from '../components/Base/HomeBase'
 import Home from '../components/Pages/Home'
+import NotFound from '../components/Pages/NotFound'
 import ProductListPage from '../components/Pages/ProductList'
 import ProductDetail from '../components/Pages/ProductDetail'
 import ProductSubcategory from '../components/Pages/ProductSubcategory'
@@ -36,6 +37,10 @@ export default new VueRouter({
         },
       ],
     },
+    {
+      path: '/**',
+      component: NotFound
+    }
   ],
   mode: 'history'
 })

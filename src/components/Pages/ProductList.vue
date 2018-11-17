@@ -82,8 +82,8 @@
             </div>
           </div>
           <div class="block-content" >
-            <div class="row" :class="[view_type]">
-              <div v-for="(product, index) in products" :key="index" >
+            <div class="row products-list-page" :class="[view_type]">
+              <div v-for="(product, index) in products" :key="index" class="products-list-page-item">
                 <ProductItem :product="product"></ProductItem>
                 <hr>
               </div>
