@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="header">
+    <div id="header" :class="{'fixed': scrolled}">
       <div id="top">
         <div id="navbar">
           <div class="burger1">
@@ -11,7 +11,15 @@
               <img src="/static/images/logo-top.png">
             </router-link>
           </div>
-          <div class="reclame"><img src="/static/images/reclame.png"></div>
+          <div class="column">
+            <div class="reclame">
+              <img src="/static/images/reclame.png">
+            </div>
+            <div class="search-block">
+              <Search :categories="categories"></Search>
+            </div>
+          </div>
+
           <Cart></Cart>
           <div class="languages">
             <a href=""><p>Uz</p><img src="/static/images/uz.png" alt=""></a>
@@ -20,20 +28,20 @@
           </div>
         </div>
       </div>
-      <div class="search-block">
-        <Search :categories="categories"></Search>
-      </div>
-      <div id="top_fixed" :class="{'flex': scrolled}">
-        <div id="navbar_fixed">
-          <div class="burger2">
-            <span id="burger2" @click="left_menu_is_open=true"></span>
-          </div>
-          <div class="logo"><a href=""><img src="/static/images/logo-top.png"></a></div>
-          <Search :categories="categories"></Search>
-          <Cart></Cart>
-        </div>
-      </div>
+
+
+      <!--<div id="top_fixed" :class="{'flex': scrolled}">-->
+        <!--<div id="navbar_fixed">-->
+          <!--<div class="burger2">-->
+            <!--<span id="burger2" @click="left_menu_is_open=true"></span>-->
+          <!--</div>-->
+          <!--<div class="logo"><a href=""><img src="/static/images/logo-top.png"></a></div>-->
+          <!--<Search :categories="categories"></Search>-->
+          <!--<Cart></Cart>-->
+        <!--</div>-->
+      <!--</div>-->
     </div>
+
     <nav id="nav" :class="{'fixed': scrolled}">
       <div id="menu1">
         <ul class="menu_horizontal">
@@ -133,7 +141,7 @@
       position: relative;
       #navbar{
         display: flex;
-        align-items: center;
+        align-items: start;
         .burger1{
           display: flex;
           align-items: center;
@@ -150,6 +158,7 @@
           display: flex;
           align-items: center;
           margin: 0 33px;
+          height: 110px;
           a{
             display: inline-block;
             img{
@@ -171,7 +180,8 @@
           align-items: center;
           font-family: 'Circe Bold';
           font-size: 12px;
-          #cart1{
+          height: 110px;
+          #cart1, #cart2{
             display: flex;
             align-items: center;
             margin-left: 38px;
@@ -311,7 +321,7 @@
         .languages{
           display: flex;
           align-items: center;
-          height: 100%;
+          height: 110px;
           font-size: 14px;
           font-family: 'Circe Regular';
           a{
@@ -1016,6 +1026,35 @@
         }
       }
     }
+  }
+
+  #header.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #FFFFFF;
+    z-index: 99;
+    #top{
+      #navbar{
+        justify-content: space-between;
+        .reclame{
+          display: none;
+        }
+      }
+    }
+    .search-block{
+      width: 600px;
+      border: none;
+      display: flex;
+      align-items: center;
+      height: 110px;
+      #search{
+        margin: 0;
+      }
+    }
+
   }
   #nav{
     font-family: 'Circe Bold';
