@@ -1,8 +1,9 @@
 <template>
   <ul class="menu">
-    <li id="cart2">
+    <li id="cart1">
       <div @click="cart_opened=!cart_opened">
-        <img src="/static/images/shopping-cart-icon.png" alt="shopping cart">CART
+        <img src="/static/images/shopping-cart-icon.png" alt="shopping cart">
+        <span>CART</span>
       </div>
       <h2 id="value">0</h2>
     </li>

@@ -142,6 +142,7 @@
       #navbar{
         display: flex;
         align-items: start;
+        justify-content: space-between;
         .burger1{
           display: flex;
           align-items: center;
@@ -157,7 +158,6 @@
         .logo{
           display: flex;
           align-items: center;
-          margin: 0 33px;
           height: 110px;
           a{
             display: inline-block;
@@ -167,9 +167,11 @@
           }
         }
         .reclame{
+          margin: 16px 35px;
           display: flex;
           align-items: center;
           padding: 15px 0;
+
           img{
             width: 100%;
           }
@@ -184,7 +186,15 @@
           #cart1, #cart2{
             display: flex;
             align-items: center;
-            margin-left: 38px;
+            margin-right: 30px;
+            img{
+              vertical-align: bottom;
+
+            }
+            span{
+              vertical-align: bottom;
+
+            }
             #value{
               background: $lightgray;
               border: 1px solid $lightgray;
@@ -215,9 +225,11 @@
             background: #fff;
             border-radius: 30px;
             position: relative;
-            margin: 0 31px;
             font-family: 'Circe Bold';
             font-size: 11px;
+            a{
+              word-wrap: no-wrap;
+            }
           }
           #cartview{
             width: 310px;
@@ -719,13 +731,37 @@
       }
     }
     @include b(1440px, max-width){
+
       #top{
         #navbar{
           .burger1{
             justify-content: center;
           }
+          .menu
+            #cart1{
+              margin-right: 15px;
+            }
+          .reclame{
+            margin: 10px;
+          }
         }
       }
+    }
+    @media (max-width: 1400px) {
+      #header {
+        background: #000;
+        #top {
+          #navbar {
+            .reclame{
+              margin: 10px!important;
+            }
+            .menu
+              #cart1 {
+                margin-right: 0;
+              }
+          }
+      }
+    }
     }
     @include b(1300px, max-width){
       #top_fixed{
@@ -861,8 +897,16 @@
         }
       }
       .search-block{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+        background-color: #fff;
+        border: 0;
         #search{
-          margin: 25px 60px;
+
+          margin: 30px 20px;
           .form{
             height: 40px;
             .search_panel{
@@ -959,6 +1003,11 @@
               font-size: 11px;
             }
           }
+        }
+      }
+      #header.fixed{
+        .search-block{
+          width: 100%;
         }
       }
     }
