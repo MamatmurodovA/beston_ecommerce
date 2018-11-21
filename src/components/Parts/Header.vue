@@ -133,12 +133,13 @@
   @import "~susy";
   @import "~breakpoint-sass/stylesheets/breakpoint";
   #header{
+    position: relative;
+    margin-bottom: 141px;
     #top{
       @include innerbox(0, 0);
       width: 100%;
       display: flex;
       flex-direction: column;
-      position: relative;
       #navbar{
         display: flex;
         align-items: start;
@@ -167,10 +168,11 @@
           }
         }
         .reclame{
-          margin: 16px 35px;
+          margin: 0 35px;
           display: flex;
           align-items: center;
           padding: 15px 0;
+          margin-right: 0;
 
           img{
             width: 100%;
@@ -186,7 +188,7 @@
           #cart1, #cart2{
             display: flex;
             align-items: center;
-            margin-right: 30px;
+            margin-right: 5px;
             img{
               vertical-align: bottom;
 
@@ -339,7 +341,8 @@
           a{
             display: flex;
             align-items: center;
-            margin: 5px;
+            margin: 0;
+            margin-right: 4px;
             color: #777777;
             img{
               margin: 0 5px;
@@ -354,6 +357,12 @@
     .search-block{
       border-top: 1px solid #f0f2f7;
       border-bottom: 1px solid #ececec;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      left: 0;
+      z-index: 13;
+      background: #fff;
       #search{
         margin: 40px auto;
         border: 3px solid $orange;
@@ -741,28 +750,33 @@
             #cart1{
               margin-right: 15px;
             }
-          .reclame{
-            margin: 10px;
-          }
+
         }
       }
     }
     @media (max-width: 1400px) {
-      #header {
-        background: #000;
         #top {
           #navbar {
+            margin: 0 15px;
+            align-items: center;
+            .logo{
+              margin-left: 10px;
+            }
             .reclame{
-              margin: 10px!important;
             }
             .menu
               #cart1 {
                 margin-right: 0;
-              }
+                div{
+                  width: 53px;
+                  margin-left: 10px;
+                }
+
+            }
           }
+        }
       }
-    }
-    }
+
     @include b(1300px, max-width){
       #top_fixed{
         #navbar_fixed{
@@ -823,8 +837,16 @@
     @include b(992px, max-width){
       #top{
         #navbar{
+
+          .reclame{
+            margin-left: 10px;
+          }
+          .search-block{
+            padding: 0 15px;
+          }
           .menu{
-            margin-top: 35px;
+            margin-top: 50px;
+            height: auto;
             #cart1{
               margin-left: 10px;
             }
@@ -838,7 +860,7 @@
           }
           .languages{
             position: absolute;
-            right: 3px;
+            right: 20px;
             top: 30px;
             height: 20px;
           }
@@ -864,17 +886,19 @@
     @include b(768px, max-width) {
       #top{
         #navbar{
+          margin-top: 15px;
           display: flex;
           justify-content: space-between;
           align-items: center;
           .burger1{
-            height: 80px;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
           }
           .logo{
             margin: 0 5px;
+            height: 100%;
           }
           .menu{
             margin: 0;
@@ -898,9 +922,9 @@
       }
       .search-block{
         position: absolute;
-        top: 80px;
+        top: 100%;
         left: 0;
-        z-index: 99;
+        z-index: 14;
         width: 100%;
         background-color: #fff;
         border: 0;
@@ -1082,7 +1106,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
     background-color: #FFFFFF;
     z-index: 99;
     #top{
@@ -1094,13 +1117,22 @@
       }
     }
     .search-block{
-      width: 600px;
+      position: static;
+      width: 100%;
       border: none;
       display: flex;
       align-items: center;
       height: 110px;
       #search{
         margin: 0;
+      }
+    }
+    @media (max-width: 767px){
+      .search-block{
+        position: absolute;
+        #search{
+          margin: 0 auto;
+        }
       }
     }
 
