@@ -69,16 +69,16 @@
                 </a>
                 <ul class="nav collapse" >
                   <li v-for="child_cat in category.children">
-                    <a href="#">
-                      {{ child_cat.title }}
-                    </a>
+                      <router-link :to="{name: 'product_category_page', params: {category_id: child_cat.id}}">
+                        {{ child_cat.title }}
+                      </router-link>
                   </li>
                 </ul>
               </template>
               <template v-else>
-                <a href="">
+                  <router-link :to="{name: 'product_category_page', params: {category_id: category.id}}">
                   {{ category.title }}
-                </a>
+                  </router-link>
               </template>
             </li>
           </ul>
@@ -93,7 +93,8 @@
 </template>
 
 <script>
-  import categories from '../../data/category.json'
+  import API_ROOT from '../../config'
+
   import Search from './Search'
   import Cart from './Cart'
   export default {
@@ -102,7 +103,7 @@
     data(){
       return {
         left_menu_is_open: false,
-        categories: categories,
+        categories: [],
         scrolled: false
       }
     },
@@ -118,10 +119,20 @@
       {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         this.scrolled = scrollTop > 105;
+      },
+      getCategories()
+      {
+        let category_url = API_ROOT + '/categories/'
+        fetch(category_url, {
+          method: 'GET'
+        })
+          .then(response => response.json())
+          .then(json => this.categories = json.results)
       }
     },
     created () {
       window.addEventListener('scroll', this.handleScroll);
+      this.getCategories()
     },
     destroyed () {
       window.removeEventListener('scroll', this.handleScroll);

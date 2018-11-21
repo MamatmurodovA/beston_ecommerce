@@ -18,7 +18,7 @@
                     <ul class="sub_menu">
                       <li class="sub_list" v-for="child_cat in category.children">
                           <router-link :to="{name: 'product_category_page', params: {category_id: child_cat.id}}">
-                            {{ category.title }}
+                            {{ child_cat.title }}
                           </router-link>
                       </li>
                     </ul>
@@ -73,7 +73,7 @@
 </template>
 
 <script>
-  import categories from '../../data/category.json'
+  import API_ROOT from '../../config'
   export default {
     name: 'SectionTop',
     data(){
@@ -95,8 +95,23 @@
               prevEl: '.banner-slider-prev'
             }
           },
-          categories: categories
+          categories: []
       }
+    },
+    methods: {
+      getCategories()
+      {
+        let category_url = API_ROOT + '/categories/'
+        fetch(category_url, {
+          method: 'GET'
+        })
+          .then(response => response.json())
+          .then(json => this.categories = json.results)
+      }
+    },
+    created()
+    {
+      this.getCategories()
     }
   }
 </script>
