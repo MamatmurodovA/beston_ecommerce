@@ -146,6 +146,13 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss">
+  .subcategory-section{
+    #recent-prod{
+      .cart{
+        display: none;
+      }
+    }
+  }
 
 </style>
