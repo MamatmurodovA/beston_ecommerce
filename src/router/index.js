@@ -6,6 +6,7 @@ import NotFound from '../components/Pages/NotFound'
 import ProductListPage from '../components/Pages/ProductList'
 import ProductDetail from '../components/Pages/ProductDetail'
 import ProductSubcategory from '../components/Pages/ProductSubcategory'
+import AddProducts from '../components/Pages/AddProducts'
 
 Vue.use(VueRouter)
 
@@ -34,6 +35,11 @@ export default new VueRouter({
           path: '/category/:category_id/products/:id',
           component: ProductDetail,
           name: 'product_detail_page',
+        },
+        {
+          path: '/addproducts',
+          component: AddProducts,
+          name: 'add_products',
         },
       ],
     },
