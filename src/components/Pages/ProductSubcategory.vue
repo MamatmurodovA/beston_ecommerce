@@ -2,12 +2,12 @@
   <div>
     <Breadcrumb></Breadcrumb>
     <section class="section-product-list">
-      <div class="subcategory-products" v-for="category in categories">
+      <div class="subcategory-products" v-for="category_item in categories">
         <div class="wrapper">
           <div class="list">
             <h2 class="block-title">
-              <router-link :to="{name: 'product_category_page', params: {id: category.id}}">
-                {{ category.title }}
+              <router-link :to="{name: 'product_category_page', params: {id: category_item.id}}">
+                {{ category_item.title }}
               </router-link>
             </h2>
             <div class="menu">
@@ -34,22 +34,57 @@
 
 <script>
   import Breadcrumb from '../Parts/Breadcrumb'
-  import products from '../../data/products.json'
+
   import categories from '../../data/category.json'
   import SmallProductItem from '../Items/SmallProductItem'
   import ProductItem from '../Items/ProductItem'
+  import API_ROOT from '../../config'
   export default {
     name: 'ProductListPage',
     data(){
       return {
-        products: products,
-        categories: categories
+        categories: categories,
+        products: [],
+        category: {}
       }
     },
     components: {
       ProductItem,
       Breadcrumb,
       SmallProductItem
+    },
+    methods: {
+      getCategory()
+      {
+        console.dir(this.$route)
+        let category_url = API_ROOT + '/categories/' + this.$route.params.category_id + '/'
+        fetch(category_url, {
+          method: 'GET'
+        })
+          .then(response => response.json())
+          .then(json => this.category = json)
+      },
+      getCategoryProducts()
+      {
+        let products_url = API_ROOT + '/products/?cat='  + this.$route.params.category_id
+        fetch(products_url, {
+          method: 'GET'
+        })
+          .then(response => response.json())
+          .then(json => this.products = json.results)
+      },
+      handleRouteChange()
+      {
+        this.getCategoryProducts()
+      }
+    },
+    watch: {
+      '$route': 'handleRouteChange'
+    },
+    created()
+    {
+      this.getCategory()
+      this.getCategoryProducts()
     }
   }
 </script>

@@ -6,17 +6,17 @@
       </router-link>
     </li>
     <li>
-      <router-link :to="{name: 'product_category_page', params: {category_id: 1}}">
+      <router-link to="/category/50/">
         Agriculture & Food
       </router-link>
     </li>
     <li class="active">
-      <router-link :to="{name: 'product_list_page', params: {category_id: 1, }}">
+      <router-link to="/category/50/">
         Categories name
       </router-link>
     </li>
-    <li v-if="page.name==='product_detail'">
-        <router-link :to="{name: 'product_detail_page', params: {category_id: 1, id: 1}}">
+    <li >
+        <router-link to="/category/50/products/403/">
             Product detail
         </router-link>
     </li>
@@ -34,20 +34,32 @@
             path: 'home'
           }
         ],
+        page: {
+          name: 'home_page'
+        }
       }
     },
     props: {
-      page: {
+      args: {
+        type: Object,
         default: function () {
-          return {
-            name: 'test',
-            params: {}
-          }
-        },
-        type: Object
+          return {}
+        }
       }
     },
-    mounted() {
+    methods: {
+        defineRouter(){
+          let page_name = this.$route.name;
+          let path = {}
+          if (page_name === 'product_category_page')
+          {
+            let category = this.args.category
+
+          }
+        }
+    },
+    beforeRouteEnter() {
+
     }
   }
 </script>

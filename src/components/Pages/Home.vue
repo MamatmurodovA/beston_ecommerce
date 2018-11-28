@@ -27,13 +27,13 @@
           <section id="new-prod">
             <h2 class="block-title">New product</h2>
             <div class="block-content">
-              <SmallProductItem v-for="(product, index) in products" :key="index" :product="product"></SmallProductItem>
+              <SmallProductItem v-for="(product, index) in new_products" :key="index" :product="product"></SmallProductItem>
             </div>
           </section>
           <section id="recent-prod">
             <h2 class="block-title">Recently viewed items</h2>
             <div class="block-content">
-              <SmallProductItem v-for="(product, index) in products" :key="index" :product="product"></SmallProductItem>
+              <SmallProductItem v-for="(product, index) in recently_viewed_products" :key="index" :product="product"></SmallProductItem>
             </div>
           </section>
         </div>
@@ -50,14 +50,17 @@
   import Underground from '../Parts/Underground'
   import SectionBottom from '../Parts/SectionBottom'
   import SmallProductItem from '../Items/SmallProductItem'
-  import products from '../../data/products.json'
   import TopProductItem from '../Items/TopProductItem'
+  import API_ROOT from '../../config'
 
   export default {
     name: 'Home',
     data(){
       return {
-        top_products: products,
+        top_products: [],
+        recently_viewed_products: [],
+        new_products: [],
+        products: [],
         top_products_slider_config: {
           slidesPerView: 3,
           slidesPerColumn: 2,
@@ -67,7 +70,6 @@
             prevEl: '.top-products-controls-prev'
           }
         },
-        products: products
       }
     },
     components: {
@@ -76,6 +78,38 @@
       SectionBottom,
       Underground,
       SmallProductItem
+    },
+    methods: {
+      getTopProducts()
+      {
+        let top_products_url = API_ROOT + '/products/?top_rated=2'
+        fetch(top_products_url, {
+          method: 'GET'
+        })
+          .then(response => response.json())
+          .then(json => this.top_products = json.results)
+      },
+      getRecentlyViewedProducts(){
+        let recently_viewed_products_url = API_ROOT + '/products/?featured=2'
+        fetch(recently_viewed_products_url, {
+          method: 'GET'
+        })
+          .then(response => response.json())
+          .then(json => this.recently_viewed_products = json.results)
+      },
+      getNewProducts(){
+        let new_products_url = API_ROOT + '/products/?new=2'
+        fetch(new_products_url, {
+          method: 'GET'
+        })
+          .then(response => response.json())
+          .then(json => this.new_products = json.results)
+      },
+    },
+    created(){
+      this.getTopProducts()
+      this.getRecentlyViewedProducts()
+      this.getNewProducts()
     }
   }
 </script>

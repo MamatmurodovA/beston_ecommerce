@@ -1,13 +1,13 @@
 <template>
   <div>
-    <Breadcrumb :page="{name: 'product_detail', params: {}}"></Breadcrumb>
+    <Breadcrumb :args="{product: product}"></Breadcrumb>
     <section class="product-section">
       <div class="wrapper">
         <main class="main">
           <div class="main-product-section">
             <div class="product-image">
               <div id="main-product-image">
-                <img id="zoom_01" src="/static/plugins/zoom/images/small/image1.png" data-zoom-image="/static/plugins/zoom/images/large/image1.jpg"/>
+                <img id="zoom_01" :src="product.image" :data-zoom-image="product.image"/>
               </div>
               <div id="other-images">
                 <div class="swiper-container">
@@ -44,7 +44,7 @@
             </div>
             <div class="product-description">
               <div class="description_top">
-                <p id="product_title">Best price waste essential oil distillation equipment Beston</p>
+                <p id="product_title">{{ product.title }}</p>
                 <p id="transportation_price">FOB <span>Reference</span> Price:<a href="">Get Latest Price</a></p>
                 <p id="product_price">
                   <span class="set"><b>US $12000 - 250000</b> / Set</span>
@@ -144,6 +144,7 @@
   import Breadcrumb from '../Parts/Breadcrumb'
   import TopProductItem from '../Items/TopProductItem'
   import products from '../../data/products.json'
+  import API_ROOT from '../../config'
 
   export default {
     name: 'ProductDetail',
@@ -153,8 +154,23 @@
     },
     data(){
       return {
-        products: products
+        products: products,
+        product: {}
       }
+    },
+    methods: {
+        fetchProduct()
+        {
+          let product_url = API_ROOT + '/products/' + this.$route.params.id
+          console.log(product_url)
+          fetch(product_url)
+            .then(response => response.json())
+            .then(json => this.product = json)
+        }
+    },
+    beforeMount()
+    {
+      this.fetchProduct()
     }
   }
 </script>

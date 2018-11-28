@@ -68,6 +68,11 @@
                   <p></p>
                 </a>
                 <ul class="nav collapse" >
+                  <li>
+                    <router-link :to="{name: 'product_category_page', params: {category_id: category.id}}">
+                      See all {{ category.title }}
+                    </router-link>
+                  </li>
                   <li v-for="child_cat in category.children">
                       <router-link :to="{name: 'product_category_page', params: {category_id: child_cat.id}}">
                         {{ child_cat.title }}

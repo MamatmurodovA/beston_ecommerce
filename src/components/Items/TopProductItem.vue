@@ -2,7 +2,7 @@
     <div >
       <div class="image">
         <router-link :to="{name: 'product_detail_page', params: {category_id: 1, id: product.id}}">
-          <img :src="product.picture">
+          <img :src="product.image">
         </router-link>
       </div>
       <div class="cart">
@@ -16,7 +16,7 @@
         </router-link>
       </div>
       <div class="price">
-        {{ product.price }} / Set
+        {{ product.cost }} / Set
       </div>
     </div>
 </template>

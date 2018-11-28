@@ -3,7 +3,7 @@
       <div class="top">
         <div class="image">
           <router-link :to="{name: 'product_detail_page', params: {category_id: 1, id: product.id}}">
-            <img :src="product.picture">
+            <img :src="product.image">
           </router-link>
         </div>
         <div class="cart">
@@ -19,7 +19,7 @@
           </router-link>
         </div>
         <div class="price">
-          <span>{{ product.price }}</span> / Set
+          <span>{{ product.cost }}</span> / Set
         </div>
         <p class="min-quantity">
           <span>1 Piece</span>(Min. Order)
