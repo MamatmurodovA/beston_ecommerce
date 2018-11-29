@@ -109,7 +109,6 @@
       return {
         left_menu_is_open: false,
         categories: [],
-        scrolled: false
       }
     },
     methods: {
@@ -123,7 +122,7 @@
       handleScroll(event)
       {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        this.scrolled = scrollTop > 105;
+        this.$store.dispatch('scrolled', {scrolled: scrollTop > 105})
       },
       getCategories()
       {
@@ -142,6 +141,11 @@
     destroyed () {
       window.removeEventListener('scroll', this.handleScroll);
     },
+    computed: {
+      scrolled() {
+        return this.$store.getters.scrolled
+      }
+    }
   }
 </script>
 

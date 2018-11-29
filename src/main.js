@@ -8,9 +8,12 @@ Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper)
 
 import 'swiper/dist/css/swiper.css'
+import store from './store'
+
 
 new Vue({
   el: '#app',
+  store,
   router,
   components: { App },
   template: '<App/>'

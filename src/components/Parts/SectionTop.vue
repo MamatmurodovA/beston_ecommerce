@@ -1,5 +1,5 @@
 <template>
-  <section id="section-top">
+  <section id="section-top" :class="{scrolled: scrolled}">
     <div class="product-categories">
       <section id="category">
         <h2 class="block-title">Product categories</h2>
@@ -112,6 +112,11 @@
     created()
     {
       this.getCategories()
+    },
+    computed: {
+      scrolled() {
+        return this.$store.getters.scrolled
+      }
     }
   }
 </script>
