@@ -193,7 +193,6 @@
           align-items: center;
           padding: 15px 0;
           margin-right: 0;
-
           img{
             width: 100%;
           }
