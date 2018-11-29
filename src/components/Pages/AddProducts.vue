@@ -2,20 +2,72 @@
     <div>
       <section class="add-products">
         <ul class="steps-section">
-          <li class="passed"><a href="#!">1</a></li>
-          <li class="active"><a href="#!">2</a></li>
-          <li><a href="#!">3</a></li>
-          <li><a href="#!">4</a></li>
-          <li><a href="#!">5</a></li>
+          <li class="passed">
+            <a href="#!">1</a>
+            <h4>
+              Product info
+            </h4>
+          </li>
+          <li class="active">
+            <a href="#!">2</a>
+            <h4>Variations </h4>
+          </li>
+          <li>
+            <a href="#!">3</a>
+            <h4>Offer</h4>
+          </li>
+          <li>
+            <a href="#!">4</a>
+            <h4>Images</h4>
+          </li>
         </ul>
         <div class="form">
-          <h1>Sign Up Your User Account</h1>
           <p>Fill all form field to go next step</p>
           <form>
             <div class="form-s-01">
-              <input type="text" placeholder="name">
-              <input type="email" placeholder="email">
-              <input type="password" placeholder="password">
+              <label for="productTitle">Title</label>
+              <input type="text" placeholder="name" id="productTitle">
+
+              <label for="productBrand">Brand</label>
+              <input type="text" placeholder="brand" id="productBrand">
+
+              <label for="productColor">Color</label>
+              <input type="text" placeholder="color" id="productColor">
+
+              <label for="productSize">Size</label>
+              <input type="text" name="" id="productSize">
+
+              <input type="submit" value="Next" class="button-next">
+            </div>
+            <div class="form-s-01">
+              <label for="productTitle">Title</label>
+              <input type="text" placeholder="name" id="productTitle">
+
+              <label for="productBrand">Brand</label>
+              <input type="text" placeholder="brand" id="productBrand">
+
+              <label for="productColor">Color</label>
+              <input type="text" placeholder="color" id="productColor">
+
+              <label for="productSize">Size</label>
+              <input type="text" name="" id="productSize">
+
+              <input type="submit" value="Next" class="button-next">
+            </div>
+            <div class="form-s-01">
+              <label for="productTitle">Title</label>
+              <input type="text" placeholder="name" id="productTitle">
+
+              <label for="productBrand">Brand</label>
+              <input type="text" placeholder="brand" id="productBrand">
+
+              <label for="productColor">Color</label>
+              <input type="text" placeholder="color" id="productColor">
+
+              <label for="productSize">Size</label>
+              <input type="text" name="" id="productSize">
+
+              <input type="submit" value="Next" class="button-next">
             </div>
           </form>
         </div>
@@ -44,13 +96,15 @@
        display: flex;
        justify-content: center;
        align-items: center;
+       margin-bottom: 30px;
        li{
          border-radius: 50%;
          width: 100%;
          height: 100px;
          display: flex;
          justify-content: center;
-         align-items: center;
+         align-items: flex-start;
+         flex-direction: column;
          position: relative;
          z-index: 10;
          a{
@@ -64,15 +118,15 @@
            position: relative;
            z-index: 9;
            background-color: #FFFFFF;
+           margin-bottom: 15px;
          }
          &:before{
            content: '';
            position: absolute;
            height: 2px;
            width: 100%;
-           top: 50%;
-           left: 25px;
-           transform: translateX(-50%);
+           top: 34px;
+           left: -84%;
            background-color: #333333;
            z-index: 1;
          }
@@ -84,7 +138,6 @@
          &.active{
            &:before{
              background-color: $color-accent;
-             z-index: 1;
            }
            a{
              background-color: $color-accent;
@@ -94,13 +147,35 @@
          &.passed{
            &:before{
              background-color: $color-accent;
-             z-index: 1;
            }
            a{
              background-color: $color-accent;
              color: #FFFFFF;
            }
          }
+       }
+     }
+     .form-s-01{
+       display: flex;
+       flex-direction: column;
+       margin-top: 30px;
+       margin-bottom: 30px;
+       label{
+         margin-bottom: 10px;
+         margin-left: 10px;
+       }
+       input{
+         margin-bottom: 20px;
+         border-radius: 3px;
+         box-shadow: 1px 1px 1px #cccccc;
+         border: 1px solid #333333;
+         padding: 10px 20px;
+         width: 300px;
+       }
+       input[type=submit]{
+         background-color: $color-accent;
+         color: #FFFFFF;
+         width: 200px;
        }
      }
    }
