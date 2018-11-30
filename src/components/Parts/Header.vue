@@ -98,7 +98,7 @@
 </template>
 
 <script>
-  import API_ROOT from '../../config'
+  import * as config from '../../config'
 
   import Search from './Search'
   import Cart from './Cart'
@@ -126,7 +126,7 @@
       },
       getCategories()
       {
-        let category_url = API_ROOT + '/categories/'
+        let category_url = config.API_ROOT + '/categories/'
         fetch(category_url, {
           method: 'GET'
         })

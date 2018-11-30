@@ -144,7 +144,7 @@
   import Breadcrumb from '../Parts/Breadcrumb'
   import TopProductItem from '../Items/TopProductItem'
   import products from '../../data/products.json'
-  import API_ROOT from '../../config'
+  import * as config from '../../config'
 
   export default {
     name: 'ProductDetail',
@@ -161,7 +161,7 @@
     methods: {
         fetchProduct()
         {
-          let product_url = API_ROOT + '/products/' + this.$route.params.id
+          let product_url = config.API_ROOT + '/products/' + this.$route.params.id
           console.log(product_url)
           fetch(product_url)
             .then(response => response.json())

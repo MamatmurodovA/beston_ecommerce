@@ -51,7 +51,7 @@
   import SectionBottom from '../Parts/SectionBottom'
   import SmallProductItem from '../Items/SmallProductItem'
   import TopProductItem from '../Items/TopProductItem'
-  import API_ROOT from '../../config'
+  import * as config from '../../config'
 
   export default {
     name: 'Home',
@@ -82,7 +82,7 @@
     methods: {
       getTopProducts()
       {
-        let top_products_url = API_ROOT + '/products/?top_rated=2'
+        let top_products_url = config.API_ROOT + '/products/?top_rated=2'
         fetch(top_products_url, {
           method: 'GET'
         })
@@ -90,7 +90,7 @@
           .then(json => this.top_products = json.results)
       },
       getRecentlyViewedProducts(){
-        let recently_viewed_products_url = API_ROOT + '/products/?featured=2'
+        let recently_viewed_products_url = config.API_ROOT + '/products/?featured=2'
         fetch(recently_viewed_products_url, {
           method: 'GET'
         })
@@ -98,7 +98,7 @@
           .then(json => this.recently_viewed_products = json.results)
       },
       getNewProducts(){
-        let new_products_url = API_ROOT + '/products/?new=2'
+        let new_products_url = config.API_ROOT + '/products/?new=2'
         fetch(new_products_url, {
           method: 'GET'
         })

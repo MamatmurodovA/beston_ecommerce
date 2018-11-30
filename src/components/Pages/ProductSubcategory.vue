@@ -2,90 +2,56 @@
   <div>
     <Breadcrumb></Breadcrumb>
     <section class="section-product-list">
-      <div class="subcategory-products" v-for="category_item in categories">
-        <div class="wrapper">
-          <div class="list">
-            <h2 class="block-title">
-              <router-link :to="{name: 'product_category_page', params: {id: category_item.id}}">
-                {{ category_item.title }}
-              </router-link>
-            </h2>
-            <div class="menu">
-              <ul class="sub_menu">
-                <li class="sub_list"><a href="product_page.html">shenzhen</a></li>
-                <li class="sub_list"><a href="">wireless charger</a></li>
-                <li class="sub_list"><a href="">headset</a></li>
-                <li class="sub_list active"><a href="">power bank</a></li>
-                <li class="sub_list"><a href="">shenzhen</a></li>
-                <li class="sub_list"><a href="">wireless charger</a></li>
-                <li class="sub_list"><a href="">headset</a></li>
-                <li class="sub_list"><a href="">power bank</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="items">
-            <SmallProductItem :product="product"  v-for="(product, index) in products" :key="index"></SmallProductItem>
-          </div>
-        </div>
-      </div>
+      <SubCategory :category="category_item" v-for="(category_item,index) in category.children" :key="index"></SubCategory>
     </section>
   </div>
 </template>
 
 <script>
+  import * as config from '../../config'
   import Breadcrumb from '../Parts/Breadcrumb'
 
-  import categories from '../../data/category.json'
   import SmallProductItem from '../Items/SmallProductItem'
   import ProductItem from '../Items/ProductItem'
-  import API_ROOT from '../../config'
+  import SubCategory from '../Items/SubCategory'
+
+
   export default {
     name: 'ProductListPage',
     data(){
-      return {
-        categories: categories,
-        products: [],
-        category: {}
-      }
+        return {
+            category: {}
+        }
     },
     components: {
+      SubCategory,
       ProductItem,
       Breadcrumb,
       SmallProductItem
     },
     methods: {
-      getCategory()
-      {
-        console.dir(this.$route)
-        let category_url = API_ROOT + '/categories/' + this.$route.params.category_id + '/'
-        fetch(category_url, {
-          method: 'GET'
-        })
-          .then(response => response.json())
-          .then(json => this.category = json)
-      },
-      getCategoryProducts()
-      {
-        let products_url = API_ROOT + '/products/?cat='  + this.$route.params.category_id
-        fetch(products_url, {
-          method: 'GET'
-        })
-          .then(response => response.json())
-          .then(json => this.products = json.results)
-      },
       handleRouteChange()
       {
-        this.getCategoryProducts()
+        this.getCategory()
+      },
+      getCategory(){
+        let url = config.API_ROOT + '/categories/' + this.$route.params.category_id + '/'
+        fetch(url, {
+          method: 'GET'
+        })
+          .then(response => response.json())
+          .then(json => {
+            this.category = json
+          })
       }
     },
     watch: {
-      '$route': 'handleRouteChange'
+      '$route': 'handleRouteChange',
     },
     created()
     {
       this.getCategory()
-      this.getCategoryProducts()
-    }
+    },
   }
 </script>
 
