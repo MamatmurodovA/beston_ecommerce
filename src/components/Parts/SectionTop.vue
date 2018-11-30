@@ -125,10 +125,10 @@
   @import "~susy";
   @import "~breakpoint-sass/stylesheets/breakpoint";
   #section-top{
-    @include innerbox(0, 0);
-    &.scrolled {
+    &.scrolled{
       margin-top: 180px;
     }
+    @include innerbox(0, 0);
     .product-categories{
       @include span(3);
       max-width: 268px;
