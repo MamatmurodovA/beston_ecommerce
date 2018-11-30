@@ -126,6 +126,9 @@
   @import "~breakpoint-sass/stylesheets/breakpoint";
   #section-top{
     @include innerbox(0, 0);
+    &.scrolled {
+      margin-top: 180px;
+    }
     .product-categories{
       @include span(3);
       max-width: 268px;
