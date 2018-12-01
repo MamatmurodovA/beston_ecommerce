@@ -362,9 +362,7 @@
       #content{
         #center{
           @include span(14);
-          .swiper-button{
-            display: none;
-          }
+
         }
         #right{
           @include span(14);
