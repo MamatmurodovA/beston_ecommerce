@@ -1126,7 +1126,8 @@
     left: 0;
     width: 100%;
     background-color: #FFFFFF;
-    z-index: 99;
+    z-index: 24;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.75);
     #top{
       #navbar{
         justify-content: space-between;
