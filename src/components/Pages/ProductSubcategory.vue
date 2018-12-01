@@ -72,6 +72,7 @@
       }
       .wrapper{
         display: flex;
+        margin: 0 auto;
         .list{
           font-family: 'Circe Regular';
           font-size: 12px;
