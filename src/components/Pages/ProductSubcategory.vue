@@ -150,12 +150,15 @@
             border-radius: 5px;
             text-align: center;
             .image{
-              width: 100%;
+              width: 265px;
               height: 223px;
               overflow: hidden;
+              display: flex;
+              align-items: center;
+              justify-content: center;
               img {
-                width: 100%;
-                height: 224px;
+                max-width: 100%;
+                height: auto;
                 border-radius: 5px 5px 0 0;
               }
             }
