@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Breadcrumb></Breadcrumb>
+    <Breadcrumb :params="param_list"></Breadcrumb>
     <section class="section-product-list">
       <SubCategory :category="category_item" v-for="(category_item,index) in category.children" :key="index"></SubCategory>
     </section>
@@ -20,7 +20,8 @@
     name: 'ProductListPage',
     data(){
         return {
-            category: {}
+            category: {},
+            param_list: [],
         }
     },
     components: {
@@ -42,6 +43,7 @@
           .then(response => response.json())
           .then(json => {
             this.category = json
+            this.param_list = [json]
           })
       }
     },

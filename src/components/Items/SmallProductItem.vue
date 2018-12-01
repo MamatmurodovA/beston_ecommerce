@@ -1,7 +1,7 @@
 <template>
   <div class="item">
     <div class="image">
-      <router-link :to="{name: 'product_detail_page', params: {category_id: 1, id: product.id}}">
+      <router-link :to="{name: 'product_detail_page', params: {category_id: product.category_id, id: product.id}}">
         <img :src="product.image">
       </router-link>
     </div>
@@ -11,7 +11,7 @@
       <a href=""><i class="fa fa-eye"></i></a>
     </div>
     <div class="title">
-      <router-link :to="{name: 'product_detail_page', params: {category_id: 1, id: product.id}}">
+      <router-link :to="{name: 'product_detail_page', params: {category_id: product.category_id, id: product.id}}">
         {{ product.title }}
       </router-link>
     </div>

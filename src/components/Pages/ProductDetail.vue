@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Breadcrumb :args="{product: product}"></Breadcrumb>
+    <Breadcrumb :params="[root_category, product]"></Breadcrumb>
     <section class="product-section">
       <div class="wrapper">
         <main class="main">
@@ -155,6 +155,8 @@
     data(){
       return {
         products: products,
+        root_category: {},
+        param_list: [],
         product: {}
       }
     },
@@ -166,11 +168,23 @@
           fetch(product_url)
             .then(response => response.json())
             .then(json => this.product = json)
-        }
+        },
+        getRootCategory(){
+          let url = config.API_ROOT + '/categories/' + this.$route.params.category_id + '/root/'
+          fetch(url, {
+            method: 'GET'
+          })
+            .then(response => response.json())
+            .then(json => {
+              this.root_category = json
+              this.param_list = [json]
+            })
+        },
     },
-    beforeMount()
+    created()
     {
       this.fetchProduct()
+      this.getRootCategory()
     }
   }
 </script>

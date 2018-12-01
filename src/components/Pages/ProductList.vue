@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Breadcrumb></Breadcrumb>
+    <Breadcrumb :params="param_list"></Breadcrumb>
     <div class="subcategory-section">
       <aside class="aside">
         <div class="filter">
@@ -49,7 +49,7 @@
       <main class="main">
         <div class="toprod">
           <div class="head">
-            <h2 class="block-title">Categories name</h2>
+            <h2 class="block-title" v-if="root_category.child">{{ root_category.child.title }}</h2>
             <div class="view">
               <p class="views">View <span>575,715</span> Product(s)</p>
               <div class="right">
@@ -110,17 +110,19 @@
 </template>
 
 <script>
+  import * as config from '../../config'
   import Breadcrumb from '../Parts/Breadcrumb'
   import ProductItem from '../Items/ProductItem'
   import SmallProductItem from '../Items/SmallProductItem'
-  import products from '../../data/products.json'
 
   export default {
     name: 'Subcategory',
     data() {
       return {
-        products: products,
-        view_type: 'grid'
+        products: [],
+        view_type: 'grid',
+        param_list: [],
+        root_category: {},
       }
     },
     components: {
@@ -141,8 +143,33 @@
             children[x].classList.remove('active')
         }
         el.classList.add('active')
+      },
+      getRootCategory(){
+        let url = config.API_ROOT + '/categories/' + this.$route.params.category_id + '/root/'
+        fetch(url, {
+          method: 'GET'
+        })
+          .then(response => response.json())
+          .then(json => {
+            this.root_category = json
+            this.param_list = [json]
+          })
+      },
+      getProducts(){
+        let url = config.API_ROOT + '/products/?cat=' + this.$route.params.category_id;
+        fetch(url, {
+          method: 'GET'
+        })
+          .then(response => response.json())
+          .then(json => {
+            this.products = json.results
+          })
       }
-    }
+    },
+    created(){
+      this.getRootCategory()
+      this.getProducts()
+    },
   }
 </script>
 
