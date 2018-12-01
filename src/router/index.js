@@ -7,19 +7,19 @@ import ProductListPage from '../components/Pages/ProductList'
 import ProductDetail from '../components/Pages/ProductDetail'
 import ProductSubcategory from '../components/Pages/ProductSubcategory'
 import AddProducts from '../components/Pages/AddProducts'
+import store from '../store'
 
 Vue.use(VueRouter)
-
-export default new VueRouter({
+let router = new VueRouter({
   routes: [
     {
       path: '',
       component: HomeBase,
       children: [
         {
-            path: '/',
-            component: Home,
-            name: 'home_page',
+          path: '/',
+          component: Home,
+          name: 'home_page',
         },
         {
           path: '/category/:category_id',
@@ -50,3 +50,19 @@ export default new VueRouter({
   ],
   mode: 'history'
 })
+
+router.beforeResolve((to, from, next) => {
+  // If this isn't an initial page load.
+  if (to.name) {
+    // Start the route progress bar.
+    store.commit('loading', true)
+  }
+  next()
+})
+
+router.afterEach((to, from) => {
+  // Complete the animation of the route progress bar.
+  store.commit('loading', false)
+})
+
+export default router
