@@ -122,6 +122,8 @@
 </script>
 
 <style lang="scss">
+  $color-accent: #ff6a00;
+
   @import "~susy";
   @import "~breakpoint-sass/stylesheets/breakpoint";
   #section-top{
@@ -239,6 +241,15 @@
     .main{
       display: flex;
       flex-direction: column;
+      .swiper-pagination-bullet{
+        border: 2px solid #FFFFFF;
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .swiper-pagination-bullet-active{
+        background: $color-accent;
+        border: none;
+      }
       .owl-carousel{
         .owl-stage-outer{
           max-width: 1170px;
