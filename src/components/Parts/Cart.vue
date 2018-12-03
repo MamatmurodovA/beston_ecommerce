@@ -3,12 +3,12 @@
     <li id="cart1">
       <div @click="cart_opened=!cart_opened">
         <img src="/static/images/shopping-cart-icon.png" alt="shopping cart">
-        <span>CART</span>
+        <span>{{ $t('message.cart')}}</span>
       </div>
       <h2 id="value">0</h2>
     </li>
     <li id="reg">
-      <a href="">SIGN IN</a>
+      <a href="">{{ $t("message.sign_in") }}</a>
     </li>
     <div id="cartview" :class="{'open': cart_opened}">
       <div class="item">

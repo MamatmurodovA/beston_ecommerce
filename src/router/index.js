@@ -55,14 +55,14 @@ router.beforeResolve((to, from, next) => {
   // If this isn't an initial page load.
   if (to.name) {
     // Start the route progress bar.
-    store.commit('loading', true)
+    store.dispatch('loading', true)
   }
   next()
 })
 
 router.afterEach((to, from) => {
   // Complete the animation of the route progress bar.
-  store.commit('loading', false)
+  store.dispatch('loading', false)
 })
 
 export default router

@@ -22,9 +22,9 @@
 
           <Cart></Cart>
           <div class="languages">
-            <a href=""><p>Uz</p><img src="/static/images/uz.png" alt=""></a>
-            <a href=""><p>Ru</p><img src="/static/images/ru.png" alt=""></a>
-            <a href="" class="active"><p>En</p><img src="/static/images/en.png" alt=""></a>
+            <a  @click="setLanguage('uz')"><p>Uz</p><img src="/static/images/uz.png" alt=""></a>
+            <a  @click="setLanguage('ru')" ><p>Ru</p><img src="/static/images/ru.png" alt=""></a>
+            <a  @click="setLanguage('en')" class="active"><p>En</p><img src="/static/images/en.png" alt=""></a>
           </div>
         </div>
       </div>
@@ -132,6 +132,12 @@
         })
           .then(response => response.json())
           .then(json => this.categories = json.results)
+      },
+      setLanguage(lang)
+      {
+          this.$store.commit('loading', true)
+          this.$i18n.locale = lang
+          this.$store.commit('loading', false)
       }
     },
     created () {
