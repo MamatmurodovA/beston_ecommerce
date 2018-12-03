@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="header" :class="{'fixed': scrolled}">
-      <div id="top">
+      <div id="top" :class="{'fixed': scrolled}">
         <div id="navbar">
           <div class="burger1">
             <span id="burger1" class="left_menu_open" @click="left_menu_is_open=true"></span>
@@ -1121,21 +1121,22 @@
   }
 
   #header.fixed{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #FFFFFF;
-    z-index: 24;
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,.75);
-    #top{
+    height: 110px;
+    #top.fixed{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #FFFFFF;
+      z-index: 24;
+      box-shadow: 0 1px 5px 0 rgba(0,0,0,.75);
       #navbar{
         justify-content: space-between;
         .reclame{
           display: none;
         }
       }
-    }
+
     .search-block{
       position: static;
       width: 100%;
@@ -1155,7 +1156,7 @@
         }
       }
     }
-
+    }
   }
   #nav{
     font-family: 'Circe Bold';
