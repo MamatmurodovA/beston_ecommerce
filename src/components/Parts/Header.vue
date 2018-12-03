@@ -1128,15 +1128,20 @@
 
   #header.fixed{
     height: 110px;
+
     #top.fixed{
       position: fixed;
       top: 0;
-      left: 0;
-      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 100%;
       background-color: #FFFFFF;
       z-index: 24;
       box-shadow: 0 1px 5px 0 rgba(0,0,0,.75);
       #navbar{
+        max-width: 1470px;
+        width: 100%;
+        margin: 0 auto;
         justify-content: space-between;
         .reclame{
           display: none;
