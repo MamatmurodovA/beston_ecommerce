@@ -160,7 +160,7 @@
             return false;
         });
         $('#cart1').on('click', function(){
-            $('#cartview').addClass('open');
+            $('#cartview').addClass('open12121');
             return false;
         });
         $('#cart1_hide').on('click', function(){

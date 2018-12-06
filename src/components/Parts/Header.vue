@@ -180,6 +180,7 @@
             background-image: url('/static/images/burger.png');
             width: 20px;
             height: 14px;
+            cursor: pointer;
           }
         }
         .logo{
@@ -214,6 +215,9 @@
             display: flex;
             align-items: center;
             margin-right: 5px;
+            &:hover + #cartview{
+              display: block;
+            }
             img{
               vertical-align: bottom;
 
@@ -246,6 +250,7 @@
             color: $gray;
             display: flex;
             align-items: center;
+            justify-content: center;
             width: 82.5px;
             padding: 9.5px 16.5px;
             border: 2px solid $lightgray;
@@ -266,7 +271,7 @@
             border: none;
             border-radius: 3px;
             position: fixed;
-            top: 105px;
+            top: 72px;
             z-index: 14;
             font-family: 'Circe Regular';
             overflow-y: none;
@@ -276,6 +281,9 @@
             box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
             &.scroll{
               overflow-y: scroll;
+            }
+            &:hover{
+              display: block;
             }
             p{
               display: flex;
@@ -793,7 +801,7 @@
               #cart1 {
                 margin-right: 0;
                 div{
-                  width: 53px;
+                  width: 78px;
                   margin-left: 10px;
                 }
 

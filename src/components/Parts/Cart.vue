@@ -1,7 +1,7 @@
 <template>
   <ul class="menu">
-    <li id="cart1">
-      <div @click="cart_opened=!cart_opened">
+    <li id="cart1" @mouseenter="cart_opened=!cart_opened" @mouseleave="cart_opened=false">
+      <div>
         <img src="/static/images/shopping-cart-icon.png" alt="shopping cart">
         <span>{{ $t('message.cart')}}</span>
       </div>
