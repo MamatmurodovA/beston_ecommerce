@@ -127,11 +127,8 @@
       getCategories()
       {
         let category_url = config.API_ROOT + '/categories/'
-        fetch(category_url, {
-          method: 'GET'
-        })
-          .then(response => response.json())
-          .then(json => this.categories = json.results)
+        axios.get(category_url)
+          .then(json => this.categories = json.data.results)
       },
       setLanguage(lang)
       {

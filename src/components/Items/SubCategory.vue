@@ -47,12 +47,9 @@
       getProducts(){
         let url = config.API_ROOT + "/products/?cat=" + this.category.id
         console.log(url)
-        fetch(url, {
-          method: 'GET'
-        })
-          .then(response => response.json())
+        axios.get(url)
           .then(json => {
-            this.products = json.results
+            this.products = json.data.results
           })
       },
     },

@@ -37,13 +37,10 @@
       },
       getCategory(){
         let url = config.API_ROOT + '/categories/' + this.$route.params.category_id + '/'
-        fetch(url, {
-          method: 'GET'
-        })
-          .then(response => response.json())
+        axios.get(url)
           .then(json => {
-            this.category = json
-            this.param_list = [json]
+            this.category = json.data
+            this.param_list = [json.data]
           })
       }
     },

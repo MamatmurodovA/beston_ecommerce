@@ -165,19 +165,16 @@
         {
           let product_url = config.API_ROOT + '/products/' + this.$route.params.id
           console.log(product_url)
-          fetch(product_url)
-            .then(response => response.json())
-            .then(json => this.product = json)
+          axios.get(product_url)
+            .then(json => this.product = json.data)
         },
         getRootCategory(){
           let url = config.API_ROOT + '/categories/' + this.$route.params.category_id + '/root/'
-          fetch(url, {
-            method: 'GET'
-          })
-            .then(response => response.json())
+
+          axios.get(url)
             .then(json => {
-              this.root_category = json
-              this.param_list = [json]
+              this.root_category = json.data
+              this.param_list = [json.data]
             })
         },
     },

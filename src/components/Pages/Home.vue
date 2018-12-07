@@ -83,27 +83,18 @@
       getTopProducts()
       {
         let top_products_url = config.API_ROOT + '/products/?top_rated=2'
-        fetch(top_products_url, {
-          method: 'GET'
-        })
-          .then(response => response.json())
-          .then(json => this.top_products = json.results)
+        axios.get(top_products_url)
+          .then(json => this.top_products = json.data.results)
       },
       getRecentlyViewedProducts(){
         let recently_viewed_products_url = config.API_ROOT + '/products/?featured=2'
-        fetch(recently_viewed_products_url, {
-          method: 'GET'
-        })
-          .then(response => response.json())
-          .then(json => this.recently_viewed_products = json.results)
+        axios.get(recently_viewed_products_url)
+          .then(json => this.recently_viewed_products = json.data.results)
       },
       getNewProducts(){
         let new_products_url = config.API_ROOT + '/products/?new=2'
-        fetch(new_products_url, {
-          method: 'GET'
-        })
-          .then(response => response.json())
-          .then(json => this.new_products = json.results)
+        axios.get(new_products_url)
+          .then(json => this.new_products = json.data.results)
       },
     },
     created(){
