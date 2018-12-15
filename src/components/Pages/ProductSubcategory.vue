@@ -36,7 +36,7 @@
         this.getCategory()
       },
       getCategory(){
-        let url = config.API_ROOT + '/categories/' + this.$route.params.category_id + '/'
+        let url = config.API_ROOT + '/categories/' + this.$route.params.category_slug + '/'
         axios.get(url)
           .then(json => {
             this.category = json.data

@@ -145,7 +145,7 @@
         el.classList.add('active')
       },
       getRootCategory(){
-        let url = config.API_ROOT + '/categories/' + this.$route.params.category_id + '/root/'
+        let url = config.API_ROOT + '/categories/' + this.$route.params.category_slug + '/root/'
         axios.get(url)
           .then(json => {
             this.root_category = json.data
@@ -153,16 +153,18 @@
           })
       },
       getProducts(){
-        let url = config.API_ROOT + '/products/?cat=' + this.$route.params.category_id;
+        let url = config.API_ROOT + '/products/?cat_slug=' + this.$route.params.category_slug;
         axios.get(url)
           .then(json => {
             this.products = json.data.results
+            console.log(json.data)
           })
       }
     },
     created(){
       this.getRootCategory()
       this.getProducts()
+      console.log('Createed')
     },
   }
 </script>
@@ -175,5 +177,6 @@
       }
     }
   }
+
 
 </style>

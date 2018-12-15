@@ -22,17 +22,17 @@ let router = new VueRouter({
           name: 'home_page',
         },
         {
-          path: '/category/:category_id',
+          path: '/category/:category_slug',
           component: ProductSubcategory,
           name: 'product_category_page',
         },
         {
-          path: '/category/:category_id/products/',
+          path: '/category/:category_slug/products/',
           component: ProductListPage,
           name: 'product_list_page',
         },
         {
-          path: '/category/:category_id/products/:id',
+          path: '/category/:category_slug/products/:id',
           component: ProductDetail,
           name: 'product_detail_page',
         },

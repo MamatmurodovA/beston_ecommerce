@@ -11,20 +11,20 @@
           <ul id="category_menu">
             <li class="category_list" v-for="category in categories">
                 <template v-if="category.children">
-                    <router-link :to="{name: 'product_category_page', params: {category_id: category.id}}">
+                    <router-link :to="{name: 'product_category_page', params: {category_slug: category.slug}}">
                       {{ category.title }}
                     </router-link>
                     <img src="/static/images/arrow.png">
                     <ul class="sub_menu">
                       <li class="sub_list" v-for="child_cat in category.children">
-                          <router-link :to="{name: 'product_category_page', params: {category_id: child_cat.id}}">
+                          <router-link :to="{name: 'product_category_page', params: {category_slug: child_cat.slug}}">
                             {{ child_cat.title }}
                           </router-link>
                       </li>
                     </ul>
                 </template>
                 <template v-else>
-                  <router-link :to="{name: 'product_category_page', params: {category_id: 1}}">
+                  <router-link :to="{name: 'product_category_page', params: {category_slug: category.slug}}">
                     {{ category.title }}
                   </router-link>
                 </template>

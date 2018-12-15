@@ -45,7 +45,7 @@
     components: {SmallProductItem, },
     methods: {
       getProducts(){
-        let url = config.API_ROOT + "/products/?cat=" + this.category.id
+        let url = config.API_ROOT + "/products/?cat_slug=" + this.category.slug
         console.log(url)
         axios.get(url)
           .then(json => {

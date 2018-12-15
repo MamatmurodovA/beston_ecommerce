@@ -2,7 +2,7 @@
   <div class="item">
     <div class="image">
       <router-link :to="{name: 'product_detail_page', params: {category_id: product.category_id, id: product.id}}">
-        <img :src="product.image">
+        <img :src="product.main_image">
       </router-link>
     </div>
     <div class="cart">

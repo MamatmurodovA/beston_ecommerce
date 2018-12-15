@@ -69,19 +69,19 @@
                 </a>
                 <ul class="nav collapse" >
                   <li>
-                    <router-link :to="{name: 'product_category_page', params: {category_id: category.id}}">
+                    <router-link :to="{name: 'product_category_page', params: {category_slug: category.slug}}">
                       See all {{ category.title }}
                     </router-link>
                   </li>
                   <li v-for="child_cat in category.children">
-                      <router-link :to="{name: 'product_category_page', params: {category_id: child_cat.id}}">
+                      <router-link :to="{name: 'product_category_page', params: {category_slug: child_cat.slug}}">
                         {{ child_cat.title }}
                       </router-link>
                   </li>
                 </ul>
               </template>
               <template v-else>
-                  <router-link :to="{name: 'product_category_page', params: {category_id: category.id}}">
+                  <router-link :to="{name: 'product_category_page', params: {category_slug: category.slug}}">
                   {{ category.title }}
                   </router-link>
               </template>
