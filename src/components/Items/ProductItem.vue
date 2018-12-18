@@ -2,7 +2,7 @@
     <div class="item">
       <div class="top">
         <div class="image">
-          <router-link :to="{name: 'product_detail_page', params: {category_id: product.category_id, id: product.id}}">
+          <router-link :to="{name: 'product_detail_page', params: {category_slug: product.category.slug, product_slug: product.slug}}">
             <img :src="product.main_image">
           </router-link>
         </div>
@@ -14,7 +14,7 @@
       </div>
       <div class="middle">
         <div class="title">
-          <router-link :to="{name: 'product_detail_page', params: {category_id: product.category_id, id: product.id}}">
+          <router-link :to="{name: 'product_detail_page', params: {category_slug: product.category.slug, product_slug: product.slug}}">
             {{ product.title }}
           </router-link>
         </div>

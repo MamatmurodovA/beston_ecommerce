@@ -7,7 +7,7 @@
           <div class="main-product-section">
             <div class="product-image">
               <div id="main-product-image">
-                <img id="zoom_01" :src="product.image" :data-zoom-image="product.image"/>
+                <img id="zoom_01" :src="product.main_image" :data-zoom-image="product.main_image"/>
               </div>
               <div id="other-images">
                 <div class="swiper-container">
@@ -130,7 +130,7 @@
           <div class="related_items">
             <div class="swiper-container">
               <div class="swiper-wrapper related_products">
-                  <TopProductItem :product="product" v-for="(product, index) in products" :key="index" class="swiper-slide"></TopProductItem>
+                  <TopProductItem :product="product" v-for="(product, index) in $store.getters.top_products" :key="index" class="swiper-slide"></TopProductItem>
               </div>
             </div>
           </div>
@@ -143,7 +143,6 @@
 <script>
   import Breadcrumb from '../Parts/Breadcrumb'
   import TopProductItem from '../Items/TopProductItem'
-  import products from '../../data/products.json'
   import * as config from '../../config'
 
   export default {
@@ -154,7 +153,7 @@
     },
     data(){
       return {
-        products: products,
+        products: [],
         root_category: {},
         param_list: [],
         product: {}
@@ -163,13 +162,13 @@
     methods: {
         fetchProduct()
         {
-          let product_url = config.API_ROOT + '/products/' + this.$route.params.id
+          let product_url = config.API_ROOT + '/products/' + this.$route.params.product_slug + '/'
           console.log(product_url)
           axios.get(product_url)
             .then(json => this.product = json.data)
         },
         getRootCategory(){
-          let url = config.API_ROOT + '/categories/' + this.$route.params.category_id + '/root/'
+          let url = config.API_ROOT + '/categories/' + this.$route.params.category_slug + '/root/'
 
           axios.get(url)
             .then(json => {

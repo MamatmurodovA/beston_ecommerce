@@ -32,7 +32,7 @@ let router = new VueRouter({
           name: 'product_list_page',
         },
         {
-          path: '/category/:category_slug/products/:id',
+          path: '/category/:category_slug/products/:product_slug/',
           component: ProductDetail,
           name: 'product_detail_page',
         },
