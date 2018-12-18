@@ -225,6 +225,8 @@
               align-items: center;
               margin-bottom: 10px;
               border: 1px solid #000;
+              height: 300px;
+              overflow: hidden;
               .zoomWrapper{
                 width: 480px !important;
                 height: 291px !important;

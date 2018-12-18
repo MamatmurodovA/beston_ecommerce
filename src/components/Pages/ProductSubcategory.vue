@@ -59,6 +59,8 @@
   @import "~breakpoint-sass/stylesheets/breakpoint";
 
   .section-product-list{
+    max-width: 1470px;
+    margin: 0 auto;
     .subcategory-products{
       border-top: 1px solid #e8e8e8;
       padding-top: 40px;
@@ -68,6 +70,7 @@
         border: none;
       }
       .wrapper{
+        width: 100%;
         display: flex;
         margin: 0 auto;
         .list{
@@ -129,7 +132,7 @@
           }
         }
         .items{
-          max-width: 1171px;
+          width: 100%;
           display: flex;
           flex-wrap: wrap;
           justify-content: space-evenly;
@@ -156,6 +159,11 @@
               display: flex;
               align-items: center;
               justify-content: center;
+              a{
+                display: block;
+                width: 100%;
+                height: 100%;
+              }
               img {
                 max-width: 100%;
                 height: auto;
