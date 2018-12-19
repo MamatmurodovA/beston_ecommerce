@@ -14,7 +14,6 @@
                     <router-link :to="{name: 'product_category_page', params: {category_slug: category.slug}}">
                       {{ category.title }}
                     </router-link>
-                    <img src="/static/images/arrow.png">
                     <ul class="sub_menu">
                       <li class="sub_list" v-for="child_cat in category.children">
                           <router-link :to="{name: 'product_category_page', params: {category_slug: child_cat.slug}}">
@@ -165,14 +164,19 @@
               display: flex;
               align-items: center;
               justify-content: space-between;
-              padding: 17.9px 18px;
               border-bottom: 1px solid #f0f2f7;
               border-right: 1px solid #f0f2f7;
               border-left: 1px solid #f0f2f7;
               a {
                 color: #222;
                 font-size: 14px;
-                display: block;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                padding-left: 18px;
+                margin-right: 10px;
+                background: url("/static/images/arrow.png") no-repeat right center;
               }
               .sub_menu{
                 display: none;
