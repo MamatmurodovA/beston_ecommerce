@@ -26,7 +26,7 @@
                 let page_name = this.$route.name;
                 let paths = []
                 paths.push({
-                    title: 'Bosh sahifa',
+                    title: this.$t('message.home_page'),
                     name: 'home_page',
                     params: {}
                 })
@@ -81,11 +81,10 @@
                           params: {category_slug: this.params[0].child.slug}
                         })
                       }
-
                       paths.push({
                         title: this.params[1].title,
                         name: 'product_detail_page',
-                        params: {category_slug: this.$route.params.category_slug, product_slug: this.params[1].slug}
+                        params: {category_slug: this.$route.params.category_slug, product_slug: this.$route.params.product_slug}
                       })
                     }
                 }

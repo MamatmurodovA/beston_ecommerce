@@ -7,39 +7,16 @@
           <div class="main-product-section">
             <div class="product-image">
               <div id="main-product-image">
-                <img id="zoom_01" :src="product.main_image" :data-zoom-image="product.main_image"/>
+                <img :src="current_image" :data-zoom-image="current_image"/>
               </div>
-              <div id="other-images">
-                <div class="swiper-container">
-                  <div class="swiper-wrapper" id="gal1">
-                    <div class="swiper-slide">
-                      <a href="#" data-image="/static/plugins/zoom/images/small/image1.png" data-zoom-image="/static/plugins/zoom/images/large/image1.jpg">
-                        <img id="img_01" src="/static/plugins/zoom/images/thumb/image1.jpg" class="active"/>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" data-image="/static/plugins/zoom/images/small/image2.png" data-zoom-image="/static/plugins/zoom/images/large/image2.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image2.jpg" /></a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" data-image="/static/plugins/zoom/images/small/image3.png" data-zoom-image="/static/plugins/zoom/images/large/image3.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image3.jpg" /></a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" data-image="/static/plugins/zoom/images/small/image4.png" data-zoom-image="/static/plugins/zoom/images/large/image4.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image4.jpg" /></a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" data-image="/static/plugins/zoom/images/small/image1.png" data-zoom-image="/static/plugins/zoom/images/large/image1.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image1.jpg" class="active"/></a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" data-image="/static/plugins/zoom/images/small/image2.png" data-zoom-image="/static/plugins/zoom/images/large/image2.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image2.jpg" /></a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" data-image="/static/plugins/zoom/images/small/image3.png" data-zoom-image="/static/plugins/zoom/images/large/image3.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image3.jpg" /></a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" data-image="/static/plugins/zoom/images/small/image4.png" data-zoom-image="/static/plugins/zoom/images/large/image4.jpg"><img id="img_01" src="/static/plugins/zoom/images/thumb/image4.jpg" /></a>
-                    </div>
+              <div id="thumbnails-images">
+                  <div class="thumbnails-wrapper" >
+                      <carousel :perPage="6">
+                          <slide v-for="(item, index) in product.images" class="product-image-item" :key="index" :class="{active: item.image===current_image}">
+                              <img :src="item.image" @click="setActiveImage(item.image)" />
+                          </slide>
+                      </carousel>
                   </div>
-                </div>
               </div>
             </div>
             <div class="product-description">
@@ -85,27 +62,12 @@
             <h2 class="product-details">Product details</h2>
             <div class="details-description">
               <h2 class="overview">Overview</h2>
-              <ul class="details">
-                <li class="quick-details">Quick details</li>
-                <li class="place-of-origin">Place of Origin:<span>Jiangsu, China (Mainland)</span></li>
-                <li class="shape">Shape:<span>Cup-Shaped</span></li>
-                <li class="hardness">Hardness:<span>T</span></li>
-                <li class="application">Application:<span>Stainless Steel, Metal, Aluminiu</span></li>
-                <li class="certificate">Certificate:<span>ISO9001 MPA EN12413</span></li>
-                <li class="type">Type:<span>china grinding wheel</span></li>
-                <li class="speed">Speed:<span>80M/S. 1.88TIMES</span></li>
-                <li class="brand-name">Brand Name:<span>CNDOME or OEM</span></li>
-                <li class="abrasive">Abrasive:<span>Silicon Carbide</span></li>
-                <li class="viscosity">Viscosity:<span>Standrad</span></li>
-                <li class="color">Color:<span>Black Green Red</span></li>
-                <li class="delivery">Delivery Time:<span>Within 30 Days from Receiving Deposit</span></li>
-                <li class="bond">Bond:<span>china grinding wheel</span></li>
-                <li class="model-number">Model Number:<span>T27</span></li>
-                <li class="bonding-agent">Bonding Agent:<span>Resin</span></li>
-                <li class="size">Size:<span></span>4"</li>
-                <li class="material">Material:<span>Aluminum Oxide</span></li>
-                <li class="advantage">Advantage:<span>Higher Efficiency, Durable Use</span></li>
-                <li class="package">Package:<span>200pcs/ctn</span></li>
+              <ul class="details" v-if="product.specifications && product.specifications.length">
+                <li class="quick-details">{{ $t('message.quick_details')}}</li>
+                <li class="place-of-origin" v-for="specification in product.specifications">
+                  {{ specification.title }}:
+                  <span>{{ specification.info }}</span>
+                </li>
               </ul>
               <ul class="packing-delivery">
                 <li class="packing-and-delivery">Packing and delivery</li>
@@ -141,6 +103,7 @@
 </template>
 
 <script>
+  import {Carousel, Slide} from 'vue-carousel'
   import Breadcrumb from '../Parts/Breadcrumb'
   import TopProductItem from '../Items/TopProductItem'
   import * as config from '../../config'
@@ -148,24 +111,31 @@
   export default {
     name: 'ProductDetail',
     components: {
-      TopProductItem,
-        Breadcrumb
+        TopProductItem,
+        Breadcrumb,
+        Carousel,
+        Slide,
     },
     data(){
       return {
         products: [],
         root_category: {},
         param_list: [],
-        product: {}
+        product: {},
+        current_image: ''
       }
     },
     methods: {
-        fetchProduct()
-        {
+        setActiveImage(image_src){
+          this.current_image = image_src;
+        },
+        fetchProduct(){
           let product_url = config.API_ROOT + '/products/' + this.$route.params.product_slug + '/'
-          console.log(product_url)
           axios.get(product_url)
-            .then(json => this.product = json.data)
+            .then(json => {
+              this.product = json.data
+              this.current_image = this.product.main_image
+            })
         },
         getRootCategory(){
           let url = config.API_ROOT + '/categories/' + this.$route.params.category_slug + '/root/'
@@ -903,5 +873,19 @@
         }
       }
     }
+  }
+  .product-image-item.active,
+  .product-image-item:hover
+  {
+    border: 1px solid #ff6a00;
+    cursor: pointer;
+  }
+  .product-image-item
+  {
+    border: 1px solid transparent;
+  }
+  .product-image-item img {
+    width: 70px;
+    height: 70px;
   }
 </style>

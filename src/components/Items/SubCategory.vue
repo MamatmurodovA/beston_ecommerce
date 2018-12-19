@@ -3,7 +3,7 @@
     <div class="wrapper">
       <div class="list">
         <h2 class="block-title">
-          <router-link :to="{name: 'product_list_page', params: {category_id: category.id}}">
+          <router-link :to="{name: 'product_list_page', params: {category_slug: category.slug}}">
             {{ category.title }}
           </router-link>
         </h2>

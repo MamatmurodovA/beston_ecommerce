@@ -22,17 +22,20 @@ let router = new VueRouter({
           name: 'home_page',
         },
         {
-          path: '/category/:category_slug',
+          path: '/category/:category_slug/',
+          pathToRegexpOptions: { strict: true },
           component: ProductSubcategory,
           name: 'product_category_page',
         },
         {
           path: '/category/:category_slug/products/',
+          pathToRegexpOptions: { strict: true },
           component: ProductListPage,
           name: 'product_list_page',
         },
         {
-          path: '/category/:category_slug/products/:product_slug/',
+          path: '/category/:category_slug/:product_slug/',
+          pathToRegexpOptions: { strict: true },
           component: ProductDetail,
           name: 'product_detail_page',
         },
@@ -48,7 +51,7 @@ let router = new VueRouter({
       component: NotFound
     }
   ],
-  mode: 'history'
+  mode: 'history',
 })
 
 router.beforeResolve((to, from, next) => {
