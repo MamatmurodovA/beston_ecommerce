@@ -7,7 +7,13 @@
           <div class="main-product-section">
             <div class="product-image">
               <div id="main-product-image">
-                <img :src="current_image" :data-zoom-image="current_image"/>
+                <vue-h-zoom :image="current_image"
+                            :image-full="current_image"
+                            :zoom-level="2"
+                            id="image-zoomer"
+                            :zoom-window-x="650"
+                            :zoom-window-y="400"
+                ></vue-h-zoom>
               </div>
               <div id="thumbnails-images">
                   <div class="thumbnails-wrapper" >
@@ -104,6 +110,7 @@
 
 <script>
   import {Carousel, Slide} from 'vue-carousel'
+  import VueHZoom from 'vue-h-zoom';
   import Breadcrumb from '../Parts/Breadcrumb'
   import TopProductItem from '../Items/TopProductItem'
   import * as config from '../../config'
@@ -115,6 +122,7 @@
         Breadcrumb,
         Carousel,
         Slide,
+        VueHZoom,
     },
     data(){
       return {

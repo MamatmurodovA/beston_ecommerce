@@ -3,11 +3,13 @@ import App from './App'
 import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueI18n from 'vue-i18n'
+import VueHZoom from 'vue-h-zoom';
 
 Vue.config.productionTip = false
 
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueI18n)
+Vue.use(VueHZoom);
 
 import 'swiper/dist/css/swiper.css'
 import store from './store'
