@@ -17,7 +17,7 @@
               </div>
               <div id="thumbnails-images">
                   <div class="thumbnails-wrapper" >
-                      <carousel :perPage="6">
+                      <carousel :perPage="6" :navigationEnabled="true"  :mouse-drag="false">
                           <slide v-for="(item, index) in product.images" class="product-image-item" :key="index" :class="{active: item.image===current_image}">
                               <img :src="item.image" @click="setActiveImage(item.image)" />
                           </slide>
@@ -133,7 +133,13 @@
         current_image: ''
       }
     },
+    watch: {
+      '$route': 'routeChangeHandler',
+    },
     methods: {
+        routeChangeHandler(){
+          this.fetchProduct()
+        },
         setActiveImage(image_src){
           this.current_image = image_src;
         },
@@ -144,6 +150,7 @@
               this.product = json.data
               this.current_image = this.product.main_image
             })
+
         },
         getRootCategory(){
           let url = config.API_ROOT + '/categories/' + this.$route.params.category_slug + '/root/'
@@ -159,6 +166,9 @@
     {
       this.fetchProduct()
       this.getRootCategory()
+    },
+    mounted(){
+
     }
   }
 </script>
@@ -883,17 +893,19 @@
     }
   }
   .product-image-item.active,
-  .product-image-item:hover
-  {
+  .product-image-item:hover{
     border: 1px solid #ff6a00;
     cursor: pointer;
   }
-  .product-image-item
-  {
+  .product-image-item{
     border: 1px solid transparent;
   }
   .product-image-item img {
     width: 70px;
     height: 70px;
+  }
+  #main-product-image,
+  #image-zoomer{
+    height: 100%;
   }
 </style>
