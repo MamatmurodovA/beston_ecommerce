@@ -60,6 +60,7 @@
 
   .section-product-list{
     max-width: 1470px;
+    min-height: 400px;
     margin: 0 auto;
     .subcategory-products{
       border-top: 1px solid #e8e8e8;
@@ -135,7 +136,7 @@
           width: 100%;
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-evenly;
+          justify-content: start;
           .item {
             display: inline-block;
             box-sizing: border-box;
@@ -152,6 +153,7 @@
             margin-bottom: 30px;
             border-radius: 5px;
             text-align: center;
+            margin-left: 30px;
             .image{
               width: 265px;
               height: 223px;

@@ -167,7 +167,17 @@
               border-bottom: 1px solid #f0f2f7;
               border-right: 1px solid #f0f2f7;
               border-left: 1px solid #f0f2f7;
-              a {
+              a{
+                color: #222;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                padding-left: 18px;
+                margin-right: 10px;
+              }
+              &>a {
                 color: #222;
                 font-size: 14px;
                 display: flex;
