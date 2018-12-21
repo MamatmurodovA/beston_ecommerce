@@ -7,6 +7,7 @@ import ProductListPage from '../components/Pages/ProductList'
 import ProductDetail from '../components/Pages/ProductDetail'
 import ProductSubcategory from '../components/Pages/ProductSubcategory'
 import AddProducts from '../components/Pages/AddProducts'
+import Account from '../components/Pages/Account/Account'
 import store from '../store'
 
 Vue.use(VueRouter)
@@ -44,6 +45,12 @@ let router = new VueRouter({
           component: AddProducts,
           name: 'add_products',
         },
+        {
+          path: '/account/',
+          pathToRegexpOptions: { strict: true },
+          component: Account,
+          name: 'account_page',
+        }
       ],
     },
     {

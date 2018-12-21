@@ -19,7 +19,6 @@
               <Search :categories="categories"></Search>
             </div>
           </div>
-
           <Cart></Cart>
           <div class="languages">
             <a  @click="setLanguage('uz')"><p>Uz</p><img src="/static/images/uz.png" alt=""></a>
@@ -28,20 +27,7 @@
           </div>
         </div>
       </div>
-
-
-      <!--<div id="top_fixed" :class="{'flex': scrolled}">-->
-        <!--<div id="navbar_fixed">-->
-          <!--<div class="burger2">-->
-            <!--<span id="burger2" @click="left_menu_is_open=true"></span>-->
-          <!--</div>-->
-          <!--<div class="logo"><a href=""><img src="/static/images/logo-top.png"></a></div>-->
-          <!--<Search :categories="categories"></Search>-->
-          <!--<Cart></Cart>-->
-        <!--</div>-->
-      <!--</div>-->
     </div>
-
     <nav id="nav" :class="{'fixed': scrolled}">
       <div id="menu1">
         <ul class="menu_horizontal">

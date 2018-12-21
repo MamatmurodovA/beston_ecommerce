@@ -8,7 +8,9 @@
       <h2 id="value">0</h2>
     </li>
     <li id="reg">
-      <a href="">{{ $t("message.sign_in") }}</a>
+      <router-link :to="{name: 'account_page'}">
+          {{ $t("message.sign_in") }}
+      </router-link>
     </li>
     <div id="cartview" :class="{'open': cart_opened}">
       <div class="item">

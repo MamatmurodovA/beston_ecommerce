@@ -6,7 +6,10 @@ export const messages = {
       all_categories: 'All categories',
       search: 'Search',
       cart: 'Cart',
-      quick_details: 'Quick details'
+      quick_details: 'Quick details',
+      email: 'Email',
+      password: 'Password',
+      sign_up: 'Sign up',
     }
   },
   ru: {
@@ -16,7 +19,10 @@ export const messages = {
       all_categories: 'Все категории',
       search: 'Поиск',
       cart: 'Корзинка',
-      quick_details: 'Быстрые детали'
+      quick_details: 'Быстрые детали',
+      email: 'Е-майл',
+      password: 'Пароль',
+      sign_up: 'Регистрация',
     }
   },
   uz: {
@@ -26,7 +32,10 @@ export const messages = {
       all_categories: 'Barcha kategoriyalar',
       search: 'Qidiruv',
       cart: 'Savat',
-      quick_details: 'Tez tafsilotlar'
+      quick_details: 'Tez tafsilotlar',
+      email: 'Email',
+      password: 'Kalit so\'z',
+      sign_up: 'Ro\'yxatdan o\'tish',
     }
   }
 }
