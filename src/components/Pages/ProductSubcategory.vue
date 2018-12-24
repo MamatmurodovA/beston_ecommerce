@@ -242,7 +242,7 @@
         }
       }
     }
-    @include b(992px, max-width){
+    @media only screen and (max-width: 992px){
       .subcategory-products{
         .wrapper{
           flex-direction: column;
@@ -270,6 +270,19 @@
                   }
                 }
               }
+            }
+          }
+
+        }
+      }
+    }
+    @media (max-width: 520px){
+      .subcategory-products{
+        .wrapper{
+          .items{
+            justify-content: center;
+            .item{
+              margin-left: 0;
             }
           }
         }
