@@ -24,7 +24,7 @@
         </span>
 
       </div>
-      <div class="sign-up-container col-md-6">
+      <div class="sign-up-container">
         <h2 class="title">{{ $t('message.sign_up') }}</h2>
         <form action="" method="">
           <div class="form-group">
@@ -59,7 +59,7 @@
 
 <style scoped>
 
-  .sign-in-container {
+  .sign-in-container, .sign-up-container {
     border: 1px solid #ddd;
     width: 30rem;
     margin: 30px auto;
