@@ -16,7 +16,7 @@
       </div>
       <div class="create-account" >
           <div class="title-line">
-            <span class="create-account-title">New customer?</span>
+            <span class="create-account-title">New account ?</span>
           </div>
           <span class="button-create-account">
               <router-link :to="{name: 'sign_up_page'}" class="create-account-link">

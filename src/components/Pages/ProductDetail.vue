@@ -7,13 +7,7 @@
           <div class="main-product-section">
             <div class="product-image">
               <div id="main-product-image">
-                <vue-h-zoom :image="current_image"
-                            :image-full="current_image"
-                            :zoom-level="2"
-                            id="image-zoomer"
-                            :zoom-window-x="650"
-                            :zoom-window-y="400"
-                ></vue-h-zoom>
+                <div class="" :style="{backgroundImage: current_image}"></div>
               </div>
               <div id="thumbnails-images">
                   <div class="thumbnails-wrapper" >

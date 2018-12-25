@@ -1,6 +1,6 @@
 <template>
-    <div class="login-base">
-      <div class="logo">
+    <div class="login-base" >
+      <div class="logo" style="text-align: center">
         <router-link :to="{name: 'home_page'}">
           <img src="/static/images/logo-top.png">
         </router-link>
