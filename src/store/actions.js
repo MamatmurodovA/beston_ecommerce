@@ -5,9 +5,6 @@ let actions = {
   scrolled(state, payload){
     state.commit('scrolled', payload)
   },
-  setLocale(state, payload){
-    state.commit('setLocale', payload)
-  },
   loadCategories(state, payload){
     Vue.axios.get(`${config.API_ROOT}/categories/`)
       .then(response => {

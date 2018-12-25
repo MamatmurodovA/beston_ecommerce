@@ -5,9 +5,6 @@ let getters = {
   loading(state){
     return state.loading
   },
-  locale(state){
-    return state.locale
-  },
   categories(state){
     return state.categories
   },

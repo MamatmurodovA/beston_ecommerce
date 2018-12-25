@@ -5,22 +5,24 @@
           <form action="" method="">
             <div class="form-group">
               <label for="mail">{{ $t('message.email') }}:</label>
-              <input type="password" class="form-control" id="mail">
+              <input required type="email" class="form-control" id="mail">
             </div>
-            <div class="form-group">
+            <div class="form-group" v-if="user_exist">
               <label for="pwd">{{ $t('message.password') }}:</label>
-              <input type="password" class="form-control" id="pwd">
+              <input required type="password" class="form-control" id="pwd">
             </div>
-            <button type="button" class="btn btn-default">{{ $t('message.sign_in') }}</button>
+            <button type="submit" class="btn btn-default" @click.prevent="user_exist=true">{{ $t('message.sign_in') }}</button>
           </form>
       </div>
       <div class="create-account" >
           <div class="title-line">
-            <span class="create-account-title">New account ?</span>
+            <span class="create-account-title">
+              {{ $t('message.new_account') }}?
+            </span>
           </div>
           <span class="button-create-account">
               <router-link :to="{name: 'sign_up_page'}" class="create-account-link">
-                Create your Account
+                {{ $t('message.create_your_account') }}
               </router-link>
           </span>
       </div>
@@ -37,6 +39,7 @@
       data(){
           return {
             param_list: [],
+            user_exist: false
           }
       },
   }

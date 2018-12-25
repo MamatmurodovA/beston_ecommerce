@@ -19,7 +19,7 @@ import store from './store'
 import {messages} from './translations'
 
 const i18n = new VueI18n({
-  locale: store.getters.locale.lang, // set locale
+  locale: localStorage.getItem('lang') || 'en', // set locale
   messages, // set locale messages
 })
 

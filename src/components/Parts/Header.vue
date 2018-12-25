@@ -114,6 +114,7 @@
       {
           this.$store.commit('loading', true)
           this.$i18n.locale = lang
+          localStorage.setItem('lang', lang)
           this.$store.commit('loading', false)
       }
     },

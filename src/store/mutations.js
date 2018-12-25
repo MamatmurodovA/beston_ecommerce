@@ -14,9 +14,6 @@ let mutations = {
       state.loading = false
     }, 600)
   },
-  setLocale(state, payload){
-    state.locale.lang = payload.lang;
-  },
   setCategories(state, payload){
     state.categories = payload
   },
