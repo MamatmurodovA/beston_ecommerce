@@ -15,9 +15,14 @@
               <button type="button" class="btn btn-default">{{ $t('message.sign_in') }}</button>
           </form>
       </div>
-      <div class="create-account-link">
-        <span class="title">New customer?</span>
-        <a href="">Create your Accout</a>
+      <div class="create-account">
+        <div class="title-line">
+          <span class="create-account-title">New customer?</span>
+        </div>
+        <span class="button-create-account">
+          <a class="create-account-link" href="">Create your Accout</a>
+        </span>
+
       </div>
       <div class="sign-up-container col-md-6">
         <h2 class="title">{{ $t('message.sign_up') }}</h2>
@@ -53,6 +58,7 @@
 </script>
 
 <style scoped>
+
   .sign-in-container {
     border: 1px solid #ddd;
     width: 30rem;
@@ -92,23 +98,25 @@
   .btn-default:hover{
     background-color: #f58c42;
   }
-  .create-account-link{
+  .create-account{
     width: 30rem;
     margin: 30px auto;
     padding: 20px;
+  }
+  .title-line{
     position: relative;
   }
-  .create-account-link::after{
+  .title-line::after{
     display: block;
     content: '';
     width: 100%;
     height: 1px;
-    background-color: #1c1e23;
+    background-color: rgba(28, 30, 35, 0.4);
     position: absolute;
-    top: 28%;
+    top: 39%;
     left: 0;
   }
-  .create-account-link .title{
+  .create-account .create-account-title{
     font-weight: 400;
     font-size: 16px;
     display: block;
@@ -116,8 +124,34 @@
     text-align: center;
     position: relative;
     z-index: 10;
-    width: 180px;
+    width: 150px;
     margin: 0 auto;
     margin-bottom: 30px;
+  }
+  .button-create-account{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 37px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+    border-radius: 2px;
+    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+    border: 1px solid #cccccc;
+  }
+  .create-account-link {
+    color: #111;
+    background-color: transparent;
+    border: 0;
+    display: block;
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+    line-height: 37px;
+    margin: 0;
+    outline: 0;
+    padding: 0 10px 0 11px;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 600;
+    height: 100%;
   }
 </style>
