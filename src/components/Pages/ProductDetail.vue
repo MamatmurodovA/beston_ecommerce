@@ -7,7 +7,7 @@
           <div class="main-product-section">
             <div class="product-image">
               <div id="main-product-image">
-                <div class="" :style="{backgroundImage: current_image}"></div>
+                <div class="" :style="{backgroundImage: 'url(' + current_image + ')'}"></div>
               </div>
               <div id="thumbnails-images">
                   <div class="thumbnails-wrapper" >
@@ -209,6 +209,12 @@
               border: 1px solid #000;
               height: 300px;
               overflow: hidden;
+              div{
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+              }
               .zoomWrapper{
                 width: 480px !important;
                 height: 291px !important;
@@ -726,6 +732,7 @@
               .main-product-image{
                 width: 526px;
                 // margin: auto;
+
               }
             }
             .product-description{
@@ -901,5 +908,6 @@
   #main-product-image,
   #image-zoomer{
     height: 100%;
+    width: 100%;
   }
 </style>
