@@ -2,9 +2,6 @@
     <div class="">
         <div class="sign-up-container" >
           <h2 class="title">{{ $t('message.sign_up') }}</h2>
-          <router-link :to="{name: 'sign_in_page'}">
-            {{ $t('message.sign_in') }}
-          </router-link>
           <form action="">
             <div class="form-group">
               <label for="sign_in_mail">{{ $t('message.email') }}:</label>

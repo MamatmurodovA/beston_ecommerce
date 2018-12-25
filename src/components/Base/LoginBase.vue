@@ -1,5 +1,12 @@
 <template>
-    <router-view></router-view>
+    <div class="login-base">
+      <div class="logo">
+        <router-link :to="{name: 'home_page'}">
+          <img src="/static/images/logo-top.png">
+        </router-link>
+      </div>
+      <router-view></router-view>
+    </div>
 </template>
 
 <script>
