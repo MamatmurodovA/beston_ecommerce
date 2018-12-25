@@ -18,8 +18,8 @@
               <div id="thumbnails-images">
                   <div class="thumbnails-wrapper" >
                       <carousel :perPage="6" :navigationEnabled="true"  :mouse-drag="false">
-                          <slide v-for="(item, index) in product.images" class="product-image-item" :key="index" :class="{active: item.image===current_image}">
-                              <img :src="item.image" @click="setActiveImage(item.image)" />
+                          <slide v-for="(item, index) in product.images" class="product-image-item" :key="index" :class="{active: item===current_image}">
+                              <img :src="item" @click="setActiveImage(item)" />
                           </slide>
                       </carousel>
                   </div>
@@ -145,7 +145,7 @@
         },
         fetchProduct(){
           let product_url = config.API_ROOT + '/products/' + this.$route.params.product_slug + '/'
-          axios.get(product_url)
+          this.axios.get(product_url)
             .then(json => {
               this.product = json.data
               this.current_image = this.product.main_image
@@ -155,7 +155,7 @@
         getRootCategory(){
           let url = config.API_ROOT + '/categories/' + this.$route.params.category_slug + '/root/'
 
-          axios.get(url)
+          this.axios.get(url)
             .then(json => {
               this.root_category = json.data
               this.param_list = [json.data]

@@ -8,7 +8,7 @@
       <h2 id="value">0</h2>
     </li>
     <li id="reg">
-      <router-link :to="{name: 'account_page'}">
+      <router-link :to="{name: 'sign_in_page'}">
           {{ $t("message.sign_in") }}
       </router-link>
     </li>

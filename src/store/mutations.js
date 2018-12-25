@@ -5,7 +5,7 @@ let mutations = {
   loading(state, loading) {
     state.loading = true
     window.scrollTo({
-      top: 100, // could be negative value
+      top: 100,
       left: 0,
       behavior: 'smooth'
     })

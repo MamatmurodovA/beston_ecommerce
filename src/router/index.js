@@ -1,13 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeBase from '../components/Base/HomeBase'
+import LoginBase from '../components/Base/LoginBase'
 import Home from '../components/Pages/Home'
 import NotFound from '../components/Pages/NotFound'
 import ProductListPage from '../components/Pages/ProductList'
 import ProductDetail from '../components/Pages/ProductDetail'
 import ProductSubcategory from '../components/Pages/ProductSubcategory'
 import AddProducts from '../components/Pages/AddProducts'
-import Account from '../components/Pages/Account/Account'
+import SignIn from '../components/Pages/Account/SignIn'
+import SignUp from '../components/Pages/Account/SignUp'
 import store from '../store'
 
 Vue.use(VueRouter)
@@ -45,13 +47,26 @@ let router = new VueRouter({
           component: AddProducts,
           name: 'add_products',
         },
-        {
-          path: '/account/',
-          pathToRegexpOptions: { strict: true },
-          component: Account,
-          name: 'account_page',
-        }
+
       ],
+    },
+    {
+      path: '/account/',
+      component: LoginBase,
+      children: [
+        {
+          path: 'login/',
+          name: 'sign_in_page',
+          component: SignIn,
+          pathToRegexpOptions: { strict: true },
+        },
+        {
+          path: 'register/',
+          name: 'sign_up_page',
+          component: SignUp,
+          pathToRegexpOptions: { strict: true },
+        }
+      ]
     },
     {
       path: '/**',

@@ -81,7 +81,7 @@
     methods: {
       getRecentlyViewedProducts(){
         let recently_viewed_products_url = config.API_ROOT + '/products/?featured=2'
-        axios.get(recently_viewed_products_url)
+        this.axios.get(recently_viewed_products_url)
           .then(json => this.recently_viewed_products = json.data.results)
       },
     },
