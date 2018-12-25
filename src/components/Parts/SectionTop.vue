@@ -9,7 +9,7 @@
             <i class="fa fa-minus-circle" aria-hidden="true"></i>
           </a>
           <ul id="category_menu">
-            <li class="category_list" v-for="category in categories">
+            <li class="category_list" v-for="category in $store.getters.categories">
                 <template v-if="category.children">
                     <router-link :to="{name: 'product_category_page', params: {category_slug: category.slug}}">
                       {{ category.title }}
@@ -94,23 +94,12 @@
               prevEl: '.banner-slider-prev'
             }
           },
-          categories: []
       }
     },
     methods: {
-      getCategories()
-      {
-        let category_url = config.API_ROOT + '/categories/'
-        axios.get(category_url)
-          .then(json => {
-            this.categories = json.data.results
-            console.log(json)
-          })
-      }
     },
     created()
     {
-      this.getCategories()
     },
     computed: {
       scrolled() {

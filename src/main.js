@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 import App from './App'
 import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -7,6 +9,7 @@ import VueHZoom from 'vue-h-zoom';
 
 Vue.config.productionTip = false
 
+Vue.use(VueAxios, axios)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueI18n)
 Vue.use(VueHZoom);

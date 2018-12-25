@@ -10,7 +10,7 @@
               <div class="swiper-container top-products-container">
                 <div class="swiper-wrapper top-products-wrapper">
                   <swiper :options="top_products_slider_config">
-                    <swiper-slide v-for="(top_product, index) in top_products" :key="index" >
+                    <swiper-slide v-for="(top_product, index) in $store.getters.top_products" :key="index" >
                       <TopProductItem :product="top_product"></TopProductItem>
                     </swiper-slide>
                   </swiper>
@@ -27,7 +27,7 @@
           <section id="new-prod">
             <h2 class="block-title">New product</h2>
             <div class="block-content">
-              <SmallProductItem v-for="(product, index) in new_products" :key="index" :product="product"></SmallProductItem>
+              <SmallProductItem v-for="(product, index) in $store.getters.new_products" :key="index" :product="product"></SmallProductItem>
             </div>
           </section>
           <section id="recent-prod">
@@ -57,7 +57,6 @@
     name: 'Home',
     data(){
       return {
-        top_products: [],
         recently_viewed_products: [],
         new_products: [],
         products: [],
@@ -80,27 +79,14 @@
       SmallProductItem
     },
     methods: {
-      getTopProducts()
-      {
-        let top_products_url = config.API_ROOT + '/products/?top_rated=2'
-        axios.get(top_products_url)
-          .then(json => this.top_products = json.data.results)
-      },
       getRecentlyViewedProducts(){
         let recently_viewed_products_url = config.API_ROOT + '/products/?featured=2'
         axios.get(recently_viewed_products_url)
           .then(json => this.recently_viewed_products = json.data.results)
       },
-      getNewProducts(){
-        let new_products_url = config.API_ROOT + '/products/?new=2'
-        axios.get(new_products_url)
-          .then(json => this.new_products = json.data.results)
-      },
     },
     created(){
-      this.getTopProducts()
       this.getRecentlyViewedProducts()
-      this.getNewProducts()
     }
   }
 </script>

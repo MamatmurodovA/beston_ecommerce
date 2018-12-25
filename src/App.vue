@@ -3,9 +3,11 @@
     <router-view/>
     <div id="loader" v-if="$store.getters.loading">
       <atom-spinner
-        :animation-duration="1000"
-        :size="100"
+        :animation-duration="500"
+        :size="140"
         :color="'#ff6a00'"
+        class="loader"
+        v-if="$store.getters.loading"
       />
     </div>
   </div>
@@ -18,6 +20,11 @@
     name: 'App',
     components: {
       AtomSpinner
+    },
+    beforeCreate(){
+        this.$store.dispatch('loadCategories')
+        this.$store.dispatch('loadTopProducts')
+        this.$store.dispatch('loadNewProducts')
     }
   }
 </script>
@@ -45,11 +52,21 @@
     right: 0;
     left: 0;
     margin: auto;
-    width: 200px;
-    height: 200px;
-    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: white;
+    opacity: 0.8;
   }
-
+  #loader .atom-spinner.loader {
+    z-index: 9999999999999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+  }
   .form-control {
     display: block;
     width: 100%;
