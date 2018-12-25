@@ -8,9 +8,6 @@ let actions = {
   setLocale(state, payload){
     state.commit('setLocale', payload)
   },
-  loading(state, payload){
-    state.commit('loading', payload)
-  },
   loadCategories(state, payload){
     Vue.axios.get(`${config.API_ROOT}/categories/`)
       .then(response => {

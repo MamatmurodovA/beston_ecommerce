@@ -3,14 +3,16 @@ let mutations = {
     state.scrolled = payload.scrolled
   },
   loading(state, loading) {
-    if (!loading) {
-      setTimeout(function () {
-        state.loading = false
-      }, 700)
-    }
-    else {
-      state.loading = true
-    }
+    state.loading = true
+    window.scrollTo({
+      top: 100, // could be negative value
+      left: 0,
+      behavior: 'smooth'
+    })
+
+    setTimeout(function () {
+      state.loading = false
+    }, 600)
   },
   setLocale(state, payload){
     state.locale.lang = payload.lang;
