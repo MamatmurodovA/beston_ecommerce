@@ -50,7 +50,7 @@ export const messages = {
       new_account: 'Yangi foydalanuvchi',
       create_your_account: 'Ro\'yxatdan o\'tish',
       account_exist: 'Ro\'yxatdan o\'tganmisiz',
-      sign_in_with_existing_account: 'Mavjud akkount bilan kirish'
+      sign_in_with_existing_account: 'Mavjud akkount bilan kirish',
     }
   }
 }
