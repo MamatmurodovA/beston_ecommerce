@@ -16,6 +16,13 @@
 </script>
 
 <style>
+  .login-base{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
   .sign-in-container, .sign-up-container {
     border: 1px solid #ddd;
     width: 30rem;
