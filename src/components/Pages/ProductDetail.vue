@@ -902,10 +902,16 @@
   }
   .product-image-item{
     border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 70px;
+    width: 70px;
   }
   .product-image-item img {
-    width: 70px;
-    height: 70px;
+    max-width: 100%;
+    height: auto;
   }
   #main-product-image,
   #image-zoomer{

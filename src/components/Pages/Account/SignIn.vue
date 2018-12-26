@@ -46,6 +46,10 @@
 </script>
 
 <style scoped>
-
+  label{
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
 
 </style>

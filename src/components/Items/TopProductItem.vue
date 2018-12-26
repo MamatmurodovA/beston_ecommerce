@@ -29,5 +29,7 @@
 </script>
 
 <style scoped>
-
+  .cart a{
+    text-align: center;
+  }
 </style>

@@ -590,6 +590,7 @@ a, input, textarea, select, option, button {
                   position: absolute;
                   bottom: 0;
                   a:hover{
+                    text-align: center;
                     &:nth-child(3){
                       border: none;
                     }

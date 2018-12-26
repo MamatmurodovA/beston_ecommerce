@@ -69,6 +69,7 @@
   }
   .title-line{
     position: relative;
+    margin-bottom: 30px;
   }
   .title-line::after{
     display: block;
@@ -77,8 +78,10 @@
     height: 1px;
     background-color: rgba(28, 30, 35, 0.4);
     position: absolute;
-    top: 39%;
+    top: 50%;
     left: 0;
+    transform: translateY(-50%);
+
   }
   .create-account .create-account-title{
     font-weight: 400;
