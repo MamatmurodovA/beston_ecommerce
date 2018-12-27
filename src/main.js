@@ -23,7 +23,7 @@ const i18n = new VueI18n({
   messages, // set locale messages
 })
 
-
+axios.defaults.headers.common['Accept-Language'] = localStorage.getItem('lang')
 new Vue({
   el: '#app',
   store,

@@ -2,16 +2,16 @@
   <div>
       <div class="sign-in-container">
           <h2 class="title">{{ $t('message.sign_in') }}</h2>
-          <form action="" method="">
+          <form @submit.prevent="loginSubmit">
             <div class="form-group">
               <label for="mail">{{ $t('message.email') }}:</label>
-              <input required type="email" class="form-control" id="mail">
+              <input required type="email" class="form-control" id="mail" v-model="user.username">
             </div>
             <div class="form-group" v-if="user_exist">
               <label for="pwd">{{ $t('message.password') }}:</label>
-              <input required type="password" class="form-control" id="pwd">
+              <input autocomplete="false" required type="password" class="form-control" id="pwd" v-model="user.password">
             </div>
-            <button type="submit" class="btn btn-default" @click.prevent="user_exist=true">{{ $t('message.sign_in') }}</button>
+            <button type="submit" class="btn btn-default" >{{ $t('message.sign_in') }}</button>
           </form>
       </div>
       <div class="create-account" >
@@ -39,9 +39,35 @@
       data(){
           return {
             param_list: [],
-            user_exist: false
+            user_exist: false,
+            user: {
+              username: '',
+              password: ''
+            }
           }
       },
+      methods: {
+        loginSubmit(){
+            if (this.user.password.length)
+            {
+              console.dir(this.user)
+              let message = ''
+              if (this.user.username === 'azam.mamatmurodov@gmail.com' && this.user.password === '123')
+              {
+                message = 'Login successful'
+              }
+              else
+              {
+                message = 'Login failed'
+              }
+              alert(message)
+            }
+            else
+            {
+              this.user_exist = true
+            }
+        }
+      }
   }
 </script>
 
