@@ -21,7 +21,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    min-height: 680px;
+    margin-top: 60px;
   }
   .sign-in-container, .sign-up-container {
     border: 1px solid #ddd;

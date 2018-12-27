@@ -5,7 +5,7 @@
           <form action="">
             <div class="form-group">
               <label for="sign_in_mail">{{ $t('message.email') }}:</label>
-              <input required type="password" class="form-control" id="sign_in_mail">
+              <input required type="email" class="form-control" id="sign_in_mail">
             </div>
             <div class="form-group">
               <label for="sign_in_pwd">{{ $t('message.password') }}:</label>
