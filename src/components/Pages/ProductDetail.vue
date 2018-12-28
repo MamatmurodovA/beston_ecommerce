@@ -23,13 +23,12 @@
               <div class="description_top">
                 <p id="product_title">{{ product.title }}</p>
                 <p id="transportation_price">FOB <span>Reference</span> Price:<a href="">Get Latest Price</a></p>
-                <p id="product_price">
-                  <span class="set"><b>US $12000 - 250000</b> / Set</span>
-                  <span class="piece">1 Piece/Pieces (Min. Order)</span>
-                </p>
-                <p id="supplier_ability"><span>Supply Ability:</span><span>200000 Piece/Pieces per Month</span></p>
+                <ProductPriceItem :product="product"></ProductPriceItem>
                 <form class="buttons">
-                  <button id="add-compare"><input type="checkbox"></input><p>Add to compare</p></button>
+                  <button id="add-compare">
+                    <input type="checkbox">
+                    <p>Add to compare</p>
+                  </button>
                   <button id="supplier_mail">Contact supplier</button>
                 </form>
               </div>
@@ -107,6 +106,7 @@
   import VueHZoom from 'vue-h-zoom';
   import Breadcrumb from '../Parts/Breadcrumb'
   import TopProductItem from '../Items/TopProductItem'
+  import ProductPriceItem from '../Items/ProductPriceItem'
   import * as config from '../../config'
 
   export default {
@@ -117,6 +117,7 @@
         Carousel,
         Slide,
         VueHZoom,
+        ProductPriceItem,
     },
     data(){
       return {

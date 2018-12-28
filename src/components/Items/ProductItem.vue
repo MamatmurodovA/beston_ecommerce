@@ -3,7 +3,6 @@
       <div class="top">
         <div class="image">
           <router-link :to="{name: 'product_detail_page', params: {category_slug: product.category.slug, product_slug: product.slug}}">
-            <!--<img :src="product.main_image">-->
             <div class="product-item-image" :style="{backgroundImage: 'url('+ product.main_image +')'}"></div>
           </router-link>
         </div>
@@ -33,12 +32,9 @@
         </form>
       </div>
       <ul class="information">
-        <li>Place of Origin: <span>Jiangsu,China (Mainland)</span></li>
-        <li>Shape: <span>Cup-Shaped</span></li>
-        <li>Size: <span>4"</span></li>
-        <li>Hardness: <span>T</span></li>
-        <li>Abrasive: <span>Silicon Carbide</span></li>
-        <li>Model Number: <span>T27</span></li>
+        <li v-for="specification in product.specifications">
+          {{ specification.title }}: <span>{{ specification.info }}</span>
+        </li>
       </ul>
     </div>
 </template>
