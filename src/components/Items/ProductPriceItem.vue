@@ -1,13 +1,11 @@
 <template>
     <div class="">
       <p id="product_price">
-        <template v-if="product.variation_type === 'no_variation'">
-          <span> {{ product.price }} $</span>
-        </template>
-        <template v-else-if="product.variation_type === 'color'">
+        <span> {{ price }} $</span>
+        <template v-if="product.variation_type === 'color'">
             <div class="color-label"> Color: {{ current_variation? current_variation : product.product_variation[0].variation_label }} </div>
             <div class="color-variations">
-              <a class="color-variation-item" v-for="variation in product.product_variation" @click="current_variation=variation.variation_label">
+              <a class="color-variation-item" v-for="variation in product.product_variation" @click="current_variation=variation.variation_label; price=variation.price">
                   <span class="color-code" :style="{backgroundColor: variation.color}"></span>
               </a>
             </div>
@@ -27,7 +25,8 @@
     name: 'ProductPriceItem',
     data(){
       return {
-        current_variation: ''
+        current_variation: '',
+        price: product.price? product.price : 0
       }
     }
   }
@@ -38,9 +37,7 @@
     width: 100%;
     height: 100%;
   }
-
   .color-variation-item:hover {
-    cursor: pointer;
     border: 1px solid #cccccc;
   }
   .color-variation-item {
@@ -50,9 +47,9 @@
     margin: 1px;
     border: 1px solid transparent;
   }
-
   .color-variation-item .color-code
   {
+    cursor: pointer;
     width: 100%;
     height: 100%;
     display: block;
